@@ -4,7 +4,6 @@
 @import 'fontsize';
 @import 'ckEditor';
 
-
 body {
 	background: #ffffff none repeat scroll 0 0;
     color: #687188;
@@ -13,6 +12,9 @@ body {
 }
 
 .header_wrap {
+  .top-header {
+    border-bottom: 1px solid rgba(132, 132, 132, 0.15);
+  }
   .navbar-brand {
     padding: 0px !important
   }

@@ -4,6 +4,28 @@ import React from 'react'
 const Header = ({ children, isMobile }) => {
   return (
     <header className="header_wrap fixed-top light_skin sticky_dark_skin transparent_header dd_dark_skin background-color-white">
+      <div className="top-header bg_dark light_skin d-none d-md-block background-color-white">
+        <div className="container">
+          <div className="row align-items-center">
+          <div className="col-md-6">
+              <div className="d-flex align-items-center justify-content-center justify-content-lg-start">
+                <ul className="social_icons text-center text-md-right social_white">
+                  <li><a href="#"><i className="ion-social-facebook" /></a></li>
+                  <li><a href="#"><i className="ion-social-youtube-outline" /></a></li>
+                  <li><a href="#"><i className="ion-social-instagram-outline" /></a></li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <ul className="contact_detail text-center text-lg-right ">
+                <li className="text-color-black"><i className="ti-mobile text-color-black" />123-456-7890</li>
+                <li className="text-color-black"><i className="ti-email text-color-black" />[email&nbsp;protected]</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="container">
         <nav className="navbar navbar-expand-lg">
           <a className="navbar-brand">
@@ -12,7 +34,7 @@ const Header = ({ children, isMobile }) => {
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
             <span className="ion-android-menu" />
           </button>
-          <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul className="navbar-nav">
               <li className="dropdown">
                 <a data-toggle="dropdown" className="nav-link dropdown-toggle active">Home</a>
