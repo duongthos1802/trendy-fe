@@ -50,6 +50,8 @@ class MyDocument extends Document {
           {/* <!-- Google Font --> */}
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Open+Sans&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+          
         </Head>
         <Main />
         <NextScript />

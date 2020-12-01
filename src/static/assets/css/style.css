@@ -988,6 +988,7 @@ button:focus {
 	top: 10px;
 }
 .navbar .navbar-nav > li > .nav-link {
+	font-weight: 600;
 	padding: 27px 10px;
 	text-transform: capitalize;
 	font-size: 14px;
