@@ -7,6 +7,8 @@ import ErrorPage from 'next/error'
 import Head from 'next/head'
 
 import '../scss/index.scss'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 Router.events.on('routeChangeStart', url => {
   NProgress.start()

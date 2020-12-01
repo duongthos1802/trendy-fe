@@ -3,8 +3,8 @@ import React from 'react'
 
 const Header = ({ children, isMobile }) => {
   return (
-    <header className="header_wrap fixed-top light_skin sticky_dark_skin transparent_header dd_dark_skin background-color-white">
-      <div className="top-header bg_dark light_skin d-none d-md-block background-color-white">
+    <header className="header_wrap fixed-top light_skin sticky_dark_skin transparent_header dd_dark_skin">
+      <div className="top-header light_skin d-none d-md-block">
         <div className="container">
           <div className="row align-items-center">
           <div className="col-md-6">
@@ -30,6 +30,7 @@ const Header = ({ children, isMobile }) => {
         <nav className="navbar navbar-expand-lg">
           <a className="navbar-brand">
             <img className="logo_light" width="200" src="https://mysterybean.vn/wp-content/uploads/2020/10/Mytery-bean-Logo-Org.png" alt="logo" />
+            <img className="logo_dark" width="200" src="https://mysterybean.vn/wp-content/uploads/2020/10/Mytery-bean-Logo-Org.png" alt="logo" />
           </a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
             <span className="ion-android-menu" />
