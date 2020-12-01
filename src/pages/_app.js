@@ -6,6 +6,8 @@ import App from 'next/app'
 import ErrorPage from 'next/error'
 import Head from 'next/head'
 
+import '../scss/index.scss'
+
 Router.events.on('routeChangeStart', url => {
   NProgress.start()
 })
@@ -30,7 +32,7 @@ class MyApp extends App {
         <Head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="theme-color" content="#000000" />
+          {/* <meta name="theme-color" content="#000000" /> */}
           <meta
             name="description"
             content="Web site created using create-react-app"
@@ -38,7 +40,7 @@ class MyApp extends App {
           <link rel="preload" href="/static/fonts/AvenirNextLTPro-Bold.otf" as="font" crossOrigin="" />
           <link rel="preload" href="/static/fonts/AvenirNextLTPro-It.otf" as="font" crossOrigin="" />
           <link rel="preload" href="/static/fonts/AvenirNextLTPro-Regular.otf" as="font" crossOrigin="" />
-          <title>DKB Creator</title>
+          <title>Trendy</title>
         </Head>
         <Component {...pageProps} />
       </>

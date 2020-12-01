@@ -1,0 +1,41 @@
+$color-primary: #ff4225;
+$color-primary-blue: #2A3175;
+$color-primary-gray: #2A3175;
+$color-red: #ED1C27;
+$color-black: black;
+$color-white: #FFFF;
+$color-blue:#1791e6;
+
+
+// BACKGROUND COLOR
+.background-color-primary {
+  background: $color-primary !important;
+}
+
+.background-color-primary-blue {
+  background: $color-primary-blue !important;
+}
+
+.background-color-white {
+  background: $color-white !important;
+}
+
+// TEXT COLOR
+.text-color-primary{
+  color: $color-primary !important;
+}
+
+.text-color-black {
+  color: $color-black !important;
+}
+
+.text-color-white {
+  color: $color-white !important;
+}
+
+.text-color-primary-hover {
+  color: $color-primary-blue !important;
+  &:hover {
+    color: $color-primary !important;
+  }
+}

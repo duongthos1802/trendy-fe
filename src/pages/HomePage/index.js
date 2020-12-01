@@ -1,8 +1,11 @@
 import React from 'react'
+import Layout from '../../components/layouts/Layout'
 
-const HomePage = ({ isMobile }) => {
+const HomePage = () => {
   return (
-    <div>Tuan lol</div>
+   <Layout>
+
+   </Layout>
   )
 }
 

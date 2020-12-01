@@ -48,9 +48,8 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="/static/assets/css/responsive.css" />
           <link id="layoutstyle" rel="stylesheet" href="/static/assets/color/theme-red.css" />
           {/* <!-- Google Font --> */}
-          <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&amp;display=swap" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&amp;display=swap" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap" rel="stylesheet" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Open+Sans&display=swap" rel="stylesheet" />
         </Head>
         <Main />
         <NextScript />

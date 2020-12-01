@@ -1,0 +1,22 @@
+
+@import 'mixins';
+@import 'clolors';
+@import 'fontsize';
+@import 'ckEditor';
+
+
+body {
+	background: #ffffff none repeat scroll 0 0;
+    color: #687188;
+    font-family:  'Fugaz One', cursive;
+    font-size: 16px;
+}
+
+.header_wrap {
+  .navbar-brand {
+    padding: 0px !important
+  }
+  a {
+    color: $color-black !important;
+  }
+}
