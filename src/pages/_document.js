@@ -18,7 +18,6 @@ class MyDocument extends Document {
           <meta httpEquiv="X-UA-Compatible" content="IE=EmulateIE9" />
           <meta httpEquiv="X-UA-Compatible" content="IE=EmulateIE10" />
           <meta httpEquiv="X-UA-Compatible" content="IE=EmulateIE11" />
-          <title>Trendy</title>
           {/* <!-- Favicon Icon --> */}
           <link rel="shortcut icon" type="image/x-icon" href="/static/assets/images/favicon.png" />
           {/* <!-- Animation CSS --> */}
@@ -55,7 +54,6 @@ class MyDocument extends Document {
         </Head>
         <Main />
         <NextScript />
-
         <script src="/static/assets/js/jquery-1.12.4.min.js"></script>
         <script src="/static/assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="/static/assets/owlcarousel/js/owl.carousel.min.js"></script>

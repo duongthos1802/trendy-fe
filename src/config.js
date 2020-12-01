@@ -34,7 +34,7 @@ export const CONFIG = {
   navigation: {
     creator: {
       topMenu: [
-        { name: 'home-page', path: router.homepage.path, component: router.HomePage.component }
+        { name: 'home-page', path: router.homepage.path, component: router.homepage.component }
       ]
     }
   }

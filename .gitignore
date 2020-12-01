@@ -6,7 +6,7 @@
 # testing
 /coverage
 # next.js
-/.next/
+src/.next/
 /out/
 # production
 /build

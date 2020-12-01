@@ -3,8 +3,7 @@ exports.routers = {
     homepage: {
       path: '/',
       component: '/HomePage',
-      text: '',
-      isHeader: false
+      text: ''
     }
   }
 }
