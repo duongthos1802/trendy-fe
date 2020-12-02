@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import Slider from "react-slick"
 
 const settings = {
+  className: "slide-feature-product",
   dots: true,
   infinite: true,
   speed: 500,
