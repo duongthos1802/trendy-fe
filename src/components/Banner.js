@@ -11,12 +11,12 @@ const Banner = () => {
                 {/* STRART CONTAINER */}
                 <div className="row justify-content-center">
                   <div className="col-lg-7 col-md-12 col-sm-12 text-center">
-                    <div className="banner_content text_white">
+                    {/* <div className="banner_content text_white">
                       <h2 className="staggered-animation font_style1" data-animation="fadeInUp" data-animation-delay="0.2s">Delicious food</h2>
                       <p className="staggered-animation" data-animation="fadeInUp" data-animation-delay="0.4s">If you are going to use a passage of Lorem middle of text.</p>
                       <a className="btn btn-default btn-radius staggered-animation" href="#" data-animation="fadeInUp" data-animation-delay="0.6s">Get Started</a>
                       <a className="btn btn-white btn-radius staggered-animation" href="#" data-animation="fadeInUp" data-animation-delay="0.6s">Learn More</a>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>{/* END CONTAINER*/}

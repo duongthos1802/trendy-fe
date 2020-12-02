@@ -1,0 +1,23 @@
+$i: 9;
+@while $i < 40 {
+  .font-size-#{$i} {
+    font-size: $i + px !important;
+  }
+  $i: $i + 1;
+}
+
+.line-height-15 {
+  line-height: 1.5
+}
+
+.line-height-20 {
+  line-height: 20px
+}
+
+.font-weight-600{
+  font-weight: 600 !important;
+}
+
+.text-transform-none {
+  text-transform: none !important;
+}
