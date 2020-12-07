@@ -20,6 +20,11 @@ PAGE JS
 		}, 700);
 	});
 
+	$(window).on("resize",function() {
+		  $(".menu > ul > li").children("ul").hide();
+		  $(".menu > ul").removeClass('show-on-mobile');
+		});
+
 	/*===================================*
 	02. BACKGROUND IMAGE JS
 	*===================================*/
@@ -70,116 +75,26 @@ PAGE JS
 	04. MENU JS
 	*===================================*/
 	//Main navigation scroll spy for shadow
-	$(window).on('scroll', function () {
-		var scroll = $(window).scrollTop();
-
-		if (scroll >= 150) {
-			$('header.fixed-top').addClass('nav-fixed');
-		} else {
-			$('header.fixed-top').removeClass('nav-fixed');
-		}
-
-	});
-
-	//Show Hide dropdown-menu Main navigation 
-	$(document).on('ready', function () {
-		$('.dropdown-menu a.dropdown-toggler').on('click', function (e) {
-			//var $el = $( this );
-			//var $parent = $( this ).offsetParent( ".dropdown-menu" );
-			if (!$(this).next().hasClass('show')) {
-				$(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-			}
-			var $subMenu = $(this).next(".dropdown-menu");
-			$subMenu.toggleClass('show');
-
-			$(this).parent("li").toggleClass('show');
-
-			$(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
-				$('.dropdown-menu .show').removeClass("show");
-			});
-
-			return false;
-		});
-	});
-
-	//Hide Navbar Dropdown After Click On Links
-	var navBar = $(".header_wrap");
-	var navbarLinks = navBar.find(".navbar-collapse ul li a.page-scroll");
-
-	$.each(navbarLinks, function (i, val) {
-
-		var navbarLink = $(this);
-
-		navbarLink.on('click', function () {
-			navBar.find(".navbar-collapse").collapse('hide');
-			$("header").removeClass("active");
-		});
-
-	});
-
-	//Main navigation Active Class Add Remove
-	$('.navbar-toggler').on('click', function () {
-		$("header").toggleClass("active");
-		if ($('.search-overlay').hasClass('open')) {
-			$(".search-overlay").removeClass('open');
-			$(".search_trigger").removeClass('open');
-		}
-	});
-
-	$(document).on('ready', function () {
-		if ($('.header_wrap').hasClass("fixed-top") && !$('.header_wrap').hasClass("transparent_header") && !$('.header_wrap').hasClass("no-sticky")) {
-			$(".header_wrap").before('<div class="header_sticky_bar d-none"></div>');
-		}
-	});
-
-	$(window).on('scroll', function () {
-		var scroll = $(window).scrollTop();
-
-		if (scroll >= 150) {
-			$('.header_sticky_bar').removeClass('d-none');
-			$('header.no-sticky').removeClass('nav-fixed');
-
-		} else {
-			$('.header_sticky_bar').addClass('d-none');
-		}
-
-	});
-
-	var setHeight = function () {
-		var height_header = $(".header_wrap").height();
-		$('.header_sticky_bar').css({ 'height': height_header });
-	};
-
-	$(window).on('load', function () {
-		setHeight();
-	});
-
-	$(window).on('resize', function () {
-		setHeight();
-	});
-
-	$('.sidetoggle').on('click', function () {
-		$(this).addClass('open');
-		$('body,.sidebar_menu').addClass('active');
-		$("body").append('<div id="header-overlay" class="header-overlay"></div>');
-	});
-
-	$('.cart_trigger').on('click', function () {
-		$('.cart_box').addClass('show');
-		$('body').toggleClass("cart_open");
-		$(".cart_box").after('<div id="header-overlay" class="header-overlay"></div>');
-	});
-
-	$(document).on('click', '#header-overlay, .sidemenu_close', function () {
-		$('.sidetoggle').removeClass('open');
-		$('.cart_box').removeClass('show');
-		$('body').removeClass('cart_open');
-		$('body,.sidebar_menu').removeClass('active');
-		$('#header-overlay').fadeOut('3000', function () {
-			$('#header-overlay').remove();
-		});
-		return false;
-	});
+	$(function() {
+		  $('.menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
+		  $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
+		  $(".menu > ul").before("<a href=\"#\" class=\"menu-mobile\">&nbsp;</a>");
+		  $(".menu > ul > li").hover(function(e) {
+		    if ($(window).width() > 943) {
+		      $(this).children("ul").stop(true, false).fadeToggle(150);
+		      e.preventDefault();
+		    }
+		  });
+		  $(".menu > ul > li").on("click",function() {
+		    if ($(window).width() <= 943) {
+		      $(this).children("ul").fadeToggle(150);
+		    }
+		  });
+		  $(".menu-mobile").on("click",function(e) {
+		    $(".menu > ul").toggleClass('show-on-mobile');
+		    e.preventDefault();
+		  });
+    })
 	/*===================================*
 	05. SMOOTH SCROLLING JS
 	*===================================*/

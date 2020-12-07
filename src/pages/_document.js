@@ -55,7 +55,9 @@ class MyDocument extends Document {
         </Head>
         <Main />
         <NextScript />
-        <script src="/static/assets/js/jquery-1.12.4.min.js"></script>
+        {/* <script src="/static/assets/js/jquery-1.12.4.min.js"></script> */}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
         <script src="/static/assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="/static/assets/owlcarousel/js/owl.carousel.min.js"></script>
         <script src="/static/assets/js/magnific-popup.min.js"></script>
@@ -71,6 +73,7 @@ class MyDocument extends Document {
         <script src="/static/assets/js/datepicker.min.js"></script>
         <script src="/static/assets/js/mdtimepicker.min.js"></script>
         <script src="/static/assets/js/scripts.js"></script>
+
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
       </Html>
     )
