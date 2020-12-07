@@ -3,45 +3,46 @@ import React from 'react'
 const Information = () => {
 
   return (
-    <div class="section pb_70" style={{ background: "#9f863d" }}>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-4 col-md-6">
-            <div class="icon_box icon_box_style1 text-center animation" data-animation="fadeInUp" data-animation-delay="0.02s">
-              <div class="icon">
-                <i class="flaticon-shipped"></i>
+    <div className="section pb_70" style={{ background: "#9f863d" }}>
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-lg-4 col-md-6">
+            <div className="icon_box_style1 text-center animation d-flex p-0" data-animation="fadeInUp" data-animation-delay="0.02s">
+              <div className="icon mb-0">
+                <i className="flaticon-shipped" />
               </div>
-              <div class="icon_box_content">
-                <h5 class="text-uppercase">Fast Delivery</h5>
-                <p>There are many variations of passages of Lorem Ipsum available in some form</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon_box icon_box_style1 text-center animation" data-animation="fadeInUp" data-animation-delay="0.03s">
-              <div class="icon">
-                <i class="flaticon-dining-table"></i>
-              </div>
-              <div class="icon_box_content">
-                <h5 class="text-uppercase">Online Reservation</h5>
-                <p>There are many variations of passages of Lorem Ipsum available in some form</p>
+              <div className="icon_box_content">
+                <p className="font-size-18 mb-0">Hỗ trợ thông tin:</p>
+                <p className="font-size-18 mb-0">+84 77955 8188</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon_box icon_box_style1 text-center animation" data-animation="fadeInUp" data-animation-delay="0.04s">
-              <div class="icon">
-                <i class="flaticon-destination"></i>
+          <div className="col-lg-4 col-md-6">
+            <div className=" icon_box_style1 text-center animation d-flex" data-animation="fadeInUp" data-animation-delay="0.03s">
+              <div className="icon mb-0">
+                <i className="flaticon-dining-table" />
               </div>
-              <div class="icon_box_content">
-                <h5 class="text-uppercase">Live Order Tracking</h5>
-                <p>There are many variations of passages of Lorem Ipsum available in some form</p>
+              <div className="icon_box_content">
+                <p className="font-size-18 mb-0">32 đường số 1B, P. BT Đông B</p>
+                <p className="font-size-18 mb-0">Q. Bình Tân, TP.HCM.</p>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6">
+            <div className="icon_box_style1 text-center animation d-flex" data-animation="fadeInUp" data-animation-delay="0.04s">
+              <div className="icon mb-0">
+                <i className="flaticon-destination" />
+              </div>
+              <div className="icon_box_content">
+                <p className="font-size-18 mb-0">Thư điện tử:</p>
+                <p className="font-size-18 mb-0">info@mysterybean.vn</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
   )
 }
 
