@@ -7,12 +7,12 @@ import ProductList from './ProductList'
 
 const HomePage = () => {
   return (
-   <Layout>
+    <Layout>
       <Banner />
       <FetureProduct />
       <ProductList />
       <HtmlBlock />
-   </Layout>
+    </Layout>
   )
 }
 

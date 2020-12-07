@@ -32,12 +32,18 @@ const HtmlBlock = () => {
             </div>
           </div>
           <div className="row justify-content-center">
-            <div className="col-lg-6 background-color-primary-blue">
-              <h2 className="text-color-white">Hành trình<br/>của sự chinh phục</h2>
+            <div className="col-lg-6 background-color-primary-blue p-4">
+              <h2 className="text-color-white">Hành trình của sự chinh phục</h2>
+              <p className="line-height-15">Từ 1997, khi tình yêu với cà phê không chỉ còn là để thỏa mãn vị giác mỗi ngày,
+              sự đam mê khám phá và mong muốn thành quả tạo ra những gói cà phê tinh nguyên, đắng đậm lại dịu nhẹ từ những hạt ngọc đen tinh khiết.
+              Chúng tôi hình thành "Đào Nguyên", một thương hiệu mở đầu cho hành trình chinh phục “mỹ vị” người dân Việt.</p>
+              <p className="line-height-15">Với mong muốn mang giấc mơ cà phê đi xa, chúng tôi tin rằng khát vọng được uống cà phê ngon- sạch
+              của chính quê hương mình sẽ trở thành niềm vui mang đầy sức lan tỏa trong cộng đồng cũng như bạn bè quốc tế. Và, Mystery Bean - một
+              thương hiệu của Cà phê Đào Nguyên, đã đặt cho mình sứ mệnh nhận dạng và tôn vinh giá trị cà phê Việt, mang một hình ảnh mới về sự năng
+              động và hội nhập xu thế mới của ngành công nghiệp sản xuất và chế biến cà phê trên toàn thế giới.</p>
             </div>
-
-            <div className="col-lg-6">
-              
+            <div className="col-lg-6 px-0" style={{ backgroundImage: "url(http://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-from-farm-to-cup.jpg?id=7465)", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
+              {/* <img src="http://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-from-farm-to-cup.jpg?id=7465" /> */}
             </div>
           </div>
         </div>
