@@ -153,19 +153,8 @@ const Header = ({ children, isMobile }) => {
           </li>
           <li className='mega-menu-item'>
             <a href='#' className='mega-menu-link'>
-              Liên hệ<i class='fas fa-angle-down ml-1'></i>
+              Liên hệ
             </a>
-            <ul className='sub-menu'>
-              <li>
-                <a href='#'>Today</a>
-              </li>
-              <li>
-                <a href='#'>Calendar</a>
-              </li>
-              <li>
-                <a href='#'>Sport</a>
-              </li>
-            </ul>
           </li>
         </ul>
       </div>
