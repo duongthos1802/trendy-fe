@@ -5,6 +5,7 @@ import FetureProduct from './FetureProduct'
 import HtmlBlock from './HtmlBlog'
 import ProductList from './ProductList'
 import Information from './Information'
+import Introduce from './Introduce'
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <FetureProduct />
       <ProductList />
       <HtmlBlock />
+      <Introduce />
       <Information />
     </Layout>
   )
