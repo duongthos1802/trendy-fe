@@ -1,14 +1,13 @@
-
-@import 'mixins';
-@import 'clolors';
-@import 'fontsize';
-@import 'ckEditor';
+@import "mixins";
+@import "clolors";
+@import "fontsize";
+@import "ckEditor";
 
 body {
-	background: #ffffff none repeat scroll 0 0;
-    color: #687188;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+  background: #ffffff none repeat scroll 0 0;
+  color: #687188;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
 
 .header_wrap {
@@ -16,7 +15,7 @@ body {
     border-bottom: 1px solid rgba(132, 132, 132, 0.15);
   }
   .navbar-brand {
-    padding: 0px !important
+    padding: 0px !important;
   }
   a {
     color: $color-black !important;
@@ -36,18 +35,18 @@ body {
   position: relative;
   margin-left: 0;
   margin-right: 0;
-  background: #FFF;
+  background: #fff;
   margin: 0 15px;
   transition: 0.2s !important;
-  box-shadow: 0 0px 17px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 0px 17px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
 
   .phb-content {
     position: relative;
     overflow: hidden;
-    background: #FFF;
+    background: #fff;
     padding: 30px 40px 35px 40px;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
     border: none;
     border-top: none;
     border-bottom-left-radius: 4px;
@@ -69,7 +68,7 @@ body {
     border-top: 2px solid #222222;
   }
 }
-// MENU 
+// MENU
 // MENU
 .menu-container {
   margin: 0 auto;
@@ -78,18 +77,20 @@ body {
 }
 
 .menu {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .menu a.logo {
-    display: inline-block;
-    padding: 5px;
-    width: 19%;
-    float: left;
+  display: inline-block;
+  padding: 5px;
+  width: 19%;
+  float: left;
 }
 .menu .logo img {
-    max-width: 100%;
+  max-width: 100%;
 }
 .menu-mobile {
   display: none;
@@ -104,7 +105,7 @@ body {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-25%);
-          transform: translateY(-25%);
+  transform: translateY(-25%);
 }
 .menu-dropdown-icon:before {
   content: "\f489";
@@ -116,7 +117,7 @@ body {
   background: #fff;
   color: #333;
 }
-.menu > ul {
+.menu .mega-menu {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -129,114 +130,166 @@ body {
   box-sizing: border-box;
   clear: right;
 }
-.menu > ul:before,
-.menu > ul:after {
+.menu .mega-menu:before,
+.menu .mega-menu:after {
   content: "";
   display: table;
 }
-.menu > ul:after {
+.menu .mega-menu:after {
   clear: both;
 }
-.menu > ul > li {
+.menu .mega-menu-item {
   float: left;
   background: white;
   padding: 0;
   margin: 0;
 }
-.menu > ul > li a {
+.menu .mega-menu-link {
   text-decoration: none;
-  padding: 1.5em 1.5em;
+  padding: 0.75em 0.75em;
   display: block;
   margin-top: auto;
   margin-bottom: auto;
 }
-.menu > ul > li > ul {
+.menu .sub-menu {
   display: none;
   width: calc(100vw + 10px);
   background: white;
-  padding: 20px;
+  padding: 20px 380px;
   position: absolute;
   z-index: 99;
   left: calc(390px - 50vw);
-  margin: 0;
+  margin: 1.5em 0 0 0;
   list-style: none;
   box-sizing: border-box;
 }
 
-// 1170
+.menu .sub-menu:before,
+.menu .sub-menu:after {
+  content: "";
+  display: table;
+}
+.menu .sub-menu:after {
+  clear: both;
+}
+.menu .sub-menu .sub-menu-cate {
+  margin: 0;
+  list-style: none;
+  width: 20%;
+  background: none;
+  float: left;
 
-@media screen and (max-width: 1170px){
-  .menu > ul > li > ul {
-    right: 0;
-    left: unset;
-    width: 100vw;
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__link {
+    display: block;
+    padding: 0;
+    margin: 5px 0 0;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  &__link:before,
+  &__link:after {
+    content: "";
+    display: table;
+  }
+
+  &__link:after {
+    clear: both;
+  }
+
+  &__link > li {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 }
 
-.menu > ul > li > ul:before,
-.menu > ul > li > ul:after {
-  content: "";
-  display: table;
-}
-.menu > ul > li > ul:after {
-  clear: both;
-}
-.menu > ul > li > ul > li {
-  margin: 0;
-  padding-bottom: 0;
-  list-style: none;
-  width: 25%;
-  background: none;
-  float: left;
-}
-.menu > ul > li > ul > li a {
+// .menu .sub-menu > li {
+//   margin: 0;
+//   padding-bottom: 0;
+//   list-style: none;
+//   width: 25%;
+//   background: none;
+//   float: left;
+// }
+.menu .sub-menu > li a {
   color: #777;
-  padding: .2em 0;
-  width: 95%;
-  display: block;
-  border-bottom: 1px solid #ccc;
+  padding: 0.2em 0;
+  display: inline-block;
+  &:hover {
+    color: #03a9f4;
+  }
+  &:after {
+    display: block;
+    content: "";
+    margin-top: 2px;
+    border-bottom: solid 3px brown;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  &:hover:after {
+    transform: scaleX(1);
+  }
 }
-.menu > ul > li > ul > li a:hover{
-	color:#03a9f4;
+
+// .menu .sub-menu > li > ul {
+//   display: block;
+//   padding: 0;
+//   margin: 10px 0 0;
+//   list-style: none;
+//   box-sizing: border-box;
+// }
+// .menu .sub-menu > li > ul:before,
+// .menu .sub-menu > li > ul:after {
+//   content: "";
+//   display: table;
+// }
+// .menu .sub-menu > li > ul:after {
+//   clear: both;
+// }
+// .menu .sub-menu > li > ul > li {
+//   float: left;
+//   width: 100%;
+//   padding: 10px 0;
+//   margin: 0;
+//   font-size: 0.8em;
+// }
+// .menu .sub-menu > li > ul > li a {
+//   border: 0;
+//   font-size: 14px;
+// }
+.sub-menu .sub-menu-gallery {
+  width: 80%;
+  float: right;
+  margin-top: 30px;
+  transform: translateX(5%);
 }
-.menu > ul > li > ul > li > ul {
-  display: block;
-  padding: 0;
-  margin: 10px 0 0;
+.sub-menu .sub-menu-gallery ul {
+  display: flex;
   list-style: none;
-  box-sizing: border-box;
 }
-.menu > ul > li > ul > li > ul:before,
-.menu > ul > li > ul > li > ul:after {
-  content: "";
-  display: table;
+.sub-menu .sub-menu-gallery ul li {
+  margin-right: 1%;
 }
-.menu > ul > li > ul > li > ul:after {
-  clear: both;
+
+.menu .normal-sub {
+  max-width: 150px;
+  left: auto !important;
+  padding: 10px 20px !important;
+  transform: translateX(-30px) !important;
+  text-align: center !important;
 }
-.menu > ul > li > ul > li > ul > li {
-  float: left;
-  width: 100%;
-  padding: 10px 0;
-  margin: 0;
-  font-size: .8em;
+.menu .normal-sub > li {
+  width: 100% !important;
 }
-.menu > ul > li > ul > li > ul > li a {
-  border: 0;    
-  font-size: 14px;
-}
-.menu > ul > li > ul.normal-sub {
-  width: 300px;
-  left: auto;
-  padding: 10px 20px;
-  transform: translateX(-100px);
-}
-.menu > ul > li > ul.normal-sub > li {
-  width: 100%;
-}
-.menu > ul > li > ul.normal-sub > li a {
-  border: 0;
-  padding: 1em 0;
+.menu .normal-sub > li a {
+  border: 0 !important;
+  padding: 1em 0 !important;
 }
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
 Mobile style's
@@ -245,12 +298,12 @@ Mobile style's
   .menu-container {
     width: 100%;
   }
-  .menu-container .menu{
-	display:inline-block;
-   }
+  .menu-container .menu {
+    display: inline-block;
+  }
   .menu-mobile {
-    display: block;    
-    float: right;    
+    display: block;
+    float: right;
     padding: 20px 20px 0;
   }
   .menu-dropdown-icon:before {
@@ -258,7 +311,7 @@ Mobile style's
   }
   .menu > ul {
     display: none;
-    width:100%;
+    width: 100%;
   }
   .menu > ul > li {
     width: 100%;
@@ -270,28 +323,36 @@ Mobile style's
     width: 100%;
     display: block;
   }
-  .menu > ul > li > ul {
-    position: relative;    
+  .menu .sub-menu {
+    position: relative;
     padding: 0 40px;
   }
-  .menu > ul > li > ul.normal-sub {
-    width: 100%;
+  .menu .normal-sub {
+    width: 100% !important;
   }
-  .menu > ul > li > ul > li {
+  .menu .sub-menu > li {
     float: none;
     width: 100%;
     margin-top: 20px;
   }
-  .menu > ul > li > ul > li:first-child {
+  .menu .sub-menu > li:first-child {
     margin: 0;
   }
-  .menu > ul > li > ul > li > ul {
+  .menu .sub-menu > li > ul {
     position: relative;
   }
-  .menu > ul > li > ul > li > ul > li {
+  .menu .sub-menu > li > ul > li {
     float: none;
   }
   .menu .show-on-mobile {
     display: block;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .menu .sub-menu {
+    right: 0;
+    left: unset;
+    width: 100vw;
   }
 }

@@ -1,96 +1,176 @@
-
-import React from 'react'
+import React from "react"
 
 const Header = ({ children, isMobile }) => {
   return (
-    
-     <div className="menu-container">
-  <div className="menu">
-    <a href="#" className="logo">
-      <img src="https://mysterybean.vn/wp-content/uploads/2020/10/Mytery-bean-Logo-Org.png" />
-    </a>
-    <ul className="clearfix">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About<i class="fas fa-angle-down ml-1"></i></a>
-        <ul>
-          <li><a href="#">School</a>
-            <ul>
-              <li><a href="#">Lidership</a></li>
-              <li><a href="#">History</a></li>
-              <li><a href="#">Locations</a></li>
-              <li><a href="#">Careers</a></li>
+    <div className='menu-container'>
+      <div className='menu'>
+        <a href='#' className='logo'>
+          <img src='https://mysterybean.vn/wp-content/uploads/2020/10/Mytery-bean-Logo-Org.png' />
+        </a>
+        <ul className='clearfix mega-menu'>
+          <li className='mega-menu-item'>
+            <a href='#' className='mega-menu-link'>
+              Trang chủ
+            </a>
+          </li>
+          <li className='mega-menu-item'>
+            <a href='#' className='mega-menu-link'>
+              Giới thiệu<i class='fas fa-angle-down ml-1'></i>
+            </a>
+            <ul className='sub-menu'>
+              <li>
+                <a href='#'>Today</a>
+              </li>
+              <li>
+                <a href='#'>Calendar</a>
+              </li>
+              <li>
+                <a href='#'>Sport</a>
+              </li>
             </ul>
           </li>
-          <li><a href="#">Study</a>
-            <ul>
-              <li><a href="#">Undergraduate</a></li>
-              <li><a href="#">Masters</a></li>
-              <li><a href="#">International</a></li>
-              <li><a href="#">Online</a></li>
+          <li className='mega-menu-item'>
+            <a href='#' className='mega-menu-link'>
+              Sản phẩm<i class='fas fa-angle-down ml-1'></i>
+            </a>
+            <ul className='sub-menu'>
+              <li className='sub-menu-cate'>
+                <a href='#' className='sub-menu-cate__title'>
+                  Coffee
+                </a>
+                <ul className='sub-menu-cate__link'>
+                  <li>
+                    <a href='#'>Cà phê rang xay</a>
+                  </li>
+                  <li>
+                    <a href='#'>Cà phê hoà tan</a>
+                  </li>
+                  <li>
+                    <a href='#'>Cà phê viên nén</a>
+                  </li>
+                  <li>
+                    <a href='#'>Cà phê túi lọc</a>
+                  </li>
+                </ul>
+              </li>
+              <li className='sub-menu-gallery'>
+                <ul>
+                  <li>
+                    <a href='https://mysterybean.vn/product-category/ca-phe-rang-xay/'>
+                      <img src='https://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-lover.jpg' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href='https://mysterybean.vn/product-category/ca-phe-rang-xay/'>
+                      <img src='https://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-lover.jpg' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href='https://mysterybean.vn/product-category/ca-phe-rang-xay/'>
+                      <img src='https://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-lover.jpg' />
+                    </a>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </li>
-          <li><a href="#">Research</a>
-            <ul>
-              <li><a href="#">Undergraduate research</a></li>
-              <li><a href="#">Masters research</a></li>
-              <li><a href="#">Funding</a></li>
+          <li className='mega-menu-item'>
+            <a href='#' className='mega-menu-link'>
+              Sản phẩm<i class='fas fa-angle-down ml-1'></i>
+            </a>
+            <ul className='sub-menu'>
+              <li className='sub-menu-cate'>
+                <a href='#' className='sub-menu-cate__title'>
+                  Coffee
+                </a>
+                <ul className='sub-menu-cate__link'>
+                  <li>
+                    <a href='#'>Cà phê rang xay</a>
+                  </li>
+                  <li>
+                    <a href='#'>Cà phê hoà tan</a>
+                  </li>
+                  <li>
+                    <a href='#'>Cà phê viên nén</a>
+                  </li>
+                  <li>
+                    <a href='#'>Cà phê túi lọc</a>
+                  </li>
+                </ul>
+              </li>
+              <li className='sub-menu-gallery'>
+                <ul>
+                  <li>
+                    <a href='https://mysterybean.vn/product-category/ca-phe-rang-xay/'>
+                      <img src='https://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-lover.jpg' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href='https://mysterybean.vn/product-category/ca-phe-rang-xay/'>
+                      <img src='https://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-lover.jpg' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href='https://mysterybean.vn/product-category/ca-phe-rang-xay/'>
+                      <img src='https://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-lover.jpg' />
+                    </a>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </li>
-          <li><a href="#">Something</a>
-            <ul>
-              <li><img src="https://placeimg.com/300/200/nature" /></li>
+          <li className='mega-menu-item'>
+            <a href='#' className='mega-menu-link'>
+              Tin tức<i class='fas fa-angle-down ml-1'></i>
+            </a>
+            <ul className='sub-menu'>
+              <li>
+                <a href='#'>Today</a>
+              </li>
+              <li>
+                <a href='#'>Calendar</a>
+              </li>
+              <li>
+                <a href='#'>Sport</a>
+              </li>
+            </ul>
+          </li>
+          <li className='mega-menu-item'>
+            <a href='#' className='mega-menu-link'>
+              Cảm hứng<i class='fas fa-angle-down ml-1'></i>
+            </a>
+            <ul className='sub-menu'>
+              <li>
+                <a href='#'>Today</a>
+              </li>
+              <li>
+                <a href='#'>Calendar</a>
+              </li>
+              <li>
+                <a href='#'>Sport</a>
+              </li>
+            </ul>
+          </li>
+          <li className='mega-menu-item'>
+            <a href='#' className='mega-menu-link'>
+              Liên hệ<i class='fas fa-angle-down ml-1'></i>
+            </a>
+            <ul className='sub-menu'>
+              <li>
+                <a href='#'>Today</a>
+              </li>
+              <li>
+                <a href='#'>Calendar</a>
+              </li>
+              <li>
+                <a href='#'>Sport</a>
+              </li>
             </ul>
           </li>
         </ul>
-      </li>
-      <li><a href="#">News<i class="fas fa-angle-down ml-1"></i></a>
-        <ul>
-          <li><a href="#">Today</a></li>
-          <li><a href="#">Calendar</a></li>
-          <li><a href="#">Sport</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Contact<i class="fas fa-angle-down ml-1"></i></a>
-        <ul>
-          <li><a href="#">School</a>
-            <ul>
-              <li><a href="#">Lidership</a></li>
-              <li><a href="#">History</a></li>
-              <li><a href="#">Locations</a></li>
-              <li><a href="#">Careers</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Study</a>
-            <ul>
-              <li><a href="#">Undergraduate</a></li>
-              <li><a href="#">Masters</a></li>
-              <li><a href="#">International</a></li>
-              <li><a href="#">Online</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Study</a>
-            <ul>
-              <li><a href="#">Undergraduate</a></li>
-              <li><a href="#">Masters</a></li>
-              <li><a href="#">International</a></li>
-              <li><a href="#">Online</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Empty sub</a>
-            <ul>
-              <li><img src="https://placeimg.com/300/200/people" /></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-
-      
+      </div>
+    </div>
   )
 }
 
-export default Header 
+export default Header
