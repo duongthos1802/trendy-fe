@@ -32,12 +32,6 @@ const apiPaths = {
 app.prepare().then(() => {
   const server = express()
 
-  // proxy
-  // if (dev) {
-  //   server.use('/api', createProxyMiddleware(apiPaths['/api']))
-  //   server.use('/uploads', createProxyMiddleware(apiPaths['/uploads']))
-  // }
-
   server.use(bodyParser.urlencoded({ extended: false }))
   server.use(bodyParser.json())
 

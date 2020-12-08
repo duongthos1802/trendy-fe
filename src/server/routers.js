@@ -4,6 +4,11 @@ exports.routers = {
       path: '/',
       component: '/HomePage',
       text: ''
+    },
+    product: {
+      path: '/product',
+      component: '/Product',
+      text: ''
     }
   }
 }
