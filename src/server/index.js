@@ -2,7 +2,7 @@ const express = require('express')
 const next = require('next')
 const bodyParser = require('body-parser')
 const port = (process.env.NODE_ENV !== 'production')
-  ? 3001
+  ? 3005
   : (process.env.PORT || 8080)
 
 const dev = process.env.NODE_ENV !== 'production'
