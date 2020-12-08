@@ -155,7 +155,7 @@ body {
   display: none;
   width: calc(100vw + 10px);
   background: white;
-  padding: 20px 380px;
+  padding: 20px calc(50vw - 565px);
   position: absolute;
   z-index: 99;
   left: calc(390px - 50vw);
@@ -267,7 +267,6 @@ body {
   width: 80%;
   float: right;
   margin-top: 30px;
-  transform: translateX(5%);
 }
 .sub-menu .sub-menu-gallery ul {
   display: flex;
@@ -354,5 +353,6 @@ Mobile style's
     right: 0;
     left: unset;
     width: 100vw;
+    padding: 20px 20px;
   }
 }
