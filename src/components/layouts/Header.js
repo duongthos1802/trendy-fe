@@ -76,7 +76,7 @@ const Header = ({ children, isMobile }) => {
           </li>
           <li className='mega-menu-item'>
             <a href='#' className='mega-menu-link'>
-              Sản phẩm<i class='fas fa-angle-down ml-1'></i>
+              Công thức<i class='fas fa-angle-down ml-1'></i>
             </a>
             <ul className='sub-menu'>
               <li className='sub-menu-cate'>
