@@ -6,10 +6,12 @@ const Header = ({ children, isMobile }) => {
     
      <div className="menu-container">
   <div className="menu">
-    <a href="#" className="logo">Logo</a>
+    <a href="#" className="logo">
+      <img src="https://mysterybean.vn/wp-content/uploads/2020/10/Mytery-bean-Logo-Org.png" />
+    </a>
     <ul className="clearfix">
       <li><a href="#">Home</a></li>
-      <li><a href="#">About</a>
+      <li><a href="#">About<i class="fas fa-angle-down ml-1"></i></a>
         <ul>
           <li><a href="#">School</a>
             <ul>
@@ -41,14 +43,14 @@ const Header = ({ children, isMobile }) => {
           </li>
         </ul>
       </li>
-      <li><a href="#">News</a>
+      <li><a href="#">News<i class="fas fa-angle-down ml-1"></i></a>
         <ul>
           <li><a href="#">Today</a></li>
           <li><a href="#">Calendar</a></li>
           <li><a href="#">Sport</a></li>
         </ul>
       </li>
-      <li><a href="#">Contact</a>
+      <li><a href="#">Contact<i class="fas fa-angle-down ml-1"></i></a>
         <ul>
           <li><a href="#">School</a>
             <ul>
