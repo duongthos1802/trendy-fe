@@ -3,6 +3,7 @@
 @import 'clolors';
 @import 'fontsize';
 @import 'ckEditor';
+@import 'homepage';
 
 body {
 	background: #ffffff none repeat scroll 0 0;
@@ -23,49 +24,3 @@ body {
   }
 }
 
-// Home page4
-.feture-product {
-  margin-top: -110px;
-  position: relative;
-  z-index: 2;
-}
-
-.kd-photobox {
-  border-radius: 5px;
-  display: block;
-  position: relative;
-  margin-left: 0;
-  margin-right: 0;
-  background: #FFF;
-  margin: 0 15px;
-  transition: 0.2s !important;
-  box-shadow: 0 0px 17px 0 rgba(0,0,0,0.1);
-  overflow: hidden;
-
-  .phb-content {
-    position: relative;
-    overflow: hidden;
-    background: #FFF;
-    padding: 30px 40px 35px 40px;
-    transition: .3s ease-in-out;
-    border: none;
-    border-top: none;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-  }
-
-  .photobox-img img {
-    width: 100%;
-    height: auto;
-    margin: 15px;
-    max-width: calc(100% - 30px);
-    margin-bottom: 0;
-  }
-}
-
-.hr-title {
-  hr {
-    width: 90px;
-    border-top: 2px solid #222222;
-  }
-}
