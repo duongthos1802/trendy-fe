@@ -2,9 +2,9 @@ import React from "react"
 
 const Header = ({ children, isMobile }) => {
   return (
-    <div className='menu-container'>
+    <div className='menu-container sticky-top'>
       <div className='menu'>
-        <a href='#' className='logo'>
+        <a href='#' className='logo '>
           <img src='https://mysterybean.vn/wp-content/uploads/2020/10/Mytery-bean-Logo-Org.png' />
         </a>
         <ul className='clearfix mega-menu'>
