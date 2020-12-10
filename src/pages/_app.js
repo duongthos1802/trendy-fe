@@ -3,6 +3,10 @@ import Router from 'next/router'
 import React from 'react'
 import App from 'next/app'
 
+import rootModel from '../models'
+import { Provider } from 'react-redux'
+import { init } from '@rematch/core'
+
 import ErrorPage from 'next/error'
 import Head from 'next/head'
 
@@ -16,8 +20,12 @@ Router.events.on('routeChangeStart', url => {
 Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
+
+const store = init({
+  models: rootModel
+})
+
 class MyApp extends App {
-  state = {}
 
   componentDidMount() {
   }
@@ -44,7 +52,16 @@ class MyApp extends App {
           <link rel="preload" href="/static/fonts/AvenirNextLTPro-Regular.otf" as="font" crossOrigin="" />
           <title>Trendy</title>
         </Head>
-        <Component {...pageProps} />
+
+        <Provider store={store}>
+          <Component {
+            ...pageProps
+          }
+          // isMobile={isMobile}
+          />
+        </Provider>
+
+        {/* <Component {...pageProps} /> */}
       </>
     )
   }
