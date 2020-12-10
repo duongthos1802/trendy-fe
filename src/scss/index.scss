@@ -4,23 +4,11 @@
 @import 'fontsize';
 @import 'ckEditor';
 @import 'homepage';
+@import "menu";
 
 body {
-	background: #ffffff none repeat scroll 0 0;
-    color: #687188;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+  background: #ffffff none repeat scroll 0 0;
+  color: #687188;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
-
-.header_wrap {
-  .top-header {
-    border-bottom: 1px solid rgba(132, 132, 132, 0.15);
-  }
-  .navbar-brand {
-    padding: 0px !important
-  }
-  a {
-    color: $color-black !important;
-  }
-}
-
