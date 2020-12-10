@@ -12,3 +12,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
+
+.banner_section:not(.full_screen) .carousel-item {
+  height: 500px;
+}
