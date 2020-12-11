@@ -1,13 +1,20 @@
 export const homes = {
   state: {
     bannerHome: [],
-    htmlBlock: null
+    htmlBlock: null,
+    introduceBlock: null
   },
   reducers: {
     getHtmlBlock(state, payload) {
       return {
         ...state,
         htmlBlock: payload
+      }
+    },
+    getIntroduceBlock(state, payload) {
+      return {
+        ...state,
+        introduceBlock: payload
       }
     }
   },

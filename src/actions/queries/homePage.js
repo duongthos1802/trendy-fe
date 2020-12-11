@@ -18,5 +18,16 @@ export default {
         }
       }
     }`
+  },
+  introduceBlock() {
+    return `
+    query {
+      getIntroduceBlock {
+        _id
+        title
+        description
+        image
+      }
+    }`
   }
 }
