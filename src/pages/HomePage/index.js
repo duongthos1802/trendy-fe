@@ -1,5 +1,5 @@
 import React from 'react'
-import Banner from '../../components/Banner'
+import BannerHome from '../../components/BannerHome'
 import Layout from '../../components/layouts/Layout'
 import CategoryProduct from './CategoryProduct'
 import HtmlBlock from './HtmlBlog'
@@ -10,7 +10,7 @@ import Introduce from './Introduce'
 const HomePage = () => {
   return (
     <Layout>
-      <Banner />
+      <BannerHome />
       <CategoryProduct />
       <ProductList />
       <HtmlBlock />
