@@ -76,7 +76,7 @@ PAGE JS
 	04. MENU JS
 	*===================================*/
   //Main navigation scroll spy for shadow
-  $(function () {
+  $(window).on("load", function () {
     $(".menu > ul > li:has( > ul)").addClass("menu-dropdown-icon")
     $(".menu > ul > li > ul:not(:has(ul))").addClass("normal-sub")
     $(".menu > ul").before('<a href="#" class="menu-mobile">&nbsp;</a>')

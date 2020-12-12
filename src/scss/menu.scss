@@ -118,9 +118,10 @@
 .menu .mega-menu-item {
   float: left;
   background: white;
-  padding: 0;
+  padding: 20px 0;
   margin: 0;
 }
+
 .menu .mega-menu-link {
   text-decoration: none;
   padding: 0.75em 0.75em;
@@ -194,6 +195,7 @@
 //   background: none;
 //   float: left;
 // }
+
 .menu .sub-menu > li a {
   color: #777;
   padding: 0.2em 0;
@@ -295,7 +297,9 @@ Mobile style's
     width: 100%;
     float: none;
     display: block;
+    padding: 0;
   }
+
   .menu .mega-menu .mega-menu-item .mega-menu-link {
     padding: 0.75em 1em;
     width: 100%;
@@ -356,3 +360,10 @@ Mobile style's
     padding: 20px 20px;
   }
 }
+// @media screen and (min-width: 943px) {
+//   .menu .mega-menu-item:hover {
+//     .sub-menu {
+//       display: block !important;
+//     }
+//   }
+// }
