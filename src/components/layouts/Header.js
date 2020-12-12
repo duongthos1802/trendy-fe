@@ -1,6 +1,134 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { loadDataPager } from "../../actions/categoryAction"
+import { enumType } from "../../constants"
+import Link from "next/link"
+
+const addField = (data) => {
+  return data.map((item) =>
+    Object.assign(item, {
+      cate: [],
+      parent: item.parentId ? item.parentId._id : null,
+    })
+  )
+}
+
+const generateCate = (data) => {
+  let result = data.filter((item) => !item.parent)
+  const child = data.filter((item) => !!item.parent)
+  child.map((item) => {
+    const parentIndex = result.findIndex((el) => item.parent === el._id)
+    console.log("parentIndex.........", parentIndex)
+    result[parentIndex].cate.push(item)
+  })
+
+  return result
+}
+
+const renderSubMenu = (data, isMega, parentName) => {
+  if (!isMega) {
+    return (
+      <ul className='sub-menu'>
+        {data.map((subItem) => (
+          <li>
+            <Link href=''>
+              <a>{subItem.name}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    )
+  } else {
+    return (
+      <ul className='sub-menu'>
+        <li className='sub-menu-cate'>
+          <Link href=''>
+            <a className='sub-menu-cate__title'>{parentName}</a>
+          </Link>
+          <ul className='sub-menu-cate__link'>
+            {/* <li>
+              <a href='#'>Cà phê rang xay</a>
+            </li> */}
+            {data.map((subItem) => (
+              <li>
+                <Link href=''>
+                  <a>{subItem.name}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </li>
+        <li className='sub-menu-gallery'>
+          <ul>
+            <li>
+              <a href='https://mysterybean.vn/product-category/ca-phe-rang-xay/'>
+                <img src='https://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-lover.jpg' />
+              </a>
+            </li>
+            <li>
+              <a href='https://mysterybean.vn/product-category/ca-phe-rang-xay/'>
+                <img src='https://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-lover.jpg' />
+              </a>
+            </li>
+            <li>
+              <a href='https://mysterybean.vn/product-category/ca-phe-rang-xay/'>
+                <img src='https://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-lover.jpg' />
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    )
+  }
+}
+
+const renderMenu = (initMenu) => {
+  return initMenu.map((menu) => (
+    <li className='mega-menu-item'>
+      <Link href=''>
+        <a className='mega-menu-link'>
+          {menu.name}
+          {menu.cate.length > 0 ? (
+            <i className='fas fa-angle-down ml-1'></i>
+          ) : null}
+        </a>
+      </Link>
+      {menu.cate.length > 0
+        ? menu.isMega
+          ? renderSubMenu(menu.cate, true, menu.name)
+          : renderSubMenu(menu.cate, false)
+        : null}
+    </li>
+  ))
+}
 
 const Header = ({ children, isMobile }) => {
+  const dispatch = useDispatch()
+  const [dataMenu, setDataMenu] = useState([])
+
+  const categoriesData = useSelector((state) =>
+    state.categories && state.categories.menu ? state.categories.menu : []
+  )
+
+  const loadCategoryData = async (queryClause) => {
+    const categories = await loadDataPager(queryClause)
+    dispatch.categories.getMenu(
+      categories && categories.length ? categories : []
+    )
+  }
+
+  useEffect(() => {
+    const queryClause = `filter: {status: ${enumType.status.PUBLISHED}}, skip: 0, sort:INDEX_ASC`
+    loadCategoryData(queryClause)
+  }, [])
+
+  useEffect(() => {
+    const initMenu = generateCate(addField(categoriesData))
+    setDataMenu(initMenu)
+  }, [categoriesData])
+
+  console.log("category............", generateCate(addField(categoriesData)))
+
   return (
     <React.Fragment>
       <div className='header-top-container'>
@@ -35,7 +163,8 @@ const Header = ({ children, isMobile }) => {
             <img src='https://mysterybean.vn/wp-content/uploads/2020/10/Mytery-bean-Logo-Org.png' />
           </a>
           <ul className='clearfix mega-menu'>
-            <li className='mega-menu-item'>
+            {renderMenu(dataMenu)}
+            {/* <li className='mega-menu-item'>
               <a href='#' className='mega-menu-link'>
                 Trang chủ
               </a>
@@ -193,7 +322,7 @@ const Header = ({ children, isMobile }) => {
                   <a href='#'>Sport</a>
                 </li>
               </ul>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

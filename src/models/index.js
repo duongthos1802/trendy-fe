@@ -1,8 +1,9 @@
-
-import { homes } from './home'
+import { homes } from "./home"
+import { categories } from "./category"
 
 const rootModel = {
-  homes
+  homes,
+  categories,
 }
 
 export default rootModel
