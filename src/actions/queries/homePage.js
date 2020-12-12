@@ -43,5 +43,22 @@ export default {
         image
       }
     }`
+  },
+
+  categoryFeatures() {
+    return `
+    query {
+      categoryFeatures {
+        _id
+        name
+        products{
+          _id
+          name
+          pictures
+        }
+      }
+    }
+    `
   }
+
 }

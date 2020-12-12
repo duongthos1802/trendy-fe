@@ -68,9 +68,7 @@ const CategoryProduct = () => {
 
   const dispatch = useDispatch()
 
-  const categoryProduct = useSelector(state => state.homes && state.homes.categoryProduct ? state.homes.categoryProduct : null)
-
-  console.log("categoryProduct...", categoryProduct);
+  const categoryProduct = useSelector(state => state.homes && state.homes.categoryProduct ? state.homes.categoryProduct : [])
 
   const loadCategoryProduct = async () => {
     const cateProduct = await getCategoryProduct()

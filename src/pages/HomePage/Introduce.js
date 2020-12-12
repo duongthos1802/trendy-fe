@@ -22,8 +22,6 @@ const Introduce = () => {
   }, [])
 
   return introduceHomePage && (
-
-
     <div className="section background_bg introduce" style={{ backgroundImage: `url(${imageUtils.getBlockUrl(introduceHomePage.image, enumType.imagePath.HtmlBlock)})` }}>
       <div className="bg-overlay">
         <div className="container" >

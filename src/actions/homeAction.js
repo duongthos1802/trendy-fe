@@ -66,3 +66,24 @@ export const getCategoryProduct = async () => {
     console.log('error........', error);
   }
 }
+
+export const getCategoryFeature = async () => {
+  try {
+    const queryData = query.homeQuery.categoryFeatures()
+
+    const result = await apiService().post(GRAPHQL_PATH, {
+      query: queryData,
+      variables: null
+    })
+
+    if (result.status === 200 && !result.data.errors) {
+      const resultData = result.data.data
+        ? result.data.data.categoryFeatures
+        : null
+      return resultData
+    }
+
+  } catch (error) {
+    console.log('error........', error);
+  }
+}
