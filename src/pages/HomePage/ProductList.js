@@ -1,4 +1,5 @@
 import React from 'react'
+import CardProduct from '../../components/CardProduct'
 
 const ProductList = () => {
   return (
@@ -6,18 +7,26 @@ const ProductList = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xl-6 col-lg-8">
-            <div className="heading_s1 text-center animation" data-animation="fadeInUp" data-animation-delay="0.02s">
-              <h2>Cà phê rang xay</h2>
+            <div className="heading_s1 text-center" data-animation="fadeInUp" data-animation-delay="0.02s">
+              <h2 className="text-color-black">Cà phê rang xay</h2>
             </div>
             <div className="hr-title">
-                <hr/>
+              <hr />
             </div>
           </div>
         </div>
         <div className="row">
-          <div className="col-md-12">
-            <div className="small_divider clearfix" />
-            
+          <div className="col-md-3">
+            <CardProduct />
+          </div>
+          <div className="col-md-3">
+            <CardProduct />
+          </div>
+          <div className="col-md-3">
+            <CardProduct />
+          </div>
+          <div className="col-md-3">
+            <CardProduct />
           </div>
         </div>
       </div>
