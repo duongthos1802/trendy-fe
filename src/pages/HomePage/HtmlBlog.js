@@ -62,7 +62,7 @@ const HtmlBlock = () => {
                 </div>
               </div>
               <div className="row justify-content-center">
-                <div className="col-lg-6 background-color-primary-blue p-4">
+                <div className="col-lg-6 background-color-primary-blue p-4 block-second">
                   {
                     htmlContentWithBBCode(blockHomePage.blockSecond.content)
                   }
