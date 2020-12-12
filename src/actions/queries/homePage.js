@@ -29,5 +29,19 @@ export default {
         image
       }
     }`
+  },
+
+  categoryProduct() {
+    return `
+    query {
+      categoryProduct {
+        _id
+        option
+        slug
+        name
+        description
+        image
+      }
+    }`
   }
 }
