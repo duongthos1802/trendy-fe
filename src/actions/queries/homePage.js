@@ -29,5 +29,36 @@ export default {
         image
       }
     }`
+  },
+
+  categoryProduct() {
+    return `
+    query {
+      categoryProduct {
+        _id
+        option
+        slug
+        name
+        description
+        image
+      }
+    }`
+  },
+
+  categoryFeatures() {
+    return `
+    query {
+      categoryFeatures {
+        _id
+        name
+        products{
+          _id
+          name
+          pictures
+        }
+      }
+    }
+    `
   }
+
 }

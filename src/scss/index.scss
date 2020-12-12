@@ -17,3 +17,11 @@ body {
 .banner_section:not(.full_screen) .carousel-item {
   height: 500px;
 }
+
+.banner_section:not(.full_screen) {
+  height: unset;
+}
+
+.breadcrumb_section {
+  padding: 100px 0
+}

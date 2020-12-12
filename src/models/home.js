@@ -2,7 +2,9 @@ export const homes = {
   state: {
     bannerHome: [],
     htmlBlock: null,
-    introduceBlock: null
+    introduceBlock: null,
+    categoryProduct: [],
+    categoryFeature: []
   },
   reducers: {
     getHtmlBlock(state, payload) {
@@ -15,6 +17,18 @@ export const homes = {
       return {
         ...state,
         introduceBlock: payload
+      }
+    },
+    getCategoryProduct(state, payload) {
+      return {
+        ...state,
+        categoryProduct: payload
+      }
+    },
+    getCategoryFeature(state, payload) {
+      return {
+        ...state,
+        categoryFeature: payload
       }
     }
   },
