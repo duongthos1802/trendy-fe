@@ -85,14 +85,24 @@ const renderSubMenu = (data, isMega, parentData) => {
 const renderMenu = (initMenu) => {
   return initMenu.map((menu) => (
     <li className='mega-menu-item'>
-      <Link href={`/${menu.slug}`}>
+      {menu.cate.length > 0 ? (
         <a className='mega-menu-link'>
           {menu.name}
           {menu.cate.length > 0 ? (
             <i className='fas fa-angle-down ml-1'></i>
           ) : null}
         </a>
-      </Link>
+      ) : (
+        <Link href={`/${menu.slug}`}>
+          <a className='mega-menu-link'>
+            {menu.name}
+            {menu.cate.length > 0 ? (
+              <i className='fas fa-angle-down ml-1'></i>
+            ) : null}
+          </a>
+        </Link>
+      )}
+
       {menu.cate.length > 0
         ? menu.isMega
           ? renderSubMenu(menu.cate, true, menu)
