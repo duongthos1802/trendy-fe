@@ -10,9 +10,19 @@ exports.routers = {
       component: '/Product',
       text: ''
     },
-    product: {
+    productDetail: {
       path: '/product-detail',
       component: '/ProductDetail',
+      text: ''
+    },
+    recipe: {
+      path: '/recipe',
+      component: '/Recipe',
+      text: ''
+    },
+    recipeDetail: {
+      path: '/recipe-detail',
+      component: '/RecipeDetail',
       text: ''
     }
   }
