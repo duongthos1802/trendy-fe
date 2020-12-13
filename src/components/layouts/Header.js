@@ -28,7 +28,7 @@ const generateCate = (data) => {
 const renderSubMenu = (data, isMega, parentData) => {
   if (!isMega) {
     return (
-      <ul className='sub-menu'>
+      <ul className='sub-menu normal-sub'>
         {data.map((subItem) => (
           <li>
             <Link href={`/${parentData.slug}/${subItem.slug}`}>
@@ -40,7 +40,7 @@ const renderSubMenu = (data, isMega, parentData) => {
     )
   } else {
     return (
-      <ul className='sub-menu'>
+      <ul className='sub-menu mega-sub'>
         <li className='sub-menu-cate'>
           <Link href={`/${parentData.slug}`}>
             <a className='sub-menu-cate__title'>{parentData.name}</a>
@@ -85,7 +85,7 @@ const renderSubMenu = (data, isMega, parentData) => {
 const renderMenu = (initMenu) => {
   return initMenu.map((menu) => (
     <li className='mega-menu-item'>
-      <Link href={`/${menu.slug}`}>
+      <Link href=''>
         <a className='mega-menu-link'>
           {menu.name}
           {menu.cate.length > 0 ? (
@@ -103,6 +103,7 @@ const renderMenu = (initMenu) => {
 }
 
 const Header = ({ children, isMobile }) => {
+  console.log("isMobile.......", isMobile)
   const dispatch = useDispatch()
   const [dataMenu, setDataMenu] = useState([])
 
@@ -164,6 +165,9 @@ const Header = ({ children, isMobile }) => {
               <img src='https://mysterybean.vn/wp-content/uploads/2020/10/Mytery-bean-Logo-Org.png' />
             </a>
           </Link>
+          <a href='#' class='menu-mobile'>
+            &nbsp;
+          </a>
           <ul className='clearfix mega-menu'>
             {renderMenu(dataMenu)}
             {/* <li className='mega-menu-item'>
@@ -231,100 +235,7 @@ const Header = ({ children, isMobile }) => {
                   </ul>
                 </li>
               </ul>
-            </li>
-            <li className='mega-menu-item'>
-              <a href='#' className='mega-menu-link'>
-                Công thức<i className='fas fa-angle-down ml-1'></i>
-              </a>
-              <ul className='sub-menu'>
-                <li className='sub-menu-cate'>
-                  <a href='#' className='sub-menu-cate__title'>
-                    Coffee
-                  </a>
-                  <ul className='sub-menu-cate__link'>
-                    <li>
-                      <a href='#'>Cà phê rang xay</a>
-                    </li>
-                    <li>
-                      <a href='#'>Cà phê hoà tan</a>
-                    </li>
-                    <li>
-                      <a href='#'>Cà phê viên nén</a>
-                    </li>
-                    <li>
-                      <a href='#'>Cà phê túi lọc</a>
-                    </li>
-                  </ul>
-                </li>
-                <li className='sub-menu-gallery'>
-                  <ul>
-                    <li>
-                      <a href='https://mysterybean.vn/product-category/ca-phe-rang-xay/'>
-                        <img src='https://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-lover.jpg' />
-                      </a>
-                    </li>
-                    <li>
-                      <a href='https://mysterybean.vn/product-category/ca-phe-rang-xay/'>
-                        <img src='https://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-lover.jpg' />
-                      </a>
-                    </li>
-                    <li>
-                      <a href='https://mysterybean.vn/product-category/ca-phe-rang-xay/'>
-                        <img src='https://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-lover.jpg' />
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li className='mega-menu-item'>
-              <a href='#' className='mega-menu-link'>
-                Tin tức<i className='fas fa-angle-down ml-1'></i>
-              </a>
-              <ul className='sub-menu'>
-                <li>
-                  <a href='#'>Today</a>
-                </li>
-                <li>
-                  <a href='#'>Calendar</a>
-                </li>
-                <li>
-                  <a href='#'>Sport</a>
-                </li>
-              </ul>
-            </li>
-            <li className='mega-menu-item'>
-              <a href='#' className='mega-menu-link'>
-                Cảm hứng<i className='fas fa-angle-down ml-1'></i>
-              </a>
-              <ul className='sub-menu'>
-                <li>
-                  <a href='#'>Today</a>
-                </li>
-                <li>
-                  <a href='#'>Calendar</a>
-                </li>
-                <li>
-                  <a href='#'>Sport</a>
-                </li>
-              </ul>
-            </li>
-            <li className='mega-menu-item'>
-              <a href='#' className='mega-menu-link'>
-                Liên hệ<i className='fas fa-angle-down ml-1'></i>
-              </a>
-              <ul className='sub-menu'>
-                <li>
-                  <a href='#'>Today</a>
-                </li>
-                <li>
-                  <a href='#'>Calendar</a>
-                </li>
-                <li>
-                  <a href='#'>Sport</a>
-                </li>
-              </ul>
-            </li> */}
+  </li> */}
           </ul>
         </div>
       </div>

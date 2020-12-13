@@ -121,6 +121,9 @@
   padding: 20px 0;
   margin: 0;
 }
+.menu .mega-menu-item:hover > .sub-menu {
+  display: block !important;
+}
 
 .menu .mega-menu-link {
   text-decoration: none;
