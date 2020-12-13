@@ -1,42 +1,20 @@
 import React from 'react'
 import CardProduct from '../../components/CardProduct'
 
-const data = [
-  {
-    pictures: ["1607798282618-04-Pure-Black-s-800x800.jpg"],
-    name: "Highland Unlock",
-    category: {
-      name: "Cà phê rang xay"
-    }
-  },
-  {
-    pictures: ["1607798282618-04-Pure-Black-s-800x800.jpg"],
-    name: "Highland Unlock",
-    category: {
-      name: "Cà phê rang xay"
-    }
-  },
-  {
-    pictures: ["1607798282618-04-Pure-Black-s-800x800.jpg"],
-    name: "Highland Unlock",
-    category: {
-      name: "Cà phê rang xay"
-    }
-  }
-]
-
-const ListProduct = () => {
+const ListProduct = ({ products, category }) => {
   return (
     <div className="row">
       {
-        data.map(product => (
-          <div className="col-6">
-            <CardProduct
-              product={product}
-              category={product.category}
-            />
-          </div>
-        ))
+        products && products.length
+          ? products.map(product => (
+            <div className="col-6">
+              <CardProduct
+                product={product}
+                category={category}
+              />
+            </div>
+          ))
+          : null
       }
 
 

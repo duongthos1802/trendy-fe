@@ -3,19 +3,24 @@ import Layout from '../../components/layouts/Layout'
 import Banner from '../../components/Banner'
 import ListProduct from './ListProduct'
 import MenuRight from '../../components/MenuRight'
+import { getCategoryBySlug } from '../../actions/productAction'
 
 const Product = ({ category }) => {
+
   return (
     <Layout>
-      <Banner />
+      <Banner category={category} />
       <div className="section">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="font-weight-bold py-2">Cà phê rang xay</h2>
+              <h2 className="font-weight-bold py-2">{category?.name}</h2>
             </div>
             <div className="col-md-8 col-12">
-              <ListProduct />
+              <ListProduct
+                products={category?.products ?? []}
+                category={category}
+              />
             </div>
             <div className="col-md-4 col-12">
               <MenuRight />
@@ -30,13 +35,17 @@ const Product = ({ category }) => {
 
 Product.getInitialProps = async (ctx) => {
   const { slug } = ctx.query
-  if (slug) {
 
+  let category = []
+  if (slug) {
+    const query = `filter: { slug: "${slug}" }`
+    category = await getCategoryBySlug(query)
+
+    console.log("cate...............", category);
   }
 
-
   return {
-    category: []
+    category: category[0]
   }
 }
 

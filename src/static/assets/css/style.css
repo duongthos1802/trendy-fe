@@ -4284,7 +4284,7 @@ footer .widget_title {
 	line-height: normal;
 }
 .page_title_light *, .page_title_light .breadcrumb-item, .page_title_light .breadcrumb-item::before {
-	color: #fff;
+	color: black;
 }
 .breadcrumb {
 	background-color: transparent;
