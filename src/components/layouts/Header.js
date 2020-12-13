@@ -12,26 +12,26 @@ const addField = (data) => {
     })
   )
 }
+// hi hi
 
 const generateCate = (data) => {
   let result = data.filter((item) => !item.parent)
   const child = data.filter((item) => !!item.parent)
   child.map((item) => {
     const parentIndex = result.findIndex((el) => item.parent === el._id)
-    console.log("parentIndex.........", parentIndex)
     result[parentIndex].cate.push(item)
   })
 
   return result
 }
 
-const renderSubMenu = (data, isMega, parentName) => {
+const renderSubMenu = (data, isMega, parentData) => {
   if (!isMega) {
     return (
       <ul className='sub-menu'>
         {data.map((subItem) => (
           <li>
-            <Link href=''>
+            <Link href={`/${parentData.slug}/${subItem.slug}`}>
               <a>{subItem.name}</a>
             </Link>
           </li>
@@ -42,8 +42,8 @@ const renderSubMenu = (data, isMega, parentName) => {
     return (
       <ul className='sub-menu'>
         <li className='sub-menu-cate'>
-          <Link href=''>
-            <a className='sub-menu-cate__title'>{parentName}</a>
+          <Link href={`/${parentData.slug}`}>
+            <a className='sub-menu-cate__title'>{parentData.name}</a>
           </Link>
           <ul className='sub-menu-cate__link'>
             {/* <li>
@@ -51,7 +51,7 @@ const renderSubMenu = (data, isMega, parentName) => {
             </li> */}
             {data.map((subItem) => (
               <li>
-                <Link href=''>
+                <Link href={`/${parentData.slug}/${subItem.slug}`}>
                   <a>{subItem.name}</a>
                 </Link>
               </li>
@@ -85,7 +85,7 @@ const renderSubMenu = (data, isMega, parentName) => {
 const renderMenu = (initMenu) => {
   return initMenu.map((menu) => (
     <li className='mega-menu-item'>
-      <Link href=''>
+      <Link href={`/${menu.slug}`}>
         <a className='mega-menu-link'>
           {menu.name}
           {menu.cate.length > 0 ? (
@@ -95,8 +95,8 @@ const renderMenu = (initMenu) => {
       </Link>
       {menu.cate.length > 0
         ? menu.isMega
-          ? renderSubMenu(menu.cate, true, menu.name)
-          : renderSubMenu(menu.cate, false)
+          ? renderSubMenu(menu.cate, true, menu)
+          : renderSubMenu(menu.cate, false, menu)
         : null}
     </li>
   ))
@@ -159,9 +159,11 @@ const Header = ({ children, isMobile }) => {
       </div>
       <div className='menu-container sticky-top'>
         <div className='menu'>
-          <a href='#' className='logo '>
-            <img src='https://mysterybean.vn/wp-content/uploads/2020/10/Mytery-bean-Logo-Org.png' />
-          </a>
+          <Link href='/'>
+            <a className='logo '>
+              <img src='https://mysterybean.vn/wp-content/uploads/2020/10/Mytery-bean-Logo-Org.png' />
+            </a>
+          </Link>
           <ul className='clearfix mega-menu'>
             {renderMenu(dataMenu)}
             {/* <li className='mega-menu-item'>
