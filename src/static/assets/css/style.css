@@ -5936,14 +5936,14 @@ select option {
 .widget_archive li a {
 	position: relative;
 }
-.widget_categories li a::before,
+/* .widget_categories li a::before,
 .widget_archive li a:before {
 	content: "\f3d1";
 	font-family: "Ionicons";
 	height: auto;
 	line-height: normal;
 	margin-right: 10px;
-}
+} */
 .widget_categories li:last-child,
 .widget_archive li:last-child {
 	padding-bottom: 0;
