@@ -4,7 +4,7 @@ import Banner from '../../components/Banner'
 import ListProduct from './ListProduct'
 import MenuRight from '../../components/MenuRight'
 
-const Product = () => {
+const Product = ({ category }) => {
   return (
     <Layout>
       <Banner />
@@ -26,6 +26,18 @@ const Product = () => {
 
     </Layout>
   )
+}
+
+Product.getInitialProps = async (ctx) => {
+  const { slug } = ctx.query
+  if (slug) {
+
+  }
+
+
+  return {
+    category: []
+  }
 }
 
 export default Product

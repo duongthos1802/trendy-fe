@@ -6,7 +6,7 @@ exports.routers = {
       text: "",
     },
     product: {
-      path: "/san-pham",
+      path: "/san-pham/:slug",
       component: "/Product",
       text: "",
     },
