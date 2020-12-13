@@ -9,6 +9,11 @@ exports.routers = {
       path: '/product',
       component: '/Product',
       text: ''
+    },
+    product: {
+      path: '/product-detail',
+      component: '/ProductDetail',
+      text: ''
     }
   }
 }
