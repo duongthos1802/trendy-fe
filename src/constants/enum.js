@@ -12,7 +12,6 @@ const imagePath = {
 export const categoryType = {
   HOME: 'Home',
   PRODUCT: 'Product',
-  HtmlBlock: 'html_block_pictures',
   RECIPE: 'Recipe',
   BLOG: 'Blog',
   INSPIRED: 'Inspired'
@@ -22,7 +21,6 @@ export const status = {
   PUBLISHED: 'Published',
   DELETED: 'Deleted'
 }
-
 
 export default {
   imagePath,

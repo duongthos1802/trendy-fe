@@ -6,6 +6,7 @@ export default {
           _id
           name
           slug
+          option
           products(filter: {status: Published}){
             _id
             name

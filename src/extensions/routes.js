@@ -1,25 +1,43 @@
-// import { enumType } from "../constants"
-// import routes from "../constants/routes"
+import { enumType } from "../constants"
 
-// export const generateRoutes = (option) => {
+const titleRoutes = {
+  HOME: "Nguyên liệu Trendy",
+  PRODUCT: "Sản phẩm",
+  RECIPE: "Công thức"
+}
 
-//   switch (option) {
-//     case enumType.categoryType.HOME:
-//       return ''
-//     case enumType.categoryType.PRODUCT:
-//       return routes.PRODUCT
-//     case enumType.categoryType.RECIPE:
-//       return routes.RECIPE
-//     case enumType.categoryType.VIDEO:
-//       return routes.VIDEO
-//     case enumType.categoryType.SERVICE:
-//       return routes.SERVICES
-//     case enumType.categoryType.BLOG:
-//       return routes.BLOG
-//     default:
-//       return ''
-//   }
-// }
+const pathRoutes = {
+  HOME: "/",
+  PRODUCT: "/san-pham",
+  RECIPE: "cong-thuc"
+}
+
+export const generateTitleBreadcrumb = (option) => {
+  switch (option) {
+    case enumType.categoryType.HOME:
+      return titleRoutes.HOME
+    case enumType.categoryType.PRODUCT:
+      return titleRoutes.PRODUCT
+    case enumType.categoryType.RECIPE:
+      return titleRoutes.RECIPE
+    default:
+      return titleRoutes.HOME
+  }
+}
+
+export const generatePath = (option) => {
+
+  switch (option) {
+    case enumType.categoryType.HOME:
+      return pathRoutes.HOME
+    case enumType.categoryType.PRODUCT:
+      return pathRoutes.PRODUCT
+    case enumType.categoryType.RECIPE:
+      return pathRoutes.RECIPE
+    default:
+      return pathRoutes.HOME
+  }
+}
 
 // export const getIdByUrl = (url) => {
 //   if (!url) return null

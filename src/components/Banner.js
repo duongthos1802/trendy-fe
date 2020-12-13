@@ -1,15 +1,19 @@
 import React from 'react'
+import { generateTitleBreadcrumb, generatePath } from '../extensions/routes'
+import { categoryType } from '../constants/enum'
+import Link from 'next/link'
+import className from 'classnames'
 
 const Banner = ({ category }) => {
 
   const breadcrumb = [
     {
-      name: "Nguyên liệu Trendy",
-      path: "/",
+      name: generateTitleBreadcrumb(categoryType.HOME),
+      path: generatePath(categoryType.HOME)
     },
     {
-      name: "Sản phẩm",
-      path: "/san-pham"
+      name: generateTitleBreadcrumb(category?.option),
+      path: generatePath(category?.option)
     },
     {
       name: `${category?.name}`,
@@ -30,11 +34,17 @@ const Banner = ({ category }) => {
             <ol className="breadcrumb">
               {
                 breadcrumb.map(item => (
-                  <li className="breadcrumb-item active text-color-black font-weight-bold">{item?.name}</li>
+                  <li
+                    className={className(`breadcrumb-item font-weight-bold text-color-white active text-color-black`, {
+
+                    })}
+                  >
+                    <Link href={item.path}>
+                      {item?.name}
+                    </Link>
+                  </li>
                 ))
               }
-              {/* <li className="breadcrumb-item text-color-black font-weight-bold">Nguyên liệu Trendy</li>
-              <li className="breadcrumb-item active text-color-black font-weight-bold">Sản phẩm</li> */}
             </ol>
           </div>
         </div>
