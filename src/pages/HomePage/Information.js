@@ -19,7 +19,7 @@ const Information = () => {
             </div>
           </div>
           <div className="col-lg-4 col-md-6 d-flex justify-content-center">
-            <div className="animation d-flex" data-animation="fadeInUp" data-animation-delay="0.03s">
+            <div className="d-flex" data-animation="fadeInUp" data-animation-delay="0.03s">
               <div className="icon mb-0 mr-3">
                 {/* <i className="flaticon-dining-table" /> */}
                 <i className="fas fa-map-marker-alt"></i>
@@ -31,7 +31,7 @@ const Information = () => {
             </div>
           </div>
           <div className="col-lg-4 col-md-6 d-flex justify-content-center">
-            <div className="animation d-flex" data-animation="fadeInUp" data-animation-delay="0.04s">
+            <div className="d-flex" data-animation="fadeInUp" data-animation-delay="0.04s">
               <div className="icon mb-0 mr-3">
                 {/* <i className="flaticon-destination" /> */}
                 <i className="far fa-envelope"></i>

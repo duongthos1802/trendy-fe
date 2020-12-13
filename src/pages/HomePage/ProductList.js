@@ -18,42 +18,46 @@ const ProductList = () => {
     loadCategoryFeature()
   }, [])
   return categoryFeature && categoryFeature.length && (
-    <>
+    <div className="py-4">
       {
         categoryFeature.map(category => (
-          <div className="section">
-            <div className="container">
-              <div className="row justify-content-center">
-                <div className="col-xl-6 col-lg-8">
-                  <div className="heading_s1 text-center" data-animation="fadeInUp" data-animation-delay="0.02s">
-                    <h2 className="text-color-black">{category?.name}</h2>
-                  </div>
-                  <div className="hr-title">
-                    <hr />
+          <div>
+            {
+              category.products && category.products.length
+                ? <div className="section py-4">
+                  <div className="container">
+                    <div className="row justify-content-center">
+                      <div className="col-xl-6 col-lg-8">
+                        <div className="heading_s1 text-center" data-animation="fadeInUp" data-animation-delay="0.02s">
+                          <h2 className="text-color-black">{category?.name}</h2>
+                        </div>
+                        <div className="hr-title">
+                          <hr />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      {
+                        category.products.map(product => (
+                          <div className="col-md-3">
+                            <CardProduct
+                              product={product}
+                              category={category}
+                            />
+                          </div>
+                        ))
+                      }
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="row">
+                : null
+            }
 
-                {
-                  category.products && category.products.length
-                    ? category.products.map(product => (
-                      <div className="col-md-3">
-                        <CardProduct
-                          product={product}
-                          category={category}
-                        />
-                      </div>
-                    ))
-                    : null
-
-                }
-              </div>
-            </div>
           </div>
+
         ))
       }
-    </>
+    </div>
   )
 }
 
