@@ -11,7 +11,7 @@ exports.routers = {
       text: "",
     },
     productDetail: {
-      path: "/product-detail",
+      path: "/san-pham/chi-tiet/:slug",
       component: "/ProductDetail",
       text: "",
     },
@@ -23,6 +23,16 @@ exports.routers = {
     recipeDetail: {
       path: "/cong-thuc/chi-tiet/:slug",
       component: "/RecipeDetail",
+      text: "",
+    },
+    blog: {
+      path: "/tin-tuc/:slug",
+      component: "/Blog",
+      text: "",
+    },
+    blogDetail: {
+      path: "/tin-tuc/chi-tiet/:slug",
+      component: "/BlogDetail",
       text: "",
     },
   },

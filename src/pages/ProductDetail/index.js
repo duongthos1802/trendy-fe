@@ -64,13 +64,28 @@ const ProductDetail = () => {
               </div>
             </div>
           </div>
-
-
         </div>
-
       </div>
     </Layout>
   )
+}
+
+ProductDetail.getInitialProps = async (ctx) => {
+  const { slug } = ctx.query
+
+  console.log('slug.....', slug);
+
+  // const id = getIdByUrl
+
+  // let category = []
+  // if (slug) {
+  //   const query = `filter: { slug: "${slug}" }`
+  //   category = await getCategoryBySlug(query)
+  // }
+
+  return {
+    product: null
+  }
 }
 
 export default ProductDetail

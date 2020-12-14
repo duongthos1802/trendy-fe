@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import CardProduct from '../../components/CardProduct'
 import { useDispatch, useSelector } from 'react-redux'
 import { getCategoryFeature } from '../../actions/homeAction'
+import Link from 'next/link'
 
 const ProductList = () => {
 
@@ -29,7 +30,11 @@ const ProductList = () => {
                     <div className="row justify-content-center">
                       <div className="col-xl-6 col-lg-8">
                         <div className="heading_s1 text-center" data-animation="fadeInUp" data-animation-delay="0.02s">
-                          <h2 className="text-color-black">{category?.name}</h2>
+                          <Link href={`san-pham/${category?.slug}`}>
+                            <a>
+                              <h2 className="text-color-black">{category?.name}</h2>
+                            </a>
+                          </Link>
                         </div>
                         <div className="hr-title">
                           <hr />
@@ -40,10 +45,14 @@ const ProductList = () => {
                       {
                         category.products.map(product => (
                           <div className="col-md-3">
-                            <CardProduct
-                              product={product}
-                              category={category}
-                            />
+                            <Link href={`san-pham/chi-tiet/${product?.slug}-${product._id}`}>
+                              <a>
+                                <CardProduct
+                                  product={product}
+                                  category={category}
+                                />
+                              </a>
+                            </Link>
                           </div>
                         ))
                       }
