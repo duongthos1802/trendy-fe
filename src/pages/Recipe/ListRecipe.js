@@ -1,45 +1,46 @@
-import React from 'react'
-import CardProduct from '../../components/CardProduct'
+import React from "react"
+import CardProduct from "../../components/CardProduct"
+import Link from "next/link"
 
 const data = [
   {
     pictures: ["1607798282618-04-Pure-Black-s-800x800.jpg"],
     name: "Highland Unlock",
     category: {
-      name: "Cà phê rang xay"
-    }
+      name: "Cà phê rang xay",
+    },
   },
   {
     pictures: ["1607798282618-04-Pure-Black-s-800x800.jpg"],
     name: "Highland Unlock",
     category: {
-      name: "Cà phê rang xay"
-    }
+      name: "Cà phê rang xay",
+    },
   },
   {
     pictures: ["1607798282618-04-Pure-Black-s-800x800.jpg"],
     name: "Highland Unlock",
     category: {
-      name: "Cà phê rang xay"
-    }
-  }
+      name: "Cà phê rang xay",
+    },
+  },
 ]
 
-const ListRecipe = () => {
+const ListRecipe = ({ recipes, category }) => {
+  console.log("recipe,,,,,,,", recipes)
   return (
-    <div className="row">
-      {
-        data.map(product => (
-          <div className="col-6">
-            <CardProduct
-              product={product}
-              category={product.category}
-            />
-          </div>
-        ))
-      }
-
-
+    <div className='row'>
+      {recipes && recipes.length
+        ? recipes.map((recipe) => (
+            <div className='col-6'>
+              <Link href={`cong-thuc/chi-tiet/${recipe?.slug}-${recipe._id}`}>
+                <a>
+                  <CardProduct recipe={recipe} category={category} />
+                </a>
+              </Link>
+            </div>
+          ))
+        : null}
     </div>
   )
 }

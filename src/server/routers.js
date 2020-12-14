@@ -16,7 +16,7 @@ exports.routers = {
       text: "",
     },
     recipe: {
-      path: "/recipe",
+      path: "/cong-thuc/:slug",
       component: "/Recipe",
       text: "",
     },
