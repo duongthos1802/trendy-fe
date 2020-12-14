@@ -133,6 +133,12 @@
   margin-bottom: auto;
   cursor: pointer;
 }
+.menu .mega-menu-link:not([href]) {
+  color: #292b2c !important;
+}
+.menu .mega-menu-link:not([href]):hover {
+  color: #ff324d !important;
+}
 .menu .sub-menu {
   display: none;
   width: calc(100vw + 10px);

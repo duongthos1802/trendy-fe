@@ -1,11 +1,11 @@
-
-@import 'mixins';
-@import 'clolors';
-@import 'fontsize';
-@import 'ckEditor';
-@import 'homepage';
+@import "mixins";
+@import "clolors";
+@import "fontsize";
+@import "ckEditor";
+@import "homepage";
 @import "menu";
 @import "product";
+@import "recipe";
 
 body {
   background: #ffffff none repeat scroll 0 0;
@@ -23,5 +23,5 @@ body {
 }
 
 .breadcrumb_section {
-  padding: 100px 0
+  padding: 100px 0;
 }

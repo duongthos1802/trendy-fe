@@ -1,11 +1,13 @@
 import React from "react"
+import Banner from "../../components/Banner"
 import Layout from "../../components/layouts/Layout"
 
 const RecipeDetail = () => {
   return (
     <Layout>
+      <Banner />
       <div className='container'>
-        <div className='row '>
+        <div className='row recipe'>
           <div className='recipe-media col-md-12 col-xl-6'>
             <img src='https://www.monin.com/asia/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/8/8/881-bully_mary-hd.jpg' />
           </div>
@@ -23,15 +25,15 @@ const RecipeDetail = () => {
                     <li>Mint leaves</li>
                   </ul>
                 </div>
-              </div>
-              <div>
-                <h3>Instructions </h3>
-                <ol>
-                  <li>Combine all ingredients into blender</li>
-                  <li>Blend well</li>
-                  <li>Fill glass with ice</li>
-                  <li>Top up the mix</li>
-                </ol>
+                <div>
+                  <h3>Instructions </h3>
+                  <ol>
+                    <li>Combine all ingredients into blender</li>
+                    <li>Blend well</li>
+                    <li>Fill glass with ice</li>
+                    <li>Top up the mix</li>
+                  </ol>
+                </div>
               </div>
             </div>
           </div>
