@@ -15,5 +15,22 @@ export default {
           }
         }
       }`
+  },
+
+  getProductById(clause) {
+    return `
+      query {
+        product(${clause}) {
+          _id
+          name
+          slug
+          description
+          pictures
+          packing
+          preservation
+          recipeSuggestion
+          application
+        }
+      }`
   }
 }
