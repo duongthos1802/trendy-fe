@@ -25,5 +25,15 @@ exports.routers = {
       component: "/RecipeDetail",
       text: "",
     },
+    blog: {
+      path: "/tin-tuc/:slug",
+      component: "/Blog",
+      text: "",
+    },
+    blogDetail: {
+      path: "/tin-tuc/chi-tiet/:slug",
+      component: "/BlogDetail",
+      text: "",
+    },
   },
 }

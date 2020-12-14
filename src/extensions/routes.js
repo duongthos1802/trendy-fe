@@ -38,9 +38,9 @@ export const generatePath = (option) => {
   }
 }
 
-// export const getIdByUrl = (url) => {
-//   if (!url) return null
-//   const arrayStringUrl = url.split('-')
-//   const idUrl = arrayStringUrl.slice(arrayStringUrl.length - 1, arrayStringUrl.length)
-//   return idUrl
-// }
+export const getIdByUrl = (url) => {
+  if (!url) return null
+  const arrayStringUrl = url.split('-')
+  const idUrl = arrayStringUrl.slice(arrayStringUrl.length - 1, arrayStringUrl.length)
+  return idUrl
+}

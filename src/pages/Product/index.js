@@ -40,8 +40,6 @@ Product.getInitialProps = async (ctx) => {
   if (slug) {
     const query = `filter: { slug: "${slug}" }`
     category = await getCategoryBySlug(query)
-
-    console.log("cate...............", category);
   }
 
   return {
