@@ -26,7 +26,7 @@ const CardProduct = ({ product, category, recipe }) => {
         </div>
         <div className='title-product'>
           <p className='mb-0 font-size-18 font-weight-bold text-color-black'>
-            {product?.name}
+            {product ? product?.name : recipe?.name}
           </p>
           <p className='mb-0 category'>{category?.name}</p>
         </div>
