@@ -2,7 +2,7 @@ import React from 'react'
 
 const MenuRight = () => {
   return (
-    <div class="sidebar px-5">
+    <div class="sidebar px-5 d-none d-md-block">
       <div className="widget">
         <h5 className="font-weight-bold">Danh mục</h5>
         <ul className="widget_categories mt-4">
