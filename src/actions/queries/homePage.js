@@ -51,9 +51,11 @@ export default {
       categoryFeatures {
         _id
         name
+        slug
         products{
           _id
           name
+          slug
           pictures
         }
       }

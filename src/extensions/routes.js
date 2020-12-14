@@ -26,7 +26,6 @@ export const generateTitleBreadcrumb = (option) => {
 }
 
 export const generatePath = (option) => {
-
   switch (option) {
     case enumType.categoryType.HOME:
       return pathRoutes.HOME

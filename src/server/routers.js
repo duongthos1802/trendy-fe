@@ -11,7 +11,7 @@ exports.routers = {
       text: "",
     },
     productDetail: {
-      path: "/product-detail",
+      path: "/san-pham/chi-tiet/:slug",
       component: "/ProductDetail",
       text: "",
     },

@@ -1,5 +1,6 @@
 import React from 'react'
 import CardProduct from '../../components/CardProduct'
+import Link from 'next/link'
 
 const ListProduct = ({ products, category }) => {
   return (
@@ -8,10 +9,14 @@ const ListProduct = ({ products, category }) => {
         products && products.length
           ? products.map(product => (
             <div className="col-6">
-              <CardProduct
-                product={product}
-                category={category}
-              />
+              <Link href={`san-pham/chi-tiet/${product?.slug}-${product._id}`}>
+                <a>
+                  <CardProduct
+                    product={product}
+                    category={category}
+                  />
+                </a>
+              </Link>
             </div>
           ))
           : null
