@@ -21,7 +21,7 @@ exports.routers = {
       text: "",
     },
     recipeDetail: {
-      path: "/recipe-detail",
+      path: "/cong-thuc/chi-tiet/:slug",
       component: "/RecipeDetail",
       text: "",
     },

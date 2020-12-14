@@ -1,39 +1,73 @@
 import React from "react"
+import ImageGallery from "react-image-gallery"
+import { getRecipeDetail } from "../../actions/recipeAction"
 import Banner from "../../components/Banner"
 import Layout from "../../components/layouts/Layout"
+import { enumType } from "../../constants"
+import { htmlContentWithBBCode } from "../../extensions/html"
+import { getIdByUrl } from "../../extensions/routes"
+import { imageUtils } from "../../utils"
 
-const RecipeDetail = () => {
+const renderImageGallery = (pictures) => {
+  let imagesData = []
+  if (pictures && pictures.length) {
+    imagesData = pictures.map((item, index) => {
+      const img = imageUtils.getUrlImageProduct(item, enumType.imagePath.Recipe)
+      return { original: img, thumbnail: img }
+    })
+  }
+  return (
+    <ImageGallery
+      items={imagesData}
+      showThumbnails={true}
+      sizes={"width:400px;height:400px"}
+    />
+  )
+}
+
+const RecipeDetail = ({ recipe }) => {
   return (
     <Layout>
       <Banner />
       <div className='container'>
         <div className='row recipe'>
-          <div className='recipe-media col-md-12 col-xl-6'>
-            <img src='https://www.monin.com/asia/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/8/8/881-bully_mary-hd.jpg' />
+          <div className='recipe-media col-md-12 col-xl-5'>
+            {renderImageGallery(recipe?.pictures)}
           </div>
-          <div className='recipe-info-main col-md-12 col-xl-6'>
+          <div className='recipe-info-main col-md-12 col-xl-7'>
             <div className='recipe-info-main-content'>
-              <h1 className='page-title'>3R (Regenerate, Recharge, Relieve)</h1>
+              <h1 className='page-title'>{recipe.name}</h1>
               <div className='recipe_content_information'>
-                <div>
-                  <h3>Ingredients</h3>
-                  <ul>
-                    <li>15 ml Le Fruit Williams Pear</li>
-                    <li>100 ml chamomile tea&nbsp;</li>
-                    <li>100 ml watermelon juice</li>
-                    <li>Cucumber slice</li>
-                    <li>Mint leaves</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3>Instructions </h3>
-                  <ol>
-                    <li>Combine all ingredients into blender</li>
-                    <li>Blend well</li>
-                    <li>Fill glass with ice</li>
-                    <li>Top up the mix</li>
-                  </ol>
-                </div>
+                {recipe?.ingredient ? (
+                  <div>
+                    <h3>Ingredients</h3>
+                    <div className='recipe_content'>
+                      {recipe.ingredient
+                        ? htmlContentWithBBCode(recipe.ingredient)
+                        : null}
+                    </div>
+                  </div>
+                ) : null}
+                {recipe?.method ? (
+                  <div>
+                    <h3>Method</h3>
+                    <div className='recipe_content'>
+                      {recipe.ingredient
+                        ? htmlContentWithBBCode(recipe.method)
+                        : null}
+                    </div>
+                  </div>
+                ) : null}
+                {recipe?.decorate ? (
+                  <div>
+                    <h3>Decorate</h3>
+                    <div className='recipe_content'>
+                      {recipe.decorate
+                        ? htmlContentWithBBCode(recipe.decorate)
+                        : null}
+                    </div>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
@@ -41,6 +75,17 @@ const RecipeDetail = () => {
       </div>
     </Layout>
   )
+}
+
+RecipeDetail.getInitialProps = async (context) => {
+  const { slug } = context.query
+  console.log("slug........", slug)
+  const id = getIdByUrl(slug)
+  const clause = `_id: "${id}"`
+
+  const recipeDetail = await getRecipeDetail(clause)
+
+  return { recipe: recipeDetail }
 }
 
 export default RecipeDetail

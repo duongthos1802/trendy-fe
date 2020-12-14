@@ -3,13 +3,13 @@ import { enumType } from "../constants"
 const titleRoutes = {
   HOME: "Nguyên liệu Trendy",
   PRODUCT: "Sản phẩm",
-  RECIPE: "Công thức"
+  RECIPE: "Công thức",
 }
 
 const pathRoutes = {
   HOME: "/",
   PRODUCT: "/san-pham",
-  RECIPE: "cong-thuc"
+  RECIPE: "cong-thuc",
 }
 
 export const generateTitleBreadcrumb = (option) => {
@@ -40,7 +40,10 @@ export const generatePath = (option) => {
 
 export const getIdByUrl = (url) => {
   if (!url) return null
-  const arrayStringUrl = url.split('-')
-  const idUrl = arrayStringUrl.slice(arrayStringUrl.length - 1, arrayStringUrl.length)
+  const arrayStringUrl = url.split("-")
+  const idUrl = arrayStringUrl.slice(
+    arrayStringUrl.length - 1,
+    arrayStringUrl.length
+  )
   return idUrl
 }
