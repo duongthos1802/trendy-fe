@@ -4,6 +4,9 @@ import Slider from "react-slick"
 import { useDispatch, useSelector } from 'react-redux';
 import { getCategoryProduct } from '../../actions/homeAction';
 import { htmlContentWithBBCode } from '../../extensions/html';
+import Link from 'next/link';
+import { enumType } from '../../constants';
+import { imageUtils } from '../../utils';
 
 
 const NextArrow = (props) => {
@@ -86,17 +89,22 @@ const CategoryProduct = () => {
           {
             categoryProduct.map(category => (
               <div>
-                <div className="kd-photobox kd-animated fadeInUp kd-animate">
-                  <a className="full-pbox-link" href="https://mysterybean.vn/product-category/ca-phe-hoa-tan/?lang=vi" title="">
-                    <div className="photobox-img">
-                      <img src="https://mysterybean.vn/wp-content/uploads/2020/10/Salted-Caramel.jpg" />
-                    </div>
-                    <div className="phb-content text-left ">
-                      <h5 className="mb-3">{category?.name}</h5>
-                      <p className="font-size-14 line-height-20">{htmlContentWithBBCode(category?.description)}</p>
+                <Link href={`/san-pham/${category?.slug}`}>
+                  <a>
+                    <div className="kd-photobox kd-animated fadeInUp kd-animate">
+                      <a className="full-pbox-link" href="https://mysterybean.vn/product-category/ca-phe-hoa-tan/?lang=vi" title="">
+                        <div className="photobox-img">
+                          {/* <img src="https://mysterybean.vn/wp-content/uploads/2020/10/Salted-Caramel.jpg" /> */}
+                          <img src={imageUtils.getBlockUrl(category.image, enumType.imagePath.Category)} />
+                        </div>
+                        <div className="phb-content text-left ">
+                          <h5 className="mb-3">{category?.name}</h5>
+                          <p className="font-size-14 line-height-20">{htmlContentWithBBCode(category?.description)}</p>
+                        </div>
+                      </a>
                     </div>
                   </a>
-                </div>
+                </Link>
               </div>
             ))
           }
