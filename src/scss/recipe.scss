@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600&display=swap");
-
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
 .recipe {
   margin: 2em 0;
   padding: 0;
@@ -10,9 +10,10 @@
 .recipe-media {
   text-align: center;
   padding: 2em;
+
   img {
-    max-width: 450px;
-    max-height: 450px;
+    max-width: 500px;
+    max-height: 500px;
   }
 }
 
@@ -36,11 +37,11 @@
         font-weight: 600;
         font-size: 1.5em;
       }
-      ol,
-      ul {
+      .recipe_content {
         margin-left: 2em;
-        li {
+        p {
           padding: 0.2em;
+          margin-bottom: 10px !important;
         }
       }
     }
