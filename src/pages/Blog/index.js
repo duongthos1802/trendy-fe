@@ -60,7 +60,7 @@ const Blog = (props) => {
                       </div>
                     </Link>
                   )
-              )
+                )
             }
           </div>
         </div>
@@ -70,11 +70,19 @@ const Blog = (props) => {
 }
 
 Blog.getInitialProps = async ({ query }) => {
+
+  let blogs = null
   const skip = (query.pageIndex - 1) * query.pageSize
   const limit = query.pageSize || DEFAULT_PAGE_SIZE
-  const clause = `where: { slug: "${routers.defined.blog}", skip: ${skip || 0} limit: ${limit}}`
 
-  const blogs = await getBlogBySlugId(clause)
+  const { slug } = query
+  if (slug) {
+    const clause = `where: { slug: "${slug}", skip: ${skip || 0} limit: ${limit}}`
+    blogs = await getBlogBySlugId(clause)
+  } else {
+    const clause = `where: { slug: "tin-tuc", skip: ${skip || 0} limit: ${limit}}`
+    blogs = await getBlogBySlugId(clause)
+  }
 
   return {
     props: {
