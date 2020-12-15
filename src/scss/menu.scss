@@ -78,6 +78,14 @@
 .menu .logo img {
   min-width: 150px !important;
 }
+
+
+@media screen and (max-width: 959px) {
+  .menu .logo img {
+    padding-left: 20px;
+  }
+}
+
 .menu-mobile {
   display: none;
   padding: 20px;
