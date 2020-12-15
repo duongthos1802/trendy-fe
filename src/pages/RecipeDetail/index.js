@@ -28,7 +28,7 @@ const renderImageGallery = (pictures) => {
 const RecipeDetail = ({ recipe }) => {
   return (
     <Layout>
-      <Banner />
+      {/* <Banner /> */}
       <div className='container'>
         <div className='row recipe'>
           <div className='recipe-media col-md-12 col-xl-5'>
