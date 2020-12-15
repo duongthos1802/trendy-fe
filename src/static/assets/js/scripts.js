@@ -78,12 +78,12 @@ PAGE JS
   //Main navigation scroll spy for shadow
 
   $(window).on("load", function () {
-    $(".menu > ul > li").on("click", function (e) {
-      if ($(window).width() <= 943) {
-        $(this).children("ul").fadeToggle(150)
-        e.preventDefault()
-      }
-    })
+    // $(".mega-menu-link > i").on("click", function (e) {
+    //   if ($(window).width() <= 943) {
+    //     $(this).parent().parent().children("ul").fadeToggle(150)
+    //     e.preventDefault()
+    //   }
+    // })
     $(".menu-mobile").on("click", function (e) {
       $(".menu > ul").toggleClass("show-on-mobile")
       e.preventDefault()
