@@ -5,6 +5,11 @@ exports.routers = {
       component: "/HomePage",
       text: "",
     },
+    TrangChu: {
+      path: "/trang-chu",
+      component: "/HomePage",
+      text: "",
+    },
     product: {
       path: "/san-pham/:slug",
       component: "/Product",

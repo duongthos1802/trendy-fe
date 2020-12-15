@@ -61,6 +61,20 @@ export default {
       }
     }
     `
+  },
+
+  bannerHome(clause) {
+    return `
+    query {
+      getBannerHomePage(${clause}) {
+        banner{
+          _id
+          image
+          description 
+        }
+      }
+    }
+    `
   }
 
 }

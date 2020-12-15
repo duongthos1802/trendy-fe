@@ -6,11 +6,18 @@ import HtmlBlock from './HtmlBlog'
 import ProductList from './ProductList'
 import Information from './Information'
 import Introduce from './Introduce'
+import { getBannerHome } from '../../actions/homeAction'
 
-const HomePage = () => {
+const HomePage = ({ bannerHome }) => {
   return (
     <Layout>
-      <BannerHome />
+      {
+        bannerHome && bannerHome.banner && bannerHome.banner.length
+          ? <BannerHome banner={bannerHome.banner} />
+          : null
+
+      }
+
       <CategoryProduct />
       <ProductList />
       <HtmlBlock />
@@ -18,6 +25,16 @@ const HomePage = () => {
       <Information />
     </Layout>
   )
+}
+
+HomePage.getInitialProps = async (ctx) => {
+
+  const query = `where: {}`
+  const banner = await getBannerHome(query)
+
+  return {
+    bannerHome: banner,
+  }
 }
 
 export default HomePage

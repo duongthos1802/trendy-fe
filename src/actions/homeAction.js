@@ -87,3 +87,24 @@ export const getCategoryFeature = async () => {
     console.log('error........', error);
   }
 }
+
+export const getBannerHome = async (clause) => {
+  try {
+    const queryData = query.homeQuery.bannerHome(clause)
+
+    const result = await apiService().post(GRAPHQL_PATH, {
+      query: queryData,
+      variables: null
+    })
+
+    if (result.status === 200 && !result.data.errors) {
+      const resultData = result.data.data
+        ? result.data.data.getBannerHomePage
+        : null
+      return resultData
+    }
+
+  } catch (error) {
+    console.log('error........', error);
+  }
+}
