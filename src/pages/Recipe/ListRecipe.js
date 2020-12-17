@@ -27,7 +27,6 @@ const data = [
 ]
 
 const ListRecipe = ({ recipes, category }) => {
-  console.log("recipe,,,,,,,", recipes)
   return (
     <div className='row'>
       {recipes && recipes.length

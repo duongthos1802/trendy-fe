@@ -79,7 +79,6 @@ const RecipeDetail = ({ recipe }) => {
 
 RecipeDetail.getInitialProps = async (context) => {
   const { slug } = context.query
-  console.log("slug........", slug)
   const id = getIdByUrl(slug)
   const clause = `_id: "${id}"`
 

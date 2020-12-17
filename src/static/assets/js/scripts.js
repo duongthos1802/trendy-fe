@@ -78,16 +78,17 @@ PAGE JS
   //Main navigation scroll spy for shadow
 
   $(window).on("load", function () {
-    // $(".mega-menu-link > i").on("click", function (e) {
-    //   if ($(window).width() <= 943) {
-    //     $(this).parent().parent().children("ul").fadeToggle(150)
-    //     e.preventDefault()
-    //   }
-    // })
-    $(".menu-mobile").on("click", function (e) {
-      $(".menu > ul").toggleClass("show-on-mobile")
-      e.preventDefault()
-    })
+    setTimeout(function () {
+      $(".mega-menu-item").on("click", function (e) {
+        if ($(window).width() <= 943) {
+          $(this).children(".sub-menu").fadeToggle(150)
+        }
+      })
+      $(".menu-mobile").on("click", function (e) {
+        $(".menu > ul").toggleClass("show-on-mobile")
+        e.preventDefault()
+      })
+    }, 200)
   })
 
   /*===================================*

@@ -12,7 +12,6 @@ const addField = (data) => {
     })
   )
 }
-// hi hi
 
 const generateCate = (data) => {
   let result = data.filter((item) => !item.parent)
@@ -113,7 +112,6 @@ const renderMenu = (initMenu) => {
 }
 
 const Header = ({ children, isMobile }) => {
-  console.log("isMobile.......", isMobile)
   const dispatch = useDispatch()
   const [dataMenu, setDataMenu] = useState([])
 
@@ -137,8 +135,6 @@ const Header = ({ children, isMobile }) => {
     const initMenu = generateCate(addField(categoriesData))
     setDataMenu(initMenu)
   }, [categoriesData])
-
-  console.log("category............", generateCate(addField(categoriesData)))
 
   return (
     <React.Fragment>
