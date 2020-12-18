@@ -13,7 +13,7 @@ const Product = ({ category }) => {
         <div className='container'>
           <div className='row'>
             <div className='col-12'>
-              <h2 className='font-weight-bold py-2'>{category?.name}</h2>
+              <p className='font-weight-bold py-2 title-category'>{category?.name}</p>
             </div>
             <div className='col-md-8 col-12'>
               <ListProduct

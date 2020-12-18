@@ -26,6 +26,10 @@
   }
 }
 
-.product-detail {
-  
+.title-category {
+  color: $color-black;
+  font-size: 35px;
+  @media (max-width: $sm-max-width) {
+    text-align: center;
+  }
 }

@@ -72,7 +72,7 @@ const Footer = ({ children, isMobile }) => {
             <div className="bottom_footer border-top-tran">
               <div className="row">
                 <div className="col-md-12">
-                  <p className="mb-0 text-center text-color-white">© 2020 chuquancafe.com</p>
+                  <p className="mb-0 text-center text-color-white">© 2020 nguyenlieutrendy</p>
                 </div>
               </div>
             </div>
