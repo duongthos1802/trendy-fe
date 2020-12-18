@@ -83,8 +83,8 @@ const CategoryProduct = () => {
   }, [])
 
   return categoryProduct && categoryProduct.length && (
-    <div className="background-color-gray">
-      <div className="container feture-product py-5">
+    <div className="background-color-gray ">
+      <div className="container feature-category-product py-5">
         < Slider {...settings}>
           {
             categoryProduct.map(category => (

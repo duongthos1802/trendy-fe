@@ -66,8 +66,8 @@ export default {
   bannerHome(clause) {
     return `
     query {
-      getBannerHomePage(${clause}) {
-        banner{
+      getBannerHomePage {
+        banner(${clause}){
           _id
           image
           description 
