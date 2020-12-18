@@ -3,6 +3,22 @@
   margin-top: -190px;
   position: relative;
   z-index: 2;
+  @media (max-width: $xl-max-width) {
+    margin-top: -120px;
+  }
+  @media (max-width: $md-max-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media (max-width: $xs-max-width) {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    margin-top: 0px;
+    position: unset !important;
+  }
+  
 }
 
 .kd-photobox {
