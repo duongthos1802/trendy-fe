@@ -6,7 +6,7 @@ const Information = () => {
     <div className="section pb_70 information" style={{ background: "#9f863d" }}>
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-lg-4 col-md-6 d-flex justify-content-center">
+          <div className="col-lg-4 col-12 d-flex justify-content-center item-card">
             <div className="d-flex p-0" data-animation="fadeInUp" data-animation-delay="0.02s">
               <div className="icon mb-0 mr-3">
                 {/* <i className="flaticon-shipped" /> */}
@@ -18,7 +18,7 @@ const Information = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 d-flex justify-content-center">
+          <div className="col-lg-4 col-12 d-flex justify-content-center item-card">
             <div className="d-flex" data-animation="fadeInUp" data-animation-delay="0.03s">
               <div className="icon mb-0 mr-3">
                 {/* <i className="flaticon-dining-table" /> */}
@@ -30,7 +30,7 @@ const Information = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 d-flex justify-content-center">
+          <div className="col-lg-4 col-12 d-flex justify-content-center item-card">
             <div className="d-flex" data-animation="fadeInUp" data-animation-delay="0.04s">
               <div className="icon mb-0 mr-3">
                 {/* <i className="flaticon-destination" /> */}

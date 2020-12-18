@@ -34,11 +34,13 @@ const HtmlBlock = () => {
             <div className="row">
               <div className="col-lg-6 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
                 <div className="about_section pl-lg-3 py-5">
-                  <div className="heading_s1">
+                  <div className="heading_s1 title-block">
                     <h2 className="mb-5">{blockHomePage.block?.title}</h2>
                   </div>
-                  <p className="font-size-14 line-height-20">{htmlContentWithBBCode(blockHomePage.block?.description)}</p>
-                  <a className="btn btn-dark" >Tìm hiểu thêm</a>
+                  <p className="font-size-14">{htmlContentWithBBCode(blockHomePage.block?.description)}</p>
+                  <p className="w-100 btn-block">
+                    <a className="btn btn-dark" >Tìm hiểu thêm</a>
+                  </p>
                 </div>
               </div>
               <div className="col-lg-6 animation" data-animation="fadeInUp" data-animation-delay="0.03s">

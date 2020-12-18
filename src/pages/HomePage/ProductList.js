@@ -44,7 +44,7 @@ const ProductList = () => {
                     <div className="row">
                       {
                         category.products.map(product => (
-                          <div className="col-md-3">
+                          <div className="col-lg-3 col-md-6 col-12">
                             <Link href={`san-pham/chi-tiet/${product?.slug}-${product._id}`}>
                               <a>
                                 <CardProduct

@@ -68,6 +68,16 @@
     line-height: normal;
     color: $color-white
   }
+
+  @media (max-width: $md-max-width) {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    .item-card{
+      padding-top: 3rem !important;
+      padding-bottom: 3rem !important;
+    }
+  
+  }
 }
 
 .introduce {
@@ -87,5 +97,18 @@
   p {
     color: $color-white;
   }
-  
 }
+
+
+@media (max-width: $md-max-width) {
+  .title-block {
+    text-align: center;
+    h1, h2, h3, h4, h5 {
+      margin-bottom: 20px !important;
+    }
+  }
+  .btn-block{
+    text-align: center;
+  }
+}
+
