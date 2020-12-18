@@ -29,7 +29,7 @@ const HomePage = ({ bannerHome }) => {
 
 HomePage.getInitialProps = async (ctx) => {
 
-  const query = `filter:{ status: Published}`
+  const query = `filter:{ published: true }`
   const banner = await getBannerHome(query)
 
   return {
