@@ -18,6 +18,18 @@ body {
   height: 557px;
 }
 
+@media (min-width: $xl-max-width) {
+  .banner_section:not(.full_screen) .carousel-item {
+    height: 400px;
+    @media (min-width: $md-max-width) {
+      height: 300px;
+      @media (min-width: $xs-max-width) {
+        height: 146px;
+      }
+    }
+  }
+}
+
 .banner_section:not(.full_screen) {
   height: unset;
 }
