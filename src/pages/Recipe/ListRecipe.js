@@ -31,14 +31,14 @@ const ListRecipe = ({ recipes, category }) => {
     <div className='row'>
       {recipes && recipes.length
         ? recipes.map((recipe) => (
-            <div className='col-6'>
-              <Link href={`cong-thuc/chi-tiet/${recipe?.slug}-${recipe._id}`}>
-                <a>
-                  <CardProduct recipe={recipe} category={category} />
-                </a>
-              </Link>
-            </div>
-          ))
+          <div className='col-md-6 col-12'>
+            <Link href={`cong-thuc/chi-tiet/${recipe?.slug}-${recipe._id}`}>
+              <a>
+                <CardProduct recipe={recipe} category={category} />
+              </a>
+            </Link>
+          </div>
+        ))
         : null}
     </div>
   )

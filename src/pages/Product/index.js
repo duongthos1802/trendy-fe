@@ -1,11 +1,32 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Layout from "../../components/layouts/Layout"
 import Banner from "../../components/Banner"
 import ListProduct from "./ListProduct"
 import MenuRight from "../../components/MenuRight"
 import { getCategoryBySlug } from "../../actions/productAction"
+import { loadDataPager } from "../../actions/categoryAction"
+import { useDispatch, useSelector } from "react-redux"
 
 const Product = ({ category }) => {
+
+  const dispatch = useDispatch()
+
+  const categoriesData = useSelector((state) =>
+    state.categories && state.categories.menuRight ? state.categories.menuRight : []
+  )
+
+  const getMenuRight = async (queryClause) => {
+    const categories = await loadDataPager(queryClause)
+    dispatch.categories.getMenuRight(
+      categories && categories.length ? categories : []
+    )
+  }
+
+  useEffect(() => {
+    const query = `filter: { option: Product, status: Published }`
+    getMenuRight(query)
+  }, [])
+
   return (
     <Layout>
       <Banner category={category} />
@@ -22,7 +43,9 @@ const Product = ({ category }) => {
               />
             </div>
             <div className='col-md-4 col-12'>
-              <MenuRight />
+              <MenuRight
+                menu={categoriesData}
+              />
             </div>
           </div>
         </div>
