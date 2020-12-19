@@ -125,7 +125,7 @@
   float: left;
   background: white;
   padding: 20px 0;
-  margin: 0;
+  margin: 0 0.75em 0 0;
 }
 @media screen and (min-width: 959px) {
   .menu .mega-menu-item:hover > .sub-menu {
@@ -135,14 +135,16 @@
 
 .menu .mega-menu-link {
   text-decoration: none;
-  padding: 0.75em 0.75em;
-  display: block;
+  padding: 0.75em 0 0.75em 0.75em;
   margin-top: auto;
   margin-bottom: auto;
   cursor: pointer;
 }
-.menu .mega-menu-link:hover {
-  color: $color-primary !important;
+.menu .mega-menu-item:hover {
+  .mega-menu-link,
+  i {
+    color: $color-primary !important;
+  }
 }
 
 .menu .sub-menu {
@@ -156,6 +158,7 @@
   margin: 1.1em 0 0 0;
   list-style: none;
   box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
 .menu .sub-menu:before,
@@ -222,7 +225,7 @@
     display: block;
     content: "";
     margin-top: 2px;
-    border-bottom: solid 3px brown;
+    border-bottom: solid 3px $color-primary;
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
   }
@@ -287,18 +290,17 @@ Mobile style's
     float: none;
     display: block;
     padding: 0;
+
+    .fas {
+      float: right;
+      padding: 1em;
+    }
   }
 
   .menu .mega-menu .mega-menu-item .mega-menu-link {
     padding: 0.75em 1em;
-    width: 100%;
-    display: block;
-
-    .fas {
-      padding: 5px;
-      float: right !important ;
-      margin-right: 0.25em;
-    }
+    width: 80%;
+    display: inline-block;
   }
   .menu .sub-menu {
     position: relative;
@@ -314,7 +316,7 @@ Mobile style's
     transform: unset !important;
     text-align: unset !important;
     max-width: 100%;
-    padding: 0 20px !important;
+    padding: 0 30px !important;
   }
   .menu .sub-menu .normal-sub {
     float: none;
@@ -327,6 +329,9 @@ Mobile style's
   }
   .menu .sub-menu-cate {
     width: 100% !important;
+    .sub-menu-cate__title {
+      font-size: 14px !important;
+    }
   }
   .menu .sub-menu > li:first-child {
     margin: 0;
@@ -347,6 +352,6 @@ Mobile style's
     right: 0;
     left: unset;
     width: 100vw;
-    padding: 20px 20px;
+    padding: 0px 30px;
   }
 }
