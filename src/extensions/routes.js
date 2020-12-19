@@ -1,4 +1,5 @@
 import { enumType } from "../constants"
+import { routesMenu } from "../constants/enum"
 
 const titleRoutes = {
   HOME: "Nguyên liệu Trendy",
@@ -35,6 +36,23 @@ export const generatePath = (option) => {
       return pathRoutes.RECIPE
     default:
       return pathRoutes.HOME
+  }
+}
+
+export const generateRoutes = (option) => {
+  switch (option) {
+    case enumType.categoryType.HOME:
+      return routesMenu.HOME
+    case enumType.categoryType.PRODUCT:
+      return routesMenu.PRODUCT
+    case enumType.categoryType.RECIPE:
+      return routesMenu.RECIPE
+    case enumType.categoryType.BLOG:
+      return routesMenu.BLOG
+    case enumType.categoryType.INSPIRED:
+      return routesMenu.INSPIRED
+    default:
+      return ''
   }
 }
 

@@ -52,6 +52,7 @@ export default {
         _id
         name
         slug
+        option
         products{
           _id
           name
