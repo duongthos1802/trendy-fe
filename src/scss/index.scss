@@ -51,3 +51,16 @@ body {
   width: 100px !important;
   height: 100px !important;;
 }
+
+
+.slick-arrow .slick-prev {
+  @media (min-width: $sm-max-width) {
+    display: none !important;
+  }
+}
+
+.slick-arrow .slick-next {
+  @media (min-width: $sm-max-width) {
+    display: none !important;
+  }
+}
