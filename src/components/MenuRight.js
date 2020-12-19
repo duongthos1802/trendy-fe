@@ -3,9 +3,11 @@ import Link from 'next/link';
 
 const MenuRight = ({ menu }) => {
 
-  const cateParent = menu.find(item => !item.parentId)
+  let cateParent = null
+  if (menu && menu.length) {
+    cateParent = menu.find(item => !item.parentId)
+  }
 
-  console.log("menu....", menu);
   return (
     <div class="sidebar px-5 d-none d-md-block">
       <div className="widget">
