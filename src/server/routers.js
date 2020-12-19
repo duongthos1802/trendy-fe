@@ -50,13 +50,26 @@ exports.routers = {
       component: "/Blog",
       text: "",
     },
-
     blogDetail: {
       path: "/tin-tuc/chi-tiet/:slug",
       component: "/BlogDetail",
       text: "",
     },
-
+    InspiredList: {
+      path: "/cam-hung",
+      component: "/Inspired",
+      text: "",
+    },
+    blog: {
+      path: "/cam-hung/:slug",
+      component: "/Inspired",
+      text: "",
+    },
+    InspiredDetail: {
+      path: "/cam-hung/chi-tiet/:slug",
+      component: "/InspiredDetail",
+      text: "",
+    },
     introduce: {
       path: "/gioi-thieu",
       component: "/Introduce",

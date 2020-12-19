@@ -183,16 +183,16 @@ const BlogDetail = (props) => {
                   <ul className='widget_categories'>
                     {categoryFeatures && categoryFeatures.length
                       ? categoryFeatures.map((item, index) => (
-                          <Link href={`/chi-tiet/123`}>
-                            <li>
-                              <a className='text-color-primary-blue'>
-                                <span className='categories_name'>
-                                  {item.name}
-                                </span>
-                              </a>
-                            </li>
-                          </Link>
-                        ))
+                        <Link href={`/chi-tiet/123`}>
+                          <li>
+                            <a className='text-color-primary-blue'>
+                              <span className='categories_name'>
+                                {item.name}
+                              </span>
+                            </a>
+                          </li>
+                        </Link>
+                      ))
                       : null}
                   </ul>
                 </div> */}
