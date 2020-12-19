@@ -54,13 +54,13 @@ body {
 
 
 .slick-arrow .slick-prev {
-  @media (min-width: $sm-max-width) {
+  @media (max-width: $sm-max-width) {
     display: none !important;
   }
 }
 
 .slick-arrow .slick-next {
-  @media (min-width: $sm-max-width) {
+  @media (max-width: $sm-max-width) {
     display: none !important;
   }
 }
