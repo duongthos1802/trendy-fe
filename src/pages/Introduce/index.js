@@ -36,7 +36,7 @@ const Introduce = () => {
         </div>
       </div>
       <div className='content-para'>
-        <h1>Giá trị cốt lõi của chúng tôi</h1>
+        <h2>Giá trị cốt lõi của chúng tôi</h2>
         <p>
           Sự bền vững trong chuỗi giá trị liên kết toàn cầu giữa người nông dân
           với đơn vị sản xuất và phân phối, cùng chiến lược kinh doanh có hiệu
