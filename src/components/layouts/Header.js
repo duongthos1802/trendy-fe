@@ -85,13 +85,9 @@ const renderMenu = (initMenu) => {
   return initMenu.map((menu) => (
     <li className='mega-menu-item'>
       <Link href={`/${menu.slug}`}>
-        <a className='mega-menu-link'>
-          {menu.name}
-          {menu.cate.length > 0 ? (
-            <i className='fas fa-angle-down ml-1'></i>
-          ) : null}
-        </a>
+        <a className='mega-menu-link'>{menu.name}</a>
       </Link>
+      {menu.cate.length > 0 ? <i className='fas fa-angle-down ml-1'></i> : null}
 
       {menu.cate.length > 0
         ? menu.isMega
