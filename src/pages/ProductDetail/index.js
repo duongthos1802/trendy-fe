@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import ImageGallery from "react-image-gallery"
 import Layout from "../../components/layouts/Layout"
 import MenuRight from "../../components/MenuRight"
@@ -8,6 +8,8 @@ import { htmlContentWithBBCode } from "../../extensions/html"
 import Information from "./Information"
 import { enumType } from "../../constants"
 import { imageUtils } from "../../utils"
+import { useDispatch, useSelector } from "react-redux"
+import { loadDataPager } from "../../actions/categoryAction"
 
 const mapImage = (pictures) => {
   let imagesData = []
@@ -28,6 +30,25 @@ const mapImage = (pictures) => {
 }
 
 const ProductDetail = ({ product }) => {
+  const dispatch = useDispatch()
+
+  const categoriesData = useSelector((state) =>
+    state.categories && state.categories.menuRight ? state.categories.menuRight : []
+  )
+
+  const getMenuRight = async (queryClause) => {
+    const categories = await loadDataPager(queryClause)
+    dispatch.categories.getMenuRight(
+      categories && categories.length ? categories : []
+    )
+  }
+
+  useEffect(() => {
+    const query = `filter: { option: Product, status: Published }`
+    getMenuRight(query)
+  }, [])
+
+
   const imageItem = mapImage(product.pictures)
   return (
     <Layout>
@@ -51,7 +72,9 @@ const ProductDetail = ({ product }) => {
                 </div>
               </div>
               <div className='col-12 col-md-4'>
-                <MenuRight />
+                <MenuRight
+                  menu={categoriesData}
+                />
               </div>
 
               <div className='col-12 col-md-8'>
