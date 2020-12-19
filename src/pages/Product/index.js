@@ -3,10 +3,11 @@ import Layout from "../../components/layouts/Layout"
 import Banner from "../../components/Banner"
 import ListProduct from "./ListProduct"
 import MenuRight from "../../components/MenuRight"
-import { getCategoryBySlug } from "../../actions/productAction"
+import { getCategoryBySlug, getProducts } from "../../actions/productAction"
 import { loadDataPager } from "../../actions/categoryAction"
 import { useDispatch, useSelector } from "react-redux"
 import Title from "../../components/Title"
+import { enumType } from "../../constants"
 
 const Product = ({ category }) => {
 
@@ -58,15 +59,24 @@ const Product = ({ category }) => {
 
 Product.getInitialProps = async (ctx) => {
   const { slug } = ctx.query
-
   let category = []
   if (slug) {
     const query = `filter: { slug: "${slug}" }`
     category = await getCategoryBySlug(query)
+  } else {
+    const query = `filter: { status: Published }`
+    const products = await getProducts(query)
+    category.push({
+      name: "Sản phẩm",
+      slug: "san-pham",
+      option: enumType.categoryType.PRODUCT,
+      parentId: null,
+      products: products && products.length ? products : []
+    })
   }
 
   return {
-    category: category[0],
+    category: category[0]
   }
 }
 

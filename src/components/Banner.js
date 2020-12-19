@@ -14,13 +14,15 @@ const Banner = ({ category }) => {
     {
       name: generateTitleBreadcrumb(category?.option),
       path: generatePath(category?.option)
-    },
-    {
+    }
+  ]
+  if (category.parentId) {
+    breadcrumb.push({
       name: `${category?.name}`,
       path: `${category?.slug}`,
       isActive: true,
-    }
-  ]
+    })
+  }
 
   return (
     // <div className="breadcrumb_section background_bg overlay_bg_50 page_title_light" data-img-src="/static/assets/images/about_bg.jpg">

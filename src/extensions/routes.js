@@ -40,6 +40,7 @@ export const generatePath = (option) => {
 }
 
 export const generateRoutes = (option) => {
+
   switch (option) {
     case enumType.categoryType.HOME:
       return routesMenu.HOME

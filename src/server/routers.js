@@ -10,6 +10,11 @@ exports.routers = {
       component: "/HomePage",
       text: "",
     },
+    productList: {
+      path: "/san-pham",
+      component: "/Product",
+      text: "",
+    },
     product: {
       path: "/san-pham/:slug",
       component: "/Product",

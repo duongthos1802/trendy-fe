@@ -7,6 +7,9 @@ export default {
           name
           slug
           option
+          parentId {
+            _id
+          }
           products(filter: {status: Published}){
             _id
             name
@@ -32,5 +35,16 @@ export default {
           application
         }
       }`
-  }
+  },
+  getProducts(clause) {
+    return `
+      query {
+        products(${clause}){
+          _id
+          name
+          slug
+          pictures 
+        }
+      }`
+  },
 }
