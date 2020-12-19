@@ -6,6 +6,7 @@
 @import "menu";
 @import "product";
 @import "recipe";
+@import "intro";
 
 body {
   background: #ffffff none repeat scroll 0 0;
@@ -14,7 +15,13 @@ body {
   font-size: 16px;
 }
 
-h1, h2, h3, h4, p, hr, a {
+h1,
+h2,
+h3,
+h4,
+p,
+hr,
+a {
   color: $color-primary-blue !important;
 }
 
@@ -31,8 +38,6 @@ h1, h2, h3, h4, p, hr, a {
   }
 }
 
-
-
 .banner_section:not(.full_screen) {
   height: unset;
 }
@@ -42,22 +47,22 @@ h1, h2, h3, h4, p, hr, a {
 }
 .container-fluid-custom {
   @media (min-width: $xxl-min-width) {
-    padding-left:250px !important;
+    padding-left: 250px !important;
     padding-right: 250px !important;
   }
 
   @media (min-width: $xl-min-width) {
-    padding-left:200px !important;
+    padding-left: 200px !important;
     padding-right: 200px !important;
   }
 }
 .post_img_feature {
   width: 100px !important;
-  height: 100px !important;;
+  height: 100px !important;
 }
 
-
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
   @media (max-width: $sm-max-width) {
     display: none !important;
   }
@@ -76,7 +81,9 @@ h1, h2, h3, h4, p, hr, a {
   color: $color-primary-blue !important;
 }
 
-.image-gallery-thumbnail.active, .image-gallery-thumbnail:hover, .image-gallery-thumbnail:focus {
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:hover,
+.image-gallery-thumbnail:focus {
   outline: none;
   border: 4px solid $color-primary;
 }
@@ -86,28 +93,27 @@ h1, h2, h3, h4, p, hr, a {
 
 .tab-style4 .nav-tabs .nav-item a.active {
   border-color: $color-primary !important;
-  color:  $color-primary !important;
+  color: $color-primary !important;
 }
 
-
 .trendy-title {
-  text-transform: uppercase!important;
-  font-weight: 700!important;
-  color: #434242!important;
-  font-size: 1em!important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  color: #434242 !important;
+  font-size: 1em !important;
 }
 .trendy-title-border {
   border-bottom: 2px solid $color-primary !important;
-  padding: 10px 0!important;
-  font-size: 20px!important;
+  padding: 10px 0 !important;
+  font-size: 20px !important;
   @media (max-width: $sm-max-width) {
-    font-size: 18px!important;
+    font-size: 18px !important;
   }
 }
 
 .custom-title {
   @media (max-width: $sm-max-width) {
-    text-align: center
+    text-align: center;
   }
 }
 
