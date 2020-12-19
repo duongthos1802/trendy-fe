@@ -98,7 +98,7 @@ const CategoryProduct = () => {
                           <img src={imageUtils.getBlockUrl(category.image, enumType.imagePath.Category)} />
                         </div>
                         <div className="phb-content text-left ">
-                          <h5 className="mb-3">{category?.name}</h5>
+                          <h5 className="mb-3 text-color-primary-blue font-weight-bold">{category?.name}</h5>
                           <p className="font-size-14 line-height-20">{htmlContentWithBBCode(category?.description)}</p>
                         </div>
                       </a>

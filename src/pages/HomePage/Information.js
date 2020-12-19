@@ -3,7 +3,7 @@ import React from 'react'
 const Information = () => {
 
   return (
-    <div className="section pb_70 information" style={{ background: "#9f863d" }}>
+    <div className="section pb_70 information background-color-primary">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-4 col-12 d-flex justify-content-center item-card">

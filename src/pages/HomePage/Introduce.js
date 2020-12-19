@@ -28,7 +28,7 @@ const Introduce = () => {
           <div className="row">
             <div className="col-lg-6 col-md-8 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
               <div className="heading_s1 heading_light">
-                <h2>{introduceHomePage?.title}</h2>
+                <h2 className="text-color-white">{introduceHomePage?.title}</h2>
               </div>
               <p className="text-white">{htmlContentWithBBCode(introduceHomePage?.description)}</p>
               <a className="btn btn-white" href="#">Xem thêm</a>

@@ -15,17 +15,17 @@ const CardProduct = ({ product, category, recipe }) => {
               )}
             />
           ) : (
-            <img
-              src={imageUtils.getBlockUrl(
-                recipe.pictures[0],
-                enumType.imagePath.Recipe
-              )}
-            />
-          )}
+              <img
+                src={imageUtils.getBlockUrl(
+                  recipe.pictures[0],
+                  enumType.imagePath.Recipe
+                )}
+              />
+            )}
           {/* <img src={product.image} /> */}
         </div>
         <div className='title-product'>
-          <p className='mb-0 font-size-18 font-weight-bold text-color-black'>
+          <p className='mb-0 font-size-18 font-weight-bold'>
             {product ? product?.name : recipe?.name}
           </p>
           <p className='mb-0 category'>{category?.name}</p>

@@ -60,11 +60,11 @@ const HtmlBlock = () => {
                   <div className="heading_s1 text-center">
                     <h2>{blockHomePage.blockSecond?.title}</h2>
                   </div>
-                  <p className="text-center leads">{htmlContentWithBBCode(blockHomePage.blockSecond?.description)}</p>
+                  <p className="text-center leads ">{htmlContentWithBBCode(blockHomePage.blockSecond?.description)}</p>
                 </div>
               </div>
               <div className="row justify-content-center">
-                <div className="col-lg-6 background-color-primary-blue p-4 block-second">
+                <div className="col-lg-6 background-color-primary-blue p-4 block-second text-color-white">
                   {
                     htmlContentWithBBCode(blockHomePage.blockSecond.content)
                   }

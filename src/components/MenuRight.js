@@ -11,7 +11,7 @@ const MenuRight = ({ menu }) => {
   return (
     <div class="sidebar px-5 d-none d-md-block">
       <div className="widget">
-        <h5 className="font-weight-bold">Danh mục</h5>
+        <h5 className="font-weight-bold text-color-primary-blue">Danh mục</h5>
         <ul className="widget_categories mt-4">
           {
             menu && menu.length

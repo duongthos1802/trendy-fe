@@ -14,6 +14,10 @@ body {
   font-size: 16px;
 }
 
+h1, h2, h3, h4, p, hr, a {
+  color: $color-primary-blue !important;
+}
+
 .banner_section:not(.full_screen) .carousel-item {
   height: 557px;
   @media (max-width: $xl-max-width) {
@@ -57,4 +61,31 @@ body {
   @media (max-width: $sm-max-width) {
     display: none !important;
   }
+}
+
+.btn-dark::before {
+  background: $color-primary;
+}
+.btn-dark {
+  border: 1px solid $color-primary-blue;
+}
+
+.btn-dark:hover {
+  background-color: transparent;
+  border-color: $color-primary-blue;
+  color: $color-primary-blue !important;
+}
+
+.image-gallery-thumbnail.active, .image-gallery-thumbnail:hover, .image-gallery-thumbnail:focus {
+  outline: none;
+  border: 4px solid $color-primary;
+}
+.image-gallery-icon:hover {
+  color: $color-primary;
+}
+
+.tab-style4 .nav-tabs .nav-item a.active {
+  border-color: $color-primary !important;
+  color:  $color-primary !important;
+
 }

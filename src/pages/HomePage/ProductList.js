@@ -32,7 +32,7 @@ const ProductList = () => {
                         <div className="heading_s1 text-center" data-animation="fadeInUp" data-animation-delay="0.02s">
                           <Link href={`san-pham/${category?.slug}`}>
                             <a>
-                              <h2 className="text-color-black">{category?.name}</h2>
+                              <h2>{category?.name}</h2>
                             </a>
                           </Link>
                         </div>

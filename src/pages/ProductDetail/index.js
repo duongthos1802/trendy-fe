@@ -66,7 +66,7 @@ const ProductDetail = ({ product }) => {
                   <h2 className='font-weight-bold'>{product?.name}</h2>
                 </div>
                 <div className='description mt-5'>
-                  <p className='text-color-black line-height-15'>
+                  <p className='text-color-primary-blue line-height-15'>
                     {htmlContentWithBBCode(product?.description)}
                   </p>
                 </div>

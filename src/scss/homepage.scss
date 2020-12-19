@@ -57,7 +57,7 @@
 .hr-title {
   hr {
     width: 90px;
-    border-top: 2px solid #222222;
+    border-top: 2px solid $color-primary-blue;
   }
 }
 
@@ -112,3 +112,11 @@
   }
 }
 
+
+
+.block-second{
+  h2, h3, h4, h5, p {
+    color: $color-white !important;
+  }
+ 
+}
