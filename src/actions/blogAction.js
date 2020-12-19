@@ -90,3 +90,24 @@ export const getBlogBySlugId = async (clause) => {
   }
 }
 
+
+export const getBlogs = async (clause) => {
+  try {
+    const queryData = query.blogQuery.getBlogs(clause)
+
+    const result = await apiService().post(GRAPHQL_PATH, {
+      query: queryData,
+      variables: null
+    })
+
+    if (result.status === 200 && !result.data.errors) {
+      const resultData = result.data.data
+        ? result.data.data.searchBlogByOption
+        : null
+      return resultData
+    }
+
+  } catch (error) {
+    console.log('error........', error);
+  }
+}

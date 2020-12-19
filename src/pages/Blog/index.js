@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Router, { withRouter } from 'next/router'
 import Link from 'next/link'
 // actions
-import { getBlogBySlugId } from '../../actions/blogAction'
+import { getBlogBySlugId, getBlogs } from '../../actions/blogAction'
 // components
 import Layout from '../../components/layouts/Layout'
 import Loader from '../../components/Loader'
@@ -80,8 +80,8 @@ Blog.getInitialProps = async ({ query }) => {
     const clause = `where: { slug: "${slug}", skip: ${skip || 0} limit: ${limit}}`
     blogs = await getBlogBySlugId(clause)
   } else {
-    const clause = `where: { slug: "tin-tuc", skip: ${skip || 0} limit: ${limit}}`
-    blogs = await getBlogBySlugId(clause)
+    const clause = `where: { slug: "tin-tuc" skip: ${skip || 0} limit: ${limit}}`
+    blogs = await getBlogs(clause)
   }
 
   return {

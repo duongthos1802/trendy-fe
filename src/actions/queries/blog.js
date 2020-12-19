@@ -1,6 +1,6 @@
 export default {
-    loadDataPager(clause) {
-      return `
+  loadDataPager(clause) {
+    return `
         query {
           blogs(${clause}) {
             _id
@@ -10,10 +10,10 @@ export default {
             description
           }
       }`
-    },
-  
-    loadData(clause) {
-      return `
+  },
+
+  loadData(clause) {
+    return `
         query {
           blog(${clause}) {
             _id
@@ -27,10 +27,10 @@ export default {
             createdAt
           }
       }`
-    },
-  
-    categoryBlogFeatures(clause) {
-      return `
+  },
+
+  categoryBlogFeatures(clause) {
+    return `
         query {
           categoriesBlogFeatures(${clause}) {
             blogFeatures {
@@ -46,10 +46,10 @@ export default {
             }
           }
       }`
-    },
-  
-    getListBlogBySlugId(clause) {
-      return `
+  },
+
+  getListBlogBySlugId(clause) {
+    return `
       query {
         searchBlogBySlugId(${clause}) {
           category {
@@ -66,6 +66,26 @@ export default {
           }
         }
       }`
-    }
-  
+  },
+
+  getBlogs(clause) {
+    return `
+      query {
+        searchBlogByOption(${clause}) {
+          category {
+            _id
+            name
+            banner
+          }
+          total
+          blogs {
+            _id
+            name
+            slug
+            pictures
+          }
+        }
+      }`
   }
+
+}
