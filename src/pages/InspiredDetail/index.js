@@ -53,7 +53,7 @@ const BlogDetail = (props) => {
 
   const loadCategories = async (blog) => {
     if (blog && blog._id) {
-      const queryCategory = `where: {_id: "${blog._id}", slug: "${routers.defined.blog}" }`
+      const queryCategory = `where: {_id: "${blog._id}", slug: "cam-hung", type: "${enumType.blog_type.INSPIRED}" }`
       const blogFeaturesData = await categoryBlogFeatures(queryCategory)
 
       if (blogFeaturesData) {
@@ -141,7 +141,7 @@ const BlogDetail = (props) => {
                       ? blogsFeatures.map((item, index) => (
                         // <Link href={`/${routes.BLOG_DETAIL}/${item.slug}-${item._id}`}>
                         <Link
-                          href={`/tin-tuc/chi-tiet/${item.slug}-${item._id}`}
+                          href={`/cam-hung/chi-tiet/${item.slug}-${item._id}`}
                         >
                           <li key={index}>
                             <div className='post_footer'>

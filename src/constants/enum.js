@@ -30,8 +30,15 @@ export const status = {
   DELETED: 'Deleted'
 }
 
+export const blog_type = {
+  BLOG: 'Blog',
+  INSPIRED: 'Inspired'
+}
+
+
 export default {
   imagePath,
   categoryType,
-  status
+  status,
+  blog_type
 }

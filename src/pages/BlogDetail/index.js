@@ -53,7 +53,7 @@ const BlogDetail = (props) => {
 
   const loadCategories = async (blog) => {
     if (blog && blog._id) {
-      const queryCategory = `where: {_id: "${blog._id}", slug: "${routers.defined.blog}" }`
+      const queryCategory = `where: {_id: "${blog._id}", slug: "tin-tuc" type: "${enumType.blog_type.BLOG}"  }`
       const blogFeaturesData = await categoryBlogFeatures(queryCategory)
 
       if (blogFeaturesData) {
