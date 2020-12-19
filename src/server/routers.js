@@ -46,5 +46,11 @@ exports.routers = {
       component: "/BlogDetail",
       text: "",
     },
+
+    introduce: {
+      path: "/gioi-thieu",
+      component: "/Introduce",
+      text: "",
+    },
   },
 }
