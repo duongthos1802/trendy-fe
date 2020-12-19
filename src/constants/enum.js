@@ -17,6 +17,14 @@ export const categoryType = {
   INSPIRED: 'Inspired'
 }
 
+export const routesMenu = {
+  HOME: 'trang-chu',
+  PRODUCT: 'san-pham',
+  RECIPE: 'cong-thuc',
+  BLOG: 'tin-tuc',
+  INSPIRED: 'cam-hung',
+}
+
 export const status = {
   PUBLISHED: 'Published',
   DELETED: 'Deleted'

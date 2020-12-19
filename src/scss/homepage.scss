@@ -112,11 +112,16 @@
   }
 }
 
-
-
 .block-second{
   h2, h3, h4, h5, p {
     color: $color-white !important;
   }
- 
+}
+
+
+.list-product {
+  margin-top: 3rem;
+  @media (max-width: $sm-max-width) {
+    margin-top: 1.5rem;
+  }
 }
