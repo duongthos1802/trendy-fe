@@ -25,6 +25,11 @@ exports.routers = {
       component: "/ProductDetail",
       text: "",
     },
+    recipeList: {
+      path: "/cong-thuc",
+      component: "/Recipe",
+      text: "",
+    },
     recipe: {
       path: "/cong-thuc/:slug",
       component: "/Recipe",

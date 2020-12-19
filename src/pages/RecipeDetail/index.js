@@ -40,7 +40,7 @@ const RecipeDetail = ({ recipe }) => {
               <div className='recipe_content_information'>
                 {recipe?.ingredient ? (
                   <div>
-                    <h3>Ingredients</h3>
+                    <h3>Thành phần</h3>
                     <div className='recipe_content'>
                       {recipe.ingredient
                         ? htmlContentWithBBCode(recipe.ingredient)
@@ -50,7 +50,7 @@ const RecipeDetail = ({ recipe }) => {
                 ) : null}
                 {recipe?.method ? (
                   <div>
-                    <h3>Method</h3>
+                    <h3>Cách làm</h3>
                     <div className='recipe_content'>
                       {recipe.ingredient
                         ? htmlContentWithBBCode(recipe.method)
@@ -60,7 +60,7 @@ const RecipeDetail = ({ recipe }) => {
                 ) : null}
                 {recipe?.decorate ? (
                   <div>
-                    <h3>Decorate</h3>
+                    <h3>Trang trí</h3>
                     <div className='recipe_content'>
                       {recipe.decorate
                         ? htmlContentWithBBCode(recipe.decorate)

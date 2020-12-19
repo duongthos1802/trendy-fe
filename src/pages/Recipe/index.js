@@ -3,10 +3,11 @@ import Layout from "../../components/layouts/Layout"
 import Banner from "../../components/Banner"
 import ListRecipe from "./ListRecipe"
 import MenuRight from "../../components/MenuRight"
-import { getCategoryBySlug } from "../../actions/recipeAction"
+import { getCategoryBySlug, getRecipes } from "../../actions/recipeAction"
 import { useDispatch, useSelector } from "react-redux"
 import { loadDataPager } from "../../actions/categoryAction"
 import Title from "../../components/Title"
+import { enumType } from "../../constants"
 
 const Recipe = ({ category }) => {
 
@@ -63,6 +64,16 @@ Recipe.getInitialProps = async (context) => {
   if (slug) {
     const query = `filter: { slug: "${slug}" }`
     category = await getCategoryBySlug(query)
+  } else {
+    const query = `filter: { status: Published }`
+    const recipes = await getRecipes(query)
+    category.push({
+      name: "Công thức",
+      slug: "cong-thuc",
+      option: enumType.categoryType.RECIPE,
+      parentId: null,
+      recipes: recipes && recipes.length ? recipes : []
+    })
   }
 
   return { category: category[0] }

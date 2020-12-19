@@ -43,4 +43,15 @@ export default {
       }
     }`
   },
+  getRecipes(clause) {
+    return `
+      query {
+        recipes(${clause}){
+          _id
+          name
+          slug
+          pictures
+        }
+      }`
+  },
 }
