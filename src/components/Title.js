@@ -3,12 +3,12 @@ import className from 'classnames'
 import { generateRoutes } from '../extensions/routes'
 import Link from 'next/link'
 
-const Title = ({ title, category, customTitleClass }) => {
+const Title = ({ title, category, customClass, customTitleClass }) => {
 
   return (
     <div className={className({
       'trendy-title': true
-    })}>
+    }, customClass)}>
       <h2 className={className({
         'd-inline': true,
         'trendy-title-border': true

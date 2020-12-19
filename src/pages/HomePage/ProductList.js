@@ -30,8 +30,7 @@ const ProductList = () => {
                   <div className="container">
                     <div className="row justify-content-center">
                       <div className="col-xl-6 col-lg-8">
-
-                        <Title category={category} />
+                        <Title category={category} customClass="text-center" />
                         {/* <div className="heading_s1 text-center" data-animation="fadeInUp" data-animation-delay="0.02s">
                           <Link href={`san-pham/${category?.slug}`}>
                             <a>
@@ -44,7 +43,7 @@ const ProductList = () => {
                         </div> */}
                       </div>
                     </div>
-                    <div className="row">
+                    <div className="row list-product">
                       {
                         category.products.map(product => (
                           <div className="col-lg-3 col-md-6 col-12">

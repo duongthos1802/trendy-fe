@@ -6,6 +6,7 @@ import MenuRight from "../../components/MenuRight"
 import { getCategoryBySlug } from "../../actions/productAction"
 import { loadDataPager } from "../../actions/categoryAction"
 import { useDispatch, useSelector } from "react-redux"
+import Title from "../../components/Title"
 
 const Product = ({ category }) => {
 
@@ -34,7 +35,8 @@ const Product = ({ category }) => {
         <div className='container'>
           <div className='row'>
             <div className='col-12'>
-              <p className='font-weight-bold py-2 title-category'>{category?.name}</p>
+              <Title category={category} customClass="custom-title" />
+              {/* <p className='font-weight-bold py-2 title-category'>{category?.name}</p> */}
             </div>
             <div className='col-md-8 col-12'>
               <ListProduct

@@ -87,5 +87,30 @@ h1, h2, h3, h4, p, hr, a {
 .tab-style4 .nav-tabs .nav-item a.active {
   border-color: $color-primary !important;
   color:  $color-primary !important;
+}
 
+
+.trendy-title {
+  text-transform: uppercase!important;
+  font-weight: 700!important;
+  color: #434242!important;
+  font-size: 1em!important;
+}
+.trendy-title-border {
+  border-bottom: 2px solid $color-primary !important;
+  padding: 10px 0!important;
+  font-size: 20px!important;
+  @media (max-width: $sm-max-width) {
+    font-size: 18px!important;
+  }
+}
+
+.custom-title {
+  @media (max-width: $sm-max-width) {
+    text-align: center
+  }
+}
+
+.page_title_light .breadcrumb-item::before {
+  color: $color-primary-blue;
 }
