@@ -1,5 +1,8 @@
 .contact-us {
   padding: 60px 0 !important ;
+  @media (max-width: $sm-max-width) {
+    padding: 25px 0 !important ;
+  }
   .contact-us-left {
     max-width: 90%;
     h2 {
