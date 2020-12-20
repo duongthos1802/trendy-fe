@@ -75,5 +75,10 @@ exports.routers = {
       component: "/Introduce",
       text: "",
     },
+    contactUs: {
+      path: "/lien-he",
+      component: "/ContactUs",
+      text: "",
+    },
   },
 }
