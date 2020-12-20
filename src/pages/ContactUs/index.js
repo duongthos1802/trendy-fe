@@ -24,13 +24,13 @@ const ContactUs = (props) => {
             phẩm và sự hỗ trợ cao nhất có thể.
           </h2>
           <div className='address'>
-            <h3>Thành Phố Hà Nội – Việt Nam</h3>
+            <h4>Thành Phố Hà Nội – Việt Nam</h4>
             <p>Tầng 5, Hồng Hà Tower 89 Thịnh Liệt, Hoàng Mai, Hà Nội</p>
             <p>0848.034.456</p>
             <p>chuquancafe.com</p>
           </div>
           <div className='address'>
-            <h3>Thành Phố Hà Nội – Việt Nam</h3>
+            <h4>Thành Phố Hà Nội – Việt Nam</h4>
             <p>Tầng 5, Hồng Hà Tower 89 Thịnh Liệt, Hoàng Mai, Hà Nội</p>
             <p>0848.034.456</p>
             <p>chuquancafe.com</p>
