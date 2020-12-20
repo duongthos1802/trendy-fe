@@ -19,10 +19,10 @@ const ContactUs = (props) => {
     <Layout>
       <div className='row container-wrap contact-us'>
         <div className='col-md-7 contact-us-left'>
-          <h1>
+          <h2>
             Chúng tôi nỗ lực vào việc cung cấp cho khách hàng chất lượng sản
             phẩm và sự hỗ trợ cao nhất có thể.
-          </h1>
+          </h2>
           <div className='address'>
             <h3>Thành Phố Hà Nội – Việt Nam</h3>
             <p>Tầng 5, Hồng Hà Tower 89 Thịnh Liệt, Hoàng Mai, Hà Nội</p>
