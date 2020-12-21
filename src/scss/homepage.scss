@@ -1,11 +1,7 @@
 // Home page4
 .feature-category-product {
-  margin-top: -190px;
   position: relative;
   z-index: 2;
-  @media (max-width: $xl-max-width) {
-    margin-top: -120px;
-  }
   @media (max-width: $md-max-width) {
     padding-left: 30px;
     padding-right: 30px;
@@ -15,10 +11,8 @@
     padding-right: 35px;
     padding-top: 30px !important;
     padding-bottom: 30px !important;
-    margin-top: 0px;
     position: unset !important;
   }
-  
 }
 
 .kd-photobox {
@@ -27,18 +21,18 @@
   position: relative;
   margin-left: 0;
   margin-right: 0;
-  background: #FFF;
+  background: #fff;
   margin: 0 15px;
   transition: 0.2s !important;
-  box-shadow: 0 0px 17px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 0px 17px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
 
   .phb-content {
     position: relative;
     overflow: hidden;
-    background: #FFF;
+    background: #fff;
     padding: 30px 40px 35px 40px;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
     border: none;
     border-top: none;
     border-bottom-left-radius: 4px;
@@ -61,35 +55,36 @@
   }
 }
 
-
 .information {
   .icon i {
     font-size: 50px;
     line-height: normal;
-    color: $color-white
+    color: $color-white;
   }
 
   @media (max-width: $md-max-width) {
     padding-top: 0px !important;
     padding-bottom: 0px !important;
-    .item-card{
+    .item-card {
       padding-top: 3rem !important;
       padding-bottom: 3rem !important;
     }
-  
   }
 }
 
 .introduce {
   padding: 0px;
-  .bg-overlay{
+  .bg-overlay {
     padding: 90px 0px;
-    background-color: rgba(0,0,0,0.56);
+    background-color: rgba(0, 0, 0, 0.56);
   }
 }
- 
+
 .block-second {
-  h2, h1, h3, h4 h5{
+  h2,
+  h1,
+  h3,
+  h4 h5 {
     color: $color-white;
     font-weight: bold;
   }
@@ -99,25 +94,31 @@
   }
 }
 
-
 @media (max-width: $md-max-width) {
   .title-block {
     text-align: center;
-    h1, h2, h3, h4, h5 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
       margin-bottom: 20px !important;
     }
   }
-  .btn-block{
+  .btn-block {
     text-align: center;
   }
 }
 
-.block-second{
-  h2, h3, h4, h5, p {
+.block-second {
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
     color: $color-white !important;
   }
 }
-
 
 .list-product {
   margin-top: 3rem;
