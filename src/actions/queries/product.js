@@ -39,11 +39,14 @@ export default {
   getProducts(clause) {
     return `
       query {
-        products(${clause}){
-          _id
-          name
-          slug
-          pictures 
+        getProductsFE(${clause}){
+          products {
+            _id
+            name
+            slug
+            pictures
+          } 
+          total
         }
       }`
   },

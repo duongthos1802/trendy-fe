@@ -6,7 +6,7 @@ const GRAPHQL_PATH = ""
 export const getCategoryBySlug = async (clause) => {
   try {
     const queryData = query.productQuery.getCategoryBySlug(clause)
-    console.log('queryData....', queryData);
+    console.log("queryData....", queryData)
 
     const result = await apiService().post(GRAPHQL_PATH, {
       query: queryData,
@@ -22,7 +22,6 @@ export const getCategoryBySlug = async (clause) => {
   }
 }
 
-
 export const getProducts = async (clause) => {
   try {
     const queryData = query.productQuery.getProducts(clause)
@@ -33,7 +32,9 @@ export const getProducts = async (clause) => {
     })
 
     if (result.status === 200 && !result.data.errors) {
-      const resultData = result.data.data ? result.data.data.products : null
+      const resultData = result.data.data
+        ? result.data.data.getProductsFE
+        : null
       return resultData
     }
   } catch (error) {
