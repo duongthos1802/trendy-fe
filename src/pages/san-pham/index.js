@@ -13,9 +13,7 @@ import { DEFAULT_PAGE_SIZE, enumType } from "../../constants"
 
 const Product = (props) => {
   const dispatch = useDispatch()
-  const [products, setProducts] = useState(
-    props.category?.products.slice(0, DEFAULT_PAGE_SIZE)
-  )
+  const [products, setProducts] = useState([])
   const [activePage, setActivePage] = useState(1)
 
   const categoriesData = useSelector((state) =>
@@ -46,10 +44,6 @@ const Product = (props) => {
     setProducts(products)
   }, [activePage])
 
-  const handlePagination = (page) => {
-    setActivePage(page)
-  }
-
   return (
     <Layout>
       <Banner category={props.category} />
@@ -69,7 +63,7 @@ const Product = (props) => {
                   itemsCountPerPage={DEFAULT_PAGE_SIZE}
                   totalItemsCount={totalItems}
                   pageRangeDisplayed={5}
-                  onChange={handlePagination}
+                  onChange={(page) => setActivePage(page)}
                   itemClass='page-item'
                   linkClass='page-link'
                   prevPageText={<i className='linearicons-chevron-left' />}
