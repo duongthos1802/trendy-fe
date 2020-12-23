@@ -1,6 +1,6 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Router, { withRouter } from "next/router"
-import ReactPaginate from "react-paginate"
+import Pagination from "react-js-pagination"
 import Layout from "../../components/layouts/Layout"
 import Banner from "../../components/Banner"
 import ListProduct from "./ListProduct"
@@ -13,12 +13,18 @@ import { DEFAULT_PAGE_SIZE, enumType } from "../../constants"
 
 const Product = (props) => {
   const dispatch = useDispatch()
+  const [products, setProducts] = useState(
+    props.category?.products.slice(0, DEFAULT_PAGE_SIZE)
+  )
+  const [activePage, setActivePage] = useState(1)
 
   const categoriesData = useSelector((state) =>
     state.categories && state.categories.menuRight
       ? state.categories.menuRight
       : []
   )
+
+  const totalItems = props.category?.products.length
 
   const getMenuRight = async (queryClause) => {
     const categories = await loadDataPager(queryClause)
@@ -32,32 +38,16 @@ const Product = (props) => {
     getMenuRight(query)
   }, [])
 
-  // const [isLoading, setLoading] = useState(false)
-  // //State for the loading indicator
-  // const startLoading = () => setLoading(true)
-  // const stopLoading = () => setLoading(false)
+  useEffect(() => {
+    const products = props.category?.products.slice(
+      (activePage - 1) * DEFAULT_PAGE_SIZE,
+      activePage * DEFAULT_PAGE_SIZE
+    )
+    setProducts(products)
+  }, [activePage])
 
-  // useEffect(() => {
-  //   //After the component is mounted set router event handlers
-  //   Router.events.on("routeChangeStart", startLoading)
-  //   Router.events.on("routeChangeComplete", stopLoading)
-
-  //   return () => {
-  //     Router.events.off("routeChangeStart", startLoading)
-  //     Router.events.off("routeChangeComplete", stopLoading)
-  //   }
-  // }, [])
-
-  const paginationHandler = (page) => {
-    console.log(props.router)
-    const currentPath = props.router.pathname
-    const currentQuery = {}
-    currentQuery.pageIndex = page.selected + 1
-    currentQuery.pageSize = DEFAULT_PAGE_SIZE
-    props.router.push({
-      pathname: currentPath,
-      query: currentQuery,
-    })
+  const handlePagination = (page) => {
+    setActivePage(page)
   }
 
   return (
@@ -71,39 +61,22 @@ const Product = (props) => {
               {/* <p className='font-weight-bold py-2 title-category'>{category?.name}</p> */}
             </div>
             <div className='col-md-9 col-12'>
-              <ListProduct
-                products={props.category?.products ?? []}
-                category={props.category}
-              />
-
-              <ReactPaginate
-                breakLabel={"..."}
-                breakClassName={"break-me"}
-                initialPage={props.currentPage - 1}
-                pageCount={Math.ceil(props.pageCount / DEFAULT_PAGE_SIZE)}
-                marginPagesDisplayed={2}
-                pageRangeDisplayed={5}
-                onPageChange={paginationHandler}
-                hrefBuilder={() => props.router.pathname}
-                // style
-                containerClassName={
-                  "pagination pagination_style1 justify-content-center"
-                }
-                // subContainerClassName={'pages pagination'}
-                activeClassName={"page-item active"}
-                // style page
-                pageClassName={"page-item"}
-                pageLinkClassName={"page-link"}
-                // style next
-                nextClassName={"page-item"}
-                nextLinkClassName={"page-link"}
-                // style previous
-                previousClassName={"page-item"}
-                previousLinkClassName={"page-link"}
-                // lable next & previous
-                previousLabel={<i className='linearicons-chevron-left'></i>}
-                nextLabel={<i className='linearicons-chevron-right'></i>}
-              />
+              <ListProduct products={products} category={props.category} />
+              {totalItems > DEFAULT_PAGE_SIZE ? (
+                <Pagination
+                  hideFirstLastPages
+                  activePage={activePage}
+                  itemsCountPerPage={DEFAULT_PAGE_SIZE}
+                  totalItemsCount={totalItems}
+                  pageRangeDisplayed={5}
+                  onChange={handlePagination}
+                  itemClass='page-item'
+                  linkClass='page-link'
+                  prevPageText={<i className='linearicons-chevron-left' />}
+                  nextPageText={<i className='linearicons-chevron-right' />}
+                  innerClass='pagination justify-content-center custom-pagination'
+                />
+              ) : null}
             </div>
             <div className='col-md-3 col-12'>
               <MenuRight menu={categoriesData} />
@@ -117,18 +90,15 @@ const Product = (props) => {
 
 Product.getInitialProps = async ({ query }) => {
   const { slug } = query
-  const skip = (query.pageIndex - 1) * query.pageSize || 0
-  const limit = query.pageSize || DEFAULT_PAGE_SIZE
   let category = []
-  let pageCount = 0
   if (slug) {
-    const query = `filter: { slug: "${slug}" }, skip: ${skip}, limit: ${limit}`
+    const query = `filter: { slug: "${slug}" }`
     console.log("query.......", query)
     category = await getCategoryBySlug(query)
   } else {
-    const query = `where: { skip: ${skip}, limit: ${limit} }`
-    const { products, total } = await getProducts(query)
-    pageCount = total
+    const query = `filter: { status: Published }`
+    const products = await getProducts(query)
+
     category.push({
       name: "Sản phẩm",
       slug: "san-pham",
@@ -140,8 +110,6 @@ Product.getInitialProps = async ({ query }) => {
 
   return {
     category: category[0],
-    currentPage: 1,
-    pageCount: pageCount,
   }
 }
 

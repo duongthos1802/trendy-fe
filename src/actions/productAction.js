@@ -32,9 +32,7 @@ export const getProducts = async (clause) => {
     })
 
     if (result.status === 200 && !result.data.errors) {
-      const resultData = result.data.data
-        ? result.data.data.getProductsFE
-        : null
+      const resultData = result.data.data ? result.data.data.products : null
       return resultData
     }
   } catch (error) {
