@@ -10,7 +10,7 @@ import { loadDataPager } from "../../actions/categoryAction"
 import Title from "../../components/Title"
 import { DEFAULT_PAGE_SIZE, enumType } from "../../constants"
 
-const Recipe = ({ category }) => {
+const Recipe = ({ category, slug }) => {
   const dispatch = useDispatch()
   const [recipes, setRecipes] = useState([])
   const [activePage, setActivePage] = useState(1)
@@ -40,7 +40,7 @@ const Recipe = ({ category }) => {
       activePage * DEFAULT_PAGE_SIZE
     )
     setRecipes(recipes)
-  }, [activePage])
+  }, [activePage, slug])
 
   return (
     <Layout>
@@ -99,7 +99,7 @@ Recipe.getInitialProps = async (context) => {
     })
   }
 
-  return { category: category[0] }
+  return { category: category[0], slug: slug }
 }
 
 export default Recipe

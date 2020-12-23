@@ -42,7 +42,7 @@ const Product = (props) => {
       activePage * DEFAULT_PAGE_SIZE
     )
     setProducts(products)
-  }, [activePage])
+  }, [activePage, props.slug])
 
   return (
     <Layout>
@@ -104,6 +104,7 @@ Product.getInitialProps = async ({ query }) => {
 
   return {
     category: category[0],
+    slug: slug
   }
 }
 
