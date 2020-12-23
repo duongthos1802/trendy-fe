@@ -8,7 +8,7 @@ const configHeader = {
 
 export const apiService = () => {
   return axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://api.nguyenlieutrendy.com',
     headers: configHeader,
     timeout: 99999
   })
