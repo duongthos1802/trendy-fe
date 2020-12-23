@@ -44,7 +44,7 @@ const Product = (props) => {
       activePage * DEFAULT_PAGE_SIZE
     )
     setProducts(products)
-  }, [activePage])
+  }, [activePage, props.slug])
 
   const handlePagination = (page) => {
     setActivePage(page)
@@ -110,6 +110,7 @@ Product.getInitialProps = async ({ query }) => {
 
   return {
     category: category[0],
+    slug: slug
   }
 }
 
