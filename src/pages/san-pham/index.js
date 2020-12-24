@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react"
-import Layout from "../../components/layouts/Layout"
+import Router, { withRouter } from "next/router"
 import Pagination from "react-js-pagination"
+import Layout from "../../components/layouts/Layout"
 import Banner from "../../components/Banner"
-import ListRecipe from "./ListRecipe"
+import ListProduct from "./ListProduct"
 import MenuRight from "../../components/MenuRight"
-import { getCategoryBySlug, getRecipes } from "../../actions/recipeAction"
-import { useDispatch, useSelector } from "react-redux"
+import { getCategoryBySlug, getProducts } from "../../actions/productAction"
 import { loadDataPager } from "../../actions/categoryAction"
+import { useDispatch, useSelector } from "react-redux"
 import Title from "../../components/Title"
 import { DEFAULT_PAGE_SIZE, enumType } from "../../constants"
 
-const Recipe = ({ category, slug }) => {
+const Product = (props) => {
   const dispatch = useDispatch()
-  const [recipes, setRecipes] = useState([])
+  const [products, setProducts] = useState([])
   const [activePage, setActivePage] = useState(1)
 
   const categoriesData = useSelector((state) =>
@@ -21,39 +22,40 @@ const Recipe = ({ category, slug }) => {
       : []
   )
 
+  const totalItems = props.category?.products.length
+
   const getMenuRight = async (queryClause) => {
     const categories = await loadDataPager(queryClause)
     dispatch.categories.getMenuRight(
       categories && categories.length ? categories : []
     )
   }
-  const totalItems = category?.recipes.length
 
   useEffect(() => {
-    const query = `filter: { option: Recipe, status: Published }`
+    const query = `filter: { option: Product, status: Published }`
     getMenuRight(query)
   }, [])
 
   useEffect(() => {
-    const recipes = category?.recipes.slice(
+    const products = props.category?.products.slice(
       (activePage - 1) * DEFAULT_PAGE_SIZE,
       activePage * DEFAULT_PAGE_SIZE
     )
-    setRecipes(recipes)
-  }, [activePage, slug])
+    setProducts(products)
+  }, [activePage, props.slug])
 
   return (
     <Layout>
-      <Banner category={category} />
+      <Banner category={props.category} />
       <div className='section'>
         <div className='container'>
           <div className='row'>
             <div className='col-12 mb-3'>
-              <Title category={category} customClass='custom-title' />
-              {/* <h2 className='font-weight-bold py-2 title-category'>{category?.name}</h2> */}
+              <Title category={props.category} customClass='custom-title' />
+              {/* <p className='font-weight-bold py-2 title-category'>{category?.name}</p> */}
             </div>
             <div className='col-md-9 col-12'>
-              <ListRecipe recipes={recipes ?? []} category={category} />
+              <ListProduct products={products} category={props.category} />
               {totalItems > DEFAULT_PAGE_SIZE ? (
                 <Pagination
                   hideFirstLastPages
@@ -80,26 +82,30 @@ const Recipe = ({ category, slug }) => {
   )
 }
 
-Recipe.getInitialProps = async (context) => {
-  const { slug } = context.query
-
+Product.getInitialProps = async ({ query }) => {
+  const { slug } = query
   let category = []
   if (slug) {
     const query = `filter: { slug: "${slug}" }`
+    console.log("query.......", query)
     category = await getCategoryBySlug(query)
   } else {
     const query = `filter: { status: Published }`
-    const recipes = await getRecipes(query)
+    const products = await getProducts(query)
+
     category.push({
-      name: "Công thức",
-      slug: "cong-thuc",
-      option: enumType.categoryType.RECIPE,
+      name: "Sản phẩm",
+      slug: "san-pham",
+      option: enumType.categoryType.PRODUCT,
       parentId: null,
-      recipes: recipes && recipes.length ? recipes : [],
+      products: products && products.length ? products : [],
     })
   }
 
-  return { category: category[0], slug: slug }
+  return {
+    category: category[0],
+    slug: slug
+  }
 }
 
-export default Recipe
+export default withRouter(Product)

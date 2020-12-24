@@ -40,10 +40,12 @@ export default {
     return `
       query {
         products(${clause}){
-          _id
-          name
-          slug
-          pictures 
+            _id
+            name
+            slug
+            pictures
+          
+
         }
       }`
   },

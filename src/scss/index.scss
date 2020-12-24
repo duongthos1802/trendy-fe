@@ -121,3 +121,23 @@ a {
 .page_title_light .breadcrumb-item::before {
   color: $color-primary-blue;
 }
+
+.custom-pagination {
+  font-weight: 500;
+  .page-item {
+    margin-right: 6px !important;
+
+    i {
+      font-weight: 700 !important;
+    }
+  }
+  .page-item.active .page-link {
+    background-color: $color-primary !important;
+    border-color: $color-primary !important;
+    color: white !important;
+  }
+  .page-link {
+    border: 2px solid #dee2e6;
+    border-radius: 4px !important;
+  }
+}
