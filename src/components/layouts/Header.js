@@ -60,18 +60,22 @@ const renderSubMenu = (data, isMega, parentData) => {
         <li className='sub-menu-gallery'>
           <ul>
             <li>
-              <a href='https://mysterybean.vn/product-category/ca-phe-rang-xay/'>
-                <img src='https://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-lover.jpg' />
+              <a href='/'>
+                <img
+                  src={`/static/assets/images/menu/how-we-make-coffee.jpg`}
+                />
               </a>
             </li>
             <li>
-              <a href='https://mysterybean.vn/product-category/ca-phe-rang-xay/'>
-                <img src='https://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-lover.jpg' />
+              <a href='/'>
+                <img
+                  src={`/static/assets/images/menu/mystery-bean-lover.jpg`}
+                />
               </a>
             </li>
             <li>
-              <a href='https://mysterybean.vn/product-category/ca-phe-rang-xay/'>
-                <img src='https://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-lover.jpg' />
+              <a href='/'>
+                <img src={`/static/assets/images/menu/ready-to-mix.jpg`} />
               </a>
             </li>
           </ul>
