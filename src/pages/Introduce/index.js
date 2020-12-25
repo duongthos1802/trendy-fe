@@ -30,9 +30,9 @@ const Introduce = () => {
               </p>
             </div>
           </div>
-          <div className='media-content col-sm-12 col-md-6'>
+          {/* <div className='media-content col-sm-12 col-md-6'>
             <img src='https://mysterybean.vn/wp-content/uploads/2020/11/Mystery-Bean-coffee-and-tea-1024x682.jpg' />
-          </div>
+          </div> */}
         </div>
       </div>
       <div className='content-para'>

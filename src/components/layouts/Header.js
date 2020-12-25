@@ -125,7 +125,7 @@ const Header = ({ children, isMobile }) => {
 
   return (
     <React.Fragment>
-      <div className='header-top-container'>
+      {/* <div className='header-top-container'>
         <div className='row align-items-center header-top'>
           <div className='col-md-6 '>
             <div className='header-top-left'>
@@ -150,12 +150,15 @@ const Header = ({ children, isMobile }) => {
             </ul>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className='menu-container sticky-top'>
         <div className='menu'>
           <Link href='/'>
             <a className='logo '>
-              <img src='https://mysterybean.vn/wp-content/uploads/2020/10/Mytery-bean-Logo-Org.png' />
+              <img
+                src={`/static/assets/images/logos/logo-trendy-01.png`}
+                alt='logo'
+              />
             </a>
           </Link>
           <a href='#' class='menu-mobile'>

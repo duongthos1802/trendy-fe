@@ -68,14 +68,17 @@
   font-size: 14px;
   font-weight: bold;
 }
-
+.footer_logo a.logo,
 .menu a.logo {
   display: inline-block;
   padding: 5px;
   width: 19%;
 }
+
+.footer_logo .logo img,
 .menu .logo img {
   min-width: 150px !important;
+  max-height: 95px !important;
 }
 
 @media screen and (max-width: 959px) {

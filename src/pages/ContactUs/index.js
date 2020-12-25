@@ -154,9 +154,9 @@ const ContactUs = (props) => {
                         <button
                           type='submit'
                           className='btn btn-default'
-                          onClick={() => {
-                            window.location.reload(true)
-                          }}
+                          // onClick={() => {
+                          //   window.location.reload(true)
+                          // }}
                         >
                           Gửi yêu cầu
                         </button>
