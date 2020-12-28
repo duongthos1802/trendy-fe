@@ -4,7 +4,7 @@ import product from "../actions/queries/product"
 import { getProducts } from "../actions/productAction"
 import SmallCardProduct from "./SmallCardProduct"
 
-const MenuRight = ({ menu }) => {
+const MenuRight = ({ menu, isGood }) => {
   const [goodProducts, setGoodProducts] = useState([])
 
   let cateParent = null
@@ -45,29 +45,33 @@ const MenuRight = ({ menu }) => {
             : null}
         </ul>
 
-        <h5 className='font-weight-bold text-color-primary-blue'>
-          Sản phẩm đánh giá cao
-        </h5>
-        <ul className='widget_categories mt-4 mb-4'>
-          {goodProducts && goodProducts.length
-            ? goodProducts.map((product) => {
-                return (
-                  <li>
-                    <Link
-                      href={`/san-pham/chi-tiet/${product?.slug}-${product._id}`}
-                    >
-                      <a>
-                        <SmallCardProduct
-                          product={product}
-                          category={product?.category}
-                        />
-                      </a>
-                    </Link>
-                  </li>
-                )
-              })
-            : null}
-        </ul>
+        {isGood ? (
+          <h5 className='font-weight-bold text-color-primary-blue'>
+            Sản phẩm đánh giá cao
+          </h5>
+        ) : null}
+        {isGood ? (
+          <ul className='widget_categories mt-4 mb-4'>
+            {goodProducts && goodProducts.length
+              ? goodProducts.map((product) => {
+                  return (
+                    <li>
+                      <Link
+                        href={`/san-pham/chi-tiet/${product?.slug}-${product._id}`}
+                      >
+                        <a>
+                          <SmallCardProduct
+                            product={product}
+                            category={product?.category}
+                          />
+                        </a>
+                      </Link>
+                    </li>
+                  )
+                })
+              : null}
+          </ul>
+        ) : null}
       </div>
     </div>
   )

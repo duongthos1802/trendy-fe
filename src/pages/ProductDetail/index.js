@@ -78,7 +78,7 @@ const ProductDetail = ({ product }) => {
                 </div>
               </div>
               <div className='col-12 col-md-4'>
-                <MenuRight menu={categoriesData} />
+                <MenuRight menu={categoriesData} isGood={true} />
               </div>
 
               <div className='col-12 col-md-8 mb-4'>
@@ -87,7 +87,7 @@ const ProductDetail = ({ product }) => {
 
               <div className='col-12'>
                 <h4 className='font-weight-bold custom-border-bottom d-inline'>
-                  Related Product
+                  Sản phẩm liên quan
                 </h4>
                 {product.productSuggestion &&
                 product.productSuggestion.length ? (

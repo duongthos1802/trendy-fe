@@ -3,6 +3,7 @@ import ImageGallery from "react-image-gallery"
 import { getRecipeDetail } from "../../actions/recipeAction"
 import Banner from "../../components/Banner"
 import Layout from "../../components/layouts/Layout"
+import RelateItem from "../../components/RelateItem"
 import { enumType } from "../../constants"
 import { htmlContentWithBBCode } from "../../extensions/html"
 import { getIdByUrl } from "../../extensions/routes"
@@ -28,6 +29,7 @@ const renderImageGallery = (pictures) => {
 }
 
 const RecipeDetail = ({ recipe }) => {
+  console.log("recipe........", recipe)
   return (
     <Layout>
       {/* <Banner /> */}
@@ -72,6 +74,17 @@ const RecipeDetail = ({ recipe }) => {
                 ) : null}
               </div>
             </div>
+          </div>
+          <div className='col-12'>
+            <h4 className='font-weight-bold custom-border-bottom d-inline'>
+              Công thức liên quan
+            </h4>
+            {recipe.recipeSuggestion && recipe.recipeSuggestion.length ? (
+              <RelateItem
+                recipes={recipe.recipeSuggestion.slice(0, 4)}
+                category={recipe.category[0]}
+              />
+            ) : null}
           </div>
         </div>
       </div>

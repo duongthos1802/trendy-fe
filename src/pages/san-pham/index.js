@@ -73,7 +73,7 @@ const Product = (props) => {
               ) : null}
             </div>
             <div className='col-md-3 col-12'>
-              <MenuRight menu={categoriesData} />
+              <MenuRight menu={categoriesData} isGood={true} />
             </div>
           </div>
         </div>

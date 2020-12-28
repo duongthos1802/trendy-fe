@@ -40,6 +40,11 @@ export default {
               slug
             }
           }
+          recipeSuggestion {
+            _id
+            name
+            pictures
+          }
       }
     }`
   },
