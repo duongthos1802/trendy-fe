@@ -92,6 +92,7 @@ Product.getInitialProps = async ({ query }) => {
   } else {
     const query = `filter: { status: Published }`
     const products = await getProducts(query)
+    console.log(products)
 
     category.push({
       name: "Sản phẩm",
@@ -104,7 +105,7 @@ Product.getInitialProps = async ({ query }) => {
 
   return {
     category: category[0],
-    slug: slug
+    slug: slug,
   }
 }
 

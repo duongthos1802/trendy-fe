@@ -48,3 +48,24 @@
     margin-top: 3rem;
   }
 }
+.small-product-card {
+  display: flex;
+
+  .small-product-img {
+    margin-right: 10px;
+    align-self: flex-end;
+  }
+  .small-card-content {
+    .small-card__title {
+      font-size: 16px !important;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+    .small-card__cate {
+      font-size: 14px;
+    }
+  }
+}
+.custom-border-bottom {
+  border-bottom: 2px solid $color-primary;
+}

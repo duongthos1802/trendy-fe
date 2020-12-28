@@ -33,6 +33,19 @@ export default {
           preservation
           recipeSuggestion
           application
+          recipes {
+            _id
+            name
+            pictures
+          }
+          category {
+            name
+          }
+          productSuggestion{
+            _id
+            pictures
+            name
+          }
         }
       }`
   },
@@ -44,8 +57,9 @@ export default {
             name
             slug
             pictures
-          
-
+            category {
+              name
+            }
         }
       }`
   },

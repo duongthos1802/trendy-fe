@@ -10,6 +10,7 @@ import { enumType } from "../../constants"
 import { imageUtils } from "../../utils"
 import { useDispatch, useSelector } from "react-redux"
 import { loadDataPager } from "../../actions/categoryAction"
+import RelateItem from "../../components/RelateItem"
 
 const mapImage = (pictures) => {
   let imagesData = []
@@ -33,7 +34,9 @@ const ProductDetail = ({ product }) => {
   const dispatch = useDispatch()
 
   const categoriesData = useSelector((state) =>
-    state.categories && state.categories.menuRight ? state.categories.menuRight : []
+    state.categories && state.categories.menuRight
+      ? state.categories.menuRight
+      : []
   )
 
   const getMenuRight = async (queryClause) => {
@@ -48,7 +51,6 @@ const ProductDetail = ({ product }) => {
     getMenuRight(query)
   }, [])
 
-
   const imageItem = mapImage(product.pictures)
   return (
     <Layout>
@@ -58,7 +60,11 @@ const ProductDetail = ({ product }) => {
             <div className='row'>
               <div className='col-12 col-md-4'>
                 <div className='product-image'>
-                  <ImageGallery items={imageItem} />
+                  <ImageGallery
+                    items={imageItem}
+                    showPlayButton={false}
+                    showFullscreenButton={false}
+                  />
                 </div>
               </div>
               <div className='col-12 col-md-4'>
@@ -72,13 +78,24 @@ const ProductDetail = ({ product }) => {
                 </div>
               </div>
               <div className='col-12 col-md-4'>
-                <MenuRight
-                  menu={categoriesData}
-                />
+                <MenuRight menu={categoriesData} />
               </div>
 
-              <div className='col-12 col-md-8'>
+              <div className='col-12 col-md-8 mb-4'>
                 <Information product={product} />
+              </div>
+
+              <div className='col-12'>
+                <h4 className='font-weight-bold custom-border-bottom d-inline'>
+                  Related Product
+                </h4>
+                {product.productSuggestion &&
+                product.productSuggestion.length ? (
+                  <RelateItem
+                    products={product.productSuggestion.slice(0, 4)}
+                    category={product.category}
+                  />
+                ) : null}
               </div>
             </div>
           </div>

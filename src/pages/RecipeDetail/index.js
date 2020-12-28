@@ -20,6 +20,8 @@ const renderImageGallery = (pictures) => {
     <ImageGallery
       items={imagesData}
       showThumbnails={true}
+      showPlayButton={false}
+      showFullscreenButton={false}
       sizes={"width:400px;height:400px"}
     />
   )
