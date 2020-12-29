@@ -19,9 +19,9 @@ const Footer = ({ children, isMobile }) => {
             <div className='col-xl-6 col-md-8 col-sm-12'>
               <div className='widget'>
                 <div className='footer_logo'>
-                  <a className='logo '>
+                  <a className='logo'>
                     <img
-                      src={`/static/assets/images/logos/logo-trendy-01.png`}
+                      src={`/static/assets/images/logos/logo_trendy_white.png`}
                       alt='logo'
                     />
                   </a>

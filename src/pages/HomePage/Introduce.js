@@ -31,7 +31,7 @@ const Introduce = () => {
                 <h2 className="text-color-white">{introduceHomePage?.title}</h2>
               </div>
               <p className="text-white">{htmlContentWithBBCode(introduceHomePage?.description)}</p>
-              <a className="btn btn-white" href="#">Xem thêm</a>
+              <a className="btn btn-white"  target="_blank" href="/cam-hung-sang-tao">Tìm hiểu thêm</a>
             </div>
           </div>
         </div >

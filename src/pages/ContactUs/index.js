@@ -29,12 +29,6 @@ const ContactUs = (props) => {
             <p>0848.034.456</p>
             <p>chuquancafe.com</p>
           </div>
-          <div className='address'>
-            <h4>Thành Phố Hà Nội – Việt Nam</h4>
-            <p>Tầng 5, Hồng Hà Tower 89 Thịnh Liệt, Hoàng Mai, Hà Nội</p>
-            <p>0848.034.456</p>
-            <p>chuquancafe.com</p>
-          </div>
         </div>
         <div className='col-md-5 contact-us-right'>
           <div className='form-card'>

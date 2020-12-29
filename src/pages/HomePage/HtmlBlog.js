@@ -39,7 +39,7 @@ const HtmlBlock = () => {
                   </div>
                   <p className="font-size-14">{htmlContentWithBBCode(blockHomePage.block?.description)}</p>
                   <p className="w-100 btn-block">
-                    <a className="btn btn-dark" >Tìm hiểu thêm</a>
+                    <a className="btn btn-dark" href="/gioi-thieu">Tìm hiểu thêm</a>
                   </p>
                 </div>
               </div>
@@ -51,42 +51,31 @@ const HtmlBlock = () => {
           : null
       }
       {/* Block Second */}
+      <div className="container my-5">
+        <hr/>
+      </div>
       {
         blockHomePage && blockHomePage.blockSecond
-          ? < div className="section">
-            <div className="container">
-              <div className="row justify-content-center">
-                <div className="col-lg-6 col-md-8 animation" data-animation="fadeInUp" data-animation-delay="0.2s">
-                  <div className="heading_s1 text-center">
-                    <h2>{blockHomePage.blockSecond?.title}</h2>
-                  </div>
-                  <p className="text-center leads ">{htmlContentWithBBCode(blockHomePage.blockSecond?.description)}</p>
-                </div>
+          ? <div className="container mb-5">
+            <div className="row">
+            <div className="col-lg-6 animation" data-animation="fadeInUp" data-animation-delay="0.03s">
+                <img src={imageUtils.getBlockUrl(blockHomePage.blockSecond.image, enumType.imagePath.HtmlBlock)} alt="about_img3" />
               </div>
-              <div className="row justify-content-center">
-                <div className="col-lg-6 background-color-primary-blue p-4 block-second text-color-white">
-                  {
-                    htmlContentWithBBCode(blockHomePage.blockSecond.content)
-                  }
-                  {/* <h2 className="text-color-white">Hành trình của sự chinh phục</h2>
-                  <p className="line-height-15 text-color-white">Từ 1997, khi tình yêu với cà phê không chỉ còn là để thỏa mãn vị giác mỗi ngày,
-                  sự đam mê khám phá và mong muốn thành quả tạo ra những gói cà phê tinh nguyên, đắng đậm lại dịu nhẹ từ những hạt ngọc đen tinh khiết.
-              Chúng tôi hình thành "Đào Nguyên", một thương hiệu mở đầu cho hành trình chinh phục “mỹ vị” người dân Việt.</p>
-                  <p className="line-height-15 text-color-white">Với mong muốn mang giấc mơ cà phê đi xa, chúng tôi tin rằng khát vọng được uống cà phê ngon- sạch
-                  của chính quê hương mình sẽ trở thành niềm vui mang đầy sức lan tỏa trong cộng đồng cũng như bạn bè quốc tế. Và, Mystery Bean - một
-                  thương hiệu của Cà phê Đào Nguyên, đã đặt cho mình sứ mệnh nhận dạng và tôn vinh giá trị cà phê Việt, mang một hình ảnh mới về sự năng
-              động và hội nhập xu thế mới của ngành công nghiệp sản xuất và chế biến cà phê trên toàn thế giới.</p> */}
-                </div>
-                <div className="col-lg-6 px-0" style={{ backgroundImage: `url(${imageUtils.getBlockUrl(blockHomePage.blockSecond.image, enumType.imagePath.HtmlBlock)})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
-                  {/* <img src="http://mysterybean.vn/wp-content/uploads/2020/10/mystery-bean-from-farm-to-cup.jpg?id=7465" /> */}
+              <div className="col-lg-6 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+                <div className="about_section pl-lg-3 py-5">
+                  <div className="heading_s1 title-block">
+                    <h2 className="mb-5">{blockHomePage.blockSecond?.title}</h2>
+                  </div>
+                  <p className="font-size-14">{htmlContentWithBBCode(blockHomePage.blockSecond?.description)}</p>
+                  <p className="w-100 btn-block">
+                    <a className="btn btn-dark" href="/cong-thuc">Tìm hiểu thêm</a>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
           : null
       }
-
-
     </div >
 
   )
