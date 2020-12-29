@@ -232,13 +232,13 @@ button:focus {
 }
 .btn-default {
 	background-color: transparent;
-	border: 1px solid #FF324D;
+	border: 1px solid #ED1C27;
 	color: #fff;
 	position: relative;
 	z-index: 1;
 }
 .btn-default:hover {
-	color: #FF324D !important;
+	color: #ED1C27 !important;
 }
 .btn-default::before {
 	display: block;
@@ -249,7 +249,7 @@ button:focus {
 	width: 100%;
 	z-index: -1;
 	content: '';
-	background-color: #FF324D;
+	background-color: #ED1C27;
 	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 }
 .btn-default::after {
@@ -266,8 +266,8 @@ button:focus {
 	transition: all 0.75s ease 0s;
 }
 .btn-fill-in {
-	border: 1px solid #FF324D;
-	background-color: #FF324D;
+	border: 1px solid #ED1C27;
+	background-color: #ED1C27;
 	color: #fff;
 	position: relative;
 }
@@ -304,7 +304,7 @@ button:focus {
 }
 .btn-dark {
 	background-color: transparent;
-	border: 1px solid #333;
+	border: 1px solid #ED1C27;
 	color: #fff !important;
 	overflow: hidden;
 	position: relative;
@@ -324,7 +324,7 @@ button:focus {
 }
 .btn-dark:hover {
 	background-color: transparent;
-	border-color: #333;
+	border-color: #ED1C27;
 	color: #333 !important;
 }
 .btn-default.btn-radius::before, .btn-default.btn-radius::after, .btn-white.btn-radius::before, .btn-white.btn-radius::after,.btn-dark.btn-radius::before, .btn-dark.btn-radius::after {
@@ -337,13 +337,13 @@ button:focus {
 	color: #333;
 }
 .text_default {
-	color: #FF324D !important;
+	color: #ED1C27 !important;
 }
 .bg_gray {
 	background-color: #f7f8fb !important;
 }
 .bg_default {
-	background-color: #FF324D !important;
+	background-color: #ED1C27 !important;
 }
 .bg_light_blue {
 	background-color: #f3f8fb !important;

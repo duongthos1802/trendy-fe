@@ -83,7 +83,13 @@
 .footer_logo {
   img {
     min-width: 150px !important;
-    max-height: 95px !important;
+    max-height: 110px !important;
+  }
+  @media (max-width: $sm-max-width) {
+    img {
+      min-width: 150px !important;
+      max-height: 95px !important;
+    }
   }
 }
 

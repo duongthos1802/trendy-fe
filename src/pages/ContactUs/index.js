@@ -147,7 +147,7 @@ const ContactUs = (props) => {
                       <div className='col-md-12 text-center'>
                         <button
                           type='submit'
-                          className='btn btn-default'
+                          className='btn btn-default background-color-primary'
                           // onClick={() => {
                           //   window.location.reload(true)
                           // }}
