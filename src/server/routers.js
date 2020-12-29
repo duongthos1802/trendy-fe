@@ -56,7 +56,7 @@ exports.routers = {
       text: "",
     },
     InspiredList: {
-      path: "/cam-hung",
+      path: "/cam-hung-sang-tao",
       component: "/Inspired",
       text: "",
     },

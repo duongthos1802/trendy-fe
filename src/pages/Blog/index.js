@@ -80,7 +80,7 @@ Blog.getInitialProps = async ({ query }) => {
     const clause = `where: { slug: "${slug}", skip: ${skip || 0} limit: ${limit}}`
     blogs = await getBlogBySlugId(clause)
   } else {
-    const clause = `where: { slug: "tin-tuc" skip: ${skip || 0} limit: ${limit}}`
+    const clause = `where: { skip: ${skip || 0} limit: ${limit}}`
     blogs = await getBlogs(clause)
   }
 

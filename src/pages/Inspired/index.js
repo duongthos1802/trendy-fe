@@ -11,7 +11,7 @@ import { DEFAULT_PAGE_SIZE, enumType } from '../../constants'
 import { routers } from '../../server/routers'
 // extensions
 import { imageUtils } from '../../utils'
-import { truncateHtmlContent } from '../../extensions/html'
+import { htmlContentWithBBCode, truncateHtmlContent } from '../../extensions/html'
 
 const Inspired = (props) => {
   const { inspired, category } = props.props
@@ -52,8 +52,8 @@ const Inspired = (props) => {
                           </div>
                           <div className="blog_content">
                             <div className="blog_text">
-                              <h5 className="blog_title text-center font-size-18 text-color-primary-blue"><a >{inspired && inspired.name ? truncateHtmlContent(inspired.name, 75) : null}</a></h5>
-                              <p className="text-center font-size-14 line-height-15 ">{inspired && inspired.description ? truncateHtmlContent(inspired.description, 100) : null}</p>
+                              <h5 className="blog_title text-center font-size-18 text-color-primary-blue"><a >{inspired?.name}</a></h5>
+                              <p className="blog_description text-center font-size-14 line-height-15 ">{htmlContentWithBBCode(inspired?.description)}</p>
                             </div>
                           </div>
                         </div>
@@ -80,7 +80,7 @@ Inspired.getInitialProps = async ({ query }) => {
     const clause = `where: { slug: "${slug}", skip: ${skip || 0} limit: ${limit}}`
     inspired = await getInspiredBySlug(clause)
   } else {
-    const clause = `where: { slug: "cam-hung" skip: ${skip || 0} limit: ${limit}}`
+    const clause = `where: { skip: ${skip || 0} limit: ${limit}}`
     inspired = await getInspired(clause)
   }
 

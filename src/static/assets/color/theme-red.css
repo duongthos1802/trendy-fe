@@ -27,7 +27,7 @@ a:hover,
 
 .btn-default:hover,
 .text_default {
-	color: #ED1C27 !important;
+	color: white !important;
 }
 
 .btn-default::before,

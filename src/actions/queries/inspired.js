@@ -14,6 +14,7 @@ export default {
             name
             slug
             pictures
+            description
           }
         }
       }`
@@ -33,6 +34,7 @@ export default {
             name
             slug
             pictures
+            description
           }
         }
       }`
