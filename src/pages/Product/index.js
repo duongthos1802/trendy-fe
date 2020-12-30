@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import Router, { withRouter } from "next/router"
 import Pagination from "react-js-pagination"
 import Layout from "../../components/layouts/Layout"
 import Banner from "../../components/Banner"
@@ -109,4 +108,4 @@ Product.getInitialProps = async ({ query }) => {
   }
 }
 
-export default withRouter(Product)
+export default Product

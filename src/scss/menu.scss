@@ -102,6 +102,8 @@
 .menu-mobile {
   display: none;
   padding: 20px;
+  color: #2a3175 !important;
+  cursor: pointer;
 }
 .menu-mobile:after {
   content: "\f394";

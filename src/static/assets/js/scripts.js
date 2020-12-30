@@ -76,20 +76,28 @@ PAGE JS
 	04. MENU JS
 	*===================================*/
   //Main navigation scroll spy for shadow
-
+  // setTimeout(function () {
+  //   $(".mobile-ddn").on("click", function (e) {
+  //     if ($(window).width() <= 943) {
+  //       $(this).parent().children(".sub-menu").fadeToggle(150)
+  //     }
+  //   })
+  // }, 200)
   $(window).on("load", function () {
     setTimeout(function () {
-      $(".mega-menu-item").on("click", function (e) {
+      $(".mobile-ddn").on("click", function (e) {
         if ($(window).width() <= 943) {
-          $(this).children(".sub-menu").fadeToggle(150)
+          $(this).parent().children(".sub-menu").fadeToggle(150)
         }
-      })
-      $(".menu-mobile").on("click", function (e) {
-        $(".menu > ul").toggleClass("show-on-mobile")
-        e.preventDefault()
       })
     }, 200)
   })
+  // $(function () {
+  //   $(".menu-mobile").on("click", function (e) {
+  //     console.log("hihihihi")
+  //     $(".menu > ul").toggleClass("show-on-mobile")
+  //   })
+  // })
 
   /*===================================*
 	05. SMOOTH SCROLLING JS
