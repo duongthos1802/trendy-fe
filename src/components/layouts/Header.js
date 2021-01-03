@@ -27,54 +27,58 @@ const generateCate = (data) => {
 const renderSubMenu = (data, isMega, parentData) => {
   if (!isMega) {
     return (
-      <ul className='sub-menu normal-sub'>
-        {data.map((subItem) => (
-          <li>
-            <Link href={`/${parentData.slug}/${subItem.slug}`}>
-              <a>{subItem.name}</a>
-            </Link>
-          </li>
-        ))}
+      <ul className='dropdown-menu' aria-labelledby={parentData.slug}>
+        {data.map((subItem) => {
+          return (
+            <li>
+              <Link href={`/${parentData.slug}/${subItem.slug}`}>
+                <a className='dropdown-item'>{subItem.name}</a>
+              </Link>
+            </li>
+          )
+        })}
       </ul>
     )
   } else {
     return (
-      <ul className='sub-menu mega-sub'>
-        <li className='sub-menu-cate'>
-          <Link href={`/${parentData.slug}`}>
-            <a className='sub-menu-cate__title'>{parentData.name}</a>
-          </Link>
-          <ul className='sub-menu-cate__link'>
-            {/* <li>
-              <a href='#'>Cà phê rang xay</a>
-            </li> */}
+      <ul
+        className='dropdown-menu mega-dropdown-menu'
+        aria-labelledby={parentData.slug}
+      >
+        <li className='row mega-dropdown__wrapper'>
+          <ul className='col-lg-2 col-md-12'>
+            <li>
+              <Link href={`/${parentData.slug}`}>
+                <a className='dropdown-item dropdown-item__title'>
+                  {parentData.name}
+                </a>
+              </Link>
+            </li>
             {data.map((subItem) => (
               <li>
                 <Link href={`/${parentData.slug}/${subItem.slug}`}>
-                  <a>{subItem.name}</a>
+                  <a className='dropdown-item'>{subItem.name}</a>
                 </Link>
               </li>
             ))}
           </ul>
-        </li>
-        <li className='sub-menu-gallery'>
-          <ul>
+          <ul className='col-lg-10 menu-gallery'>
             <li>
-              <a href='/'>
+              <a href='/' className='dropdown-item'>
                 <img
                   src={`/static/assets/images/menu/how-we-make-coffee.jpg`}
                 />
               </a>
             </li>
             <li>
-              <a href='/'>
+              <a href='/' className='dropdown-item'>
                 <img
                   src={`/static/assets/images/menu/mystery-bean-lover.jpg`}
                 />
               </a>
             </li>
             <li>
-              <a href='/'>
+              <a href='/' className='dropdown-item'>
                 <img src={`/static/assets/images/menu/ready-to-mix.jpg`} />
               </a>
             </li>
@@ -86,22 +90,42 @@ const renderSubMenu = (data, isMega, parentData) => {
 }
 
 const renderMenu = (initMenu) => {
-  return initMenu.map((menu) => (
-    <li className='mega-menu-item'>
-      <Link href={`/${menu.slug}`}>
-        <a className='mega-menu-link'>{menu.name}</a>
-      </Link>
-      {menu.cate.length > 0 ? (
-        <i className='fas fa-angle-down ml-1 mobile-ddn'></i>
-      ) : null}
-
-      {menu.cate.length > 0
-        ? menu.isMega
-          ? renderSubMenu(menu.cate, true, menu)
-          : renderSubMenu(menu.cate, false, menu)
-        : null}
-    </li>
-  ))
+  return initMenu.map((menu) => {
+    if (menu.cate.length === 0) {
+      return (
+        <li className='nav-item'>
+          <Link href={`/${menu.slug}`}>
+            <a className='nav-link' href='contact-us.html'>
+              {menu.name}
+            </a>
+          </Link>
+        </li>
+      )
+    } else {
+      return (
+        <li
+          className={`nav-item dropdown ${
+            menu.isMega ? "mega-dropdown" : null
+          }`}
+        >
+          <Link href={`/${menu.slug}`}>
+            <a
+              className='nav-link dropdown-toggle'
+              id={menu.slug}
+              data-toggle='dropdown'
+              aria-haspopup='true'
+              aria-expanded='false'
+            >
+              {menu.name}
+            </a>
+          </Link>
+          {menu.isMega
+            ? renderSubMenu(menu.cate, true, menu)
+            : renderSubMenu(menu.cate, false, menu)}
+        </li>
+      )
+    }
+  })
 }
 
 const Header = ({ children, isMobile }) => {
@@ -132,12 +156,12 @@ const Header = ({ children, isMobile }) => {
 
   return (
     <React.Fragment>
-      <div class='header-classic'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-              <nav class='navbar navbar-expand-lg navbar-classic'>
-                <a class='navbar-brand' href='/'>
+      <div className='header-classic'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+              <nav className='navbar navbar-expand-lg navbar-classic'>
+                <a className='navbar-brand' href='/'>
                   <img
                     src='/static/assets/images/logos/logo-trendy-01.png'
                     alt='Logo'
@@ -145,7 +169,7 @@ const Header = ({ children, isMobile }) => {
                   />
                 </a>
                 <button
-                  class='navbar-toggler collapsed'
+                  className='navbar-toggler collapsed'
                   type='button'
                   data-toggle='collapse'
                   data-target='#navbar-classic'
@@ -153,143 +177,13 @@ const Header = ({ children, isMobile }) => {
                   aria-expanded='false'
                   aria-label='Toggle navigation'
                 >
-                  <span class='icon-bar top-bar mt-0'></span>
-                  <span class='icon-bar middle-bar'></span>
-                  <span class='icon-bar bottom-bar'></span>
+                  <span className='icon-bar top-bar mt-0' />
+                  <span className='icon-bar middle-bar' />
+                  <span className='icon-bar bottom-bar' />
                 </button>
-                <div class='collapse navbar-collapse' id='navbar-classic'>
-                  <ul class='navbar-nav ml-auto mt-2 mt-lg-0 mr-3'>
-                    <li class='nav-item dropdown'>
-                      <a
-                        class='nav-link dropdown-toggle'
-                        href='#'
-                        id='menu-1'
-                        data-toggle='dropdown'
-                        aria-haspopup='true'
-                        aria-expanded='false'
-                      >
-                        Homepage
-                      </a>
-                      <ul class='dropdown-menu' aria-labelledby='menu-1'>
-                        <li>
-                          <a class='dropdown-item' href='#'>
-                            Homepage 1
-                          </a>
-                        </li>
-                        <li>
-                          <a class='dropdown-item' href='#'>
-                            Homepage 2
-                          </a>
-                        </li>
-                        <li>
-                          <a class='dropdown-item' href='#'>
-                            Homepage 3
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class='nav-item dropdown'>
-                      <a
-                        class='nav-link dropdown-toggle'
-                        href='#'
-                        id='menu-1'
-                        data-toggle='dropdown'
-                        aria-haspopup='true'
-                        aria-expanded='false'
-                      >
-                        Homepage
-                      </a>
-                      <ul class='dropdown-menu' aria-labelledby='menu-1'>
-                        <li>
-                          <a class='dropdown-item' href='#'>
-                            Homepage 1
-                          </a>
-                        </li>
-                        <li>
-                          <a class='dropdown-item' href='#'>
-                            Homepage 2
-                          </a>
-                        </li>
-                        <li>
-                          <a class='dropdown-item' href='#'>
-                            Homepage 3
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li class='nav-item dropdown mega-dropdown'>
-                      <a
-                        class='nav-link dropdown-toggle'
-                        href='#'
-                        id='menu-2'
-                        data-toggle='dropdown'
-                        aria-haspopup='true'
-                        aria-expanded='false'
-                      >
-                        Blocks
-                      </a>
-                      <ul
-                        class='dropdown-menu mega-dropdown-menu'
-                        aria-labelledby='menu-2'
-                      >
-                        <li class='row mega-dropdown__wrapper'>
-                          <ul class='col-lg-2 col-md-12'>
-                            <li>
-                              <a
-                                class='dropdown-item dropdown-item__title'
-                                href='#'
-                              >
-                                Blocks
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                block 20
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                block 21
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                block 21
-                              </a>
-                            </li>
-                          </ul>
-                          <ul className='col-lg-10 menu-gallery'>
-                            <li>
-                              <a href='/' class='dropdown-item'>
-                                <img
-                                  src={`/static/assets/images/menu/how-we-make-coffee.jpg`}
-                                />
-                              </a>
-                            </li>
-                            <li>
-                              <a href='/' class='dropdown-item'>
-                                <img
-                                  src={`/static/assets/images/menu/mystery-bean-lover.jpg`}
-                                />
-                              </a>
-                            </li>
-                            <li>
-                              <a href='/' class='dropdown-item'>
-                                <img
-                                  src={`/static/assets/images/menu/ready-to-mix.jpg`}
-                                />
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class='nav-item'>
-                      <a class='nav-link' href='contact-us.html'>
-                        Contact us
-                      </a>
-                    </li>
+                <div className='collapse navbar-collapse' id='navbar-classic'>
+                  <ul className='navbar-nav ml-auto mt-2 mt-lg-0 mr-3'>
+                    {renderMenu(dataMenu)}
                   </ul>
                 </div>
               </nav>

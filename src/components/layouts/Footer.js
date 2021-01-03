@@ -31,7 +31,7 @@ const Footer = ({ children, isMobile }) => {
                 </p>
               </div>
               <div className='widget'>
-                <ul className='social_icons social_white social_style1 rounded_social'>
+                <ul className='social_icons social_white social_style1 rounded_social custom-social'>
                   <li>
                     <a
                       href='https://www.facebook.com/nguyenlieutrendy'

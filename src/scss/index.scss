@@ -145,14 +145,31 @@ a {
     border-radius: 4px !important;
   }
 }
-.footer-logo a.logo {
+.footer_logo a.logo {
   display: inline-block;
   padding: 5px;
   width: 19%;
 }
-.footer-logo .logo img {
+.footer_logo .logo img {
   min-width: 150px !important;
   max-height: 95px !important;
+}
+.custom-social li {
+  display: inline-block;
+  padding: 0 5px 5px 0;
+  margin-right: 5px;
+  a {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 18px;
+    height: 36px;
+    width: 36px;
+    line-height: 36px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    border-radius: 50%;
+  }
 }
 
 .blog_title {
