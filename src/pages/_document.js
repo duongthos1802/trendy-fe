@@ -28,7 +28,7 @@ class MyDocument extends Document {
           {/* <!-- Latest Bootstrap min CSS --> */}
           <link
             rel='stylesheet'
-            href='/static/assets/bootstrap/css/bootstrap.min.css'
+            href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'
           />
           {/* <!-- Icon Font CSS --> */}
           <link rel='stylesheet' href='/static/assets/css/all.min.css' />
@@ -89,7 +89,7 @@ class MyDocument extends Document {
         </Head>
         <Main />
         <NextScript />
-        <script src="/static/assets/js/jquery-1.12.4.min.js"></script>
+        <script src='/static/assets/js/jquery-1.12.4.min.js'></script>
         {/* <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script> */}
 
         <script src='/static/assets/bootstrap/js/bootstrap.min.js'></script>
@@ -106,7 +106,8 @@ class MyDocument extends Document {
         <script src='/static/assets/js/slick.min.js'></script>
         <script src='/static/assets/js/datepicker.min.js'></script>
         <script src='/static/assets/js/mdtimepicker.min.js'></script>
-        <script src='/static/assets/js/scripts.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+        {/* <script src='/static/assets/js/scripts.js'></script> */}
 
         <script src='https://code.iconify.design/1/1.0.7/iconify.min.js'></script>
       </Html>
