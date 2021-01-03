@@ -137,8 +137,12 @@ const Header = ({ children, isMobile }) => {
           <div class='row'>
             <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
               <nav class='navbar navbar-expand-lg navbar-classic'>
-                <a class='navbar-brand' href='https://jituchauhan.com/quanto/'>
-                  Bootstrap 4
+                <a class='navbar-brand' href='/'>
+                  <img
+                    src='/static/assets/images/logos/logo-trendy-01.png'
+                    alt='Logo'
+                    className='logo-brand'
+                  />
                 </a>
                 <button
                   class='navbar-toggler collapsed'
@@ -169,19 +173,16 @@ const Header = ({ children, isMobile }) => {
                       <ul class='dropdown-menu' aria-labelledby='menu-1'>
                         <li>
                           <a class='dropdown-item' href='#'>
-                            {" "}
                             Homepage 1
                           </a>
                         </li>
                         <li>
                           <a class='dropdown-item' href='#'>
-                            {" "}
                             Homepage 2
                           </a>
                         </li>
                         <li>
                           <a class='dropdown-item' href='#'>
-                            {" "}
                             Homepage 3
                           </a>
                         </li>
@@ -191,50 +192,28 @@ const Header = ({ children, isMobile }) => {
                       <a
                         class='nav-link dropdown-toggle'
                         href='#'
-                        id='menu-2'
+                        id='menu-1'
                         data-toggle='dropdown'
                         aria-haspopup='true'
                         aria-expanded='false'
                       >
-                        Pages
+                        Homepage
                       </a>
-                      <ul class='dropdown-menu' aria-labelledby='menu-2'>
-                        <li class='dropdown-submenu'>
-                          <a class='dropdown-item dropdown-toggle' href='#'>
-                            Demo 1
+                      <ul class='dropdown-menu' aria-labelledby='menu-1'>
+                        <li>
+                          <a class='dropdown-item' href='#'>
+                            Homepage 1
                           </a>
-                          <ul class='dropdown-menu'>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                Demo sub one
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                Demo sub two
-                              </a>
-                            </li>
-                          </ul>
                         </li>
-                        <li class='dropdown-submenu'>
-                          <a class='dropdown-item dropdown-toggle' href='#'>
-                            Demo 2
+                        <li>
+                          <a class='dropdown-item' href='#'>
+                            Homepage 2
                           </a>
-                          <ul class='dropdown-menu'>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                Demo sub two
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                Demo sub three
-                              </a>
-                            </li>
-                          </ul>
+                        </li>
+                        <li>
+                          <a class='dropdown-item' href='#'>
+                            Homepage 3
+                          </a>
                         </li>
                       </ul>
                     </li>
@@ -242,8 +221,8 @@ const Header = ({ children, isMobile }) => {
                     <li class='nav-item dropdown mega-dropdown'>
                       <a
                         class='nav-link dropdown-toggle'
-                        href=''
-                        id='menu-4'
+                        href='#'
+                        id='menu-2'
                         data-toggle='dropdown'
                         aria-haspopup='true'
                         aria-expanded='false'
@@ -252,146 +231,54 @@ const Header = ({ children, isMobile }) => {
                       </a>
                       <ul
                         class='dropdown-menu mega-dropdown-menu'
-                        aria-labelledby='menu-4'
+                        aria-labelledby='menu-2'
                       >
-                        <li class='row'>
-                          <ul class='col'>
+                        <li class='row mega-dropdown__wrapper'>
+                          <ul class='col-lg-2 col-md-12'>
                             <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 1
+                              <a
+                                class='dropdown-item dropdown-item__title'
+                                href='#'
+                              >
+                                Blocks
                               </a>
                             </li>
                             <li>
                               <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 2
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 3
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 4
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 5
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 6
-                              </a>
-                            </li>
-                          </ul>
-                          <ul class='col'>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 7
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 8
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 9
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 10
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 11
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 12
-                              </a>
-                            </li>
-                          </ul>
-                          <ul class='col'>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 13
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 14
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 15
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 16
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 17
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 18
-                              </a>
-                            </li>
-                          </ul>
-                          <ul class='col'>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 19
-                              </a>
-                            </li>
-                            <li>
-                              <a class='dropdown-item' href='#'>
-                                {" "}
                                 block 20
                               </a>
                             </li>
                             <li>
                               <a class='dropdown-item' href='#'>
-                                {" "}
                                 block 21
                               </a>
                             </li>
                             <li>
                               <a class='dropdown-item' href='#'>
-                                {" "}
-                                block 22
+                                block 21
+                              </a>
+                            </li>
+                          </ul>
+                          <ul className='col-lg-10 menu-gallery'>
+                            <li>
+                              <a href='/' class='dropdown-item'>
+                                <img
+                                  src={`/static/assets/images/menu/how-we-make-coffee.jpg`}
+                                />
+                              </a>
+                            </li>
+                            <li>
+                              <a href='/' class='dropdown-item'>
+                                <img
+                                  src={`/static/assets/images/menu/mystery-bean-lover.jpg`}
+                                />
+                              </a>
+                            </li>
+                            <li>
+                              <a href='/' class='dropdown-item'>
+                                <img
+                                  src={`/static/assets/images/menu/ready-to-mix.jpg`}
+                                />
                               </a>
                             </li>
                           </ul>

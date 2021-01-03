@@ -20,15 +20,15 @@ body {
   font-size: 16px;
 }
 
-// h1,
-// h2,
-// h3,
-// h4,
-// p,
-// hr,
-// a {
-//   color: $color-primary-blue !important;
-// }
+h1,
+h2,
+h3,
+h4,
+p,
+hr,
+a {
+  color: $color-primary-blue !important;
+}
 
 .banner_section:not(.full_screen) .carousel-item {
   height: 557px;
