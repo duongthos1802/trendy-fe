@@ -12,12 +12,12 @@ exports.routers = {
     },
     productList: {
       path: "/san-pham",
-      component: "/Product",
+      component: "/san-pham",
       text: "",
     },
     product: {
       path: "/san-pham/:slug",
-      component: "/Product",
+      component: "/san-pham",
       text: "",
     },
     productDetail: {
