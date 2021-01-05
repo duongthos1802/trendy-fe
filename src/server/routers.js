@@ -7,7 +7,7 @@ exports.routers = {
     },
     TrangChu: {
       path: "/trang-chu",
-      component: "/HomePage",
+      component: "/trang-chu",
       text: "",
     },
     productList: {
@@ -27,12 +27,12 @@ exports.routers = {
     },
     recipeList: {
       path: "/cong-thuc",
-      component: "/Recipe",
+      component: "/cong-thuc",
       text: "",
     },
     recipe: {
       path: "/cong-thuc/:slug",
-      component: "/Recipe",
+      component: "/cong-thuc",
       text: "",
     },
     recipeDetail: {
@@ -57,12 +57,12 @@ exports.routers = {
     },
     InspiredList: {
       path: "/cam-hung-sang-tao",
-      component: "/Inspired",
+      component: "/cam-hung-sang-tao",
       text: "",
     },
     blog: {
       path: "/cam-hung/:slug",
-      component: "/Inspired",
+      component: "/cam-hung-sang-tao",
       text: "",
     },
     InspiredDetail: {
@@ -72,12 +72,12 @@ exports.routers = {
     },
     introduce: {
       path: "/gioi-thieu",
-      component: "/Introduce",
+      component: "/gioi-thieu",
       text: "",
     },
     contactUs: {
       path: "/lien-he",
-      component: "/ContactUs",
+      component: "/lien-he",
       text: "",
     },
   },
