@@ -2,7 +2,7 @@ exports.routers = {
   defined: {
     homepage: {
       path: "/",
-      component: "/HomePage",
+      component: "/trang-chu",
       text: "",
     },
     TrangChu: {
