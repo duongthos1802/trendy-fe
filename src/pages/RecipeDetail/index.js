@@ -2,9 +2,10 @@ import React from "react"
 import ImageGallery from "react-image-gallery"
 import { getRecipeDetail } from "../../actions/recipeAction"
 import Banner from "../../components/Banner"
+import GenerateSeo from "../../components/GenerateSeo"
 import Layout from "../../components/layouts/Layout"
 import RelateItem from "../../components/RelateItem"
-import { enumType } from "../../constants"
+import { DEFAULT_HTTP_SITE, enumType } from "../../constants"
 import { htmlContentWithBBCode } from "../../extensions/html"
 import { getIdByUrl } from "../../extensions/routes"
 import { imageUtils } from "../../utils"
@@ -29,9 +30,13 @@ const renderImageGallery = (pictures) => {
 }
 
 const RecipeDetail = ({ recipe }) => {
-  console.log("recipe........", recipe)
   return (
     <Layout>
+      <GenerateSeo
+        title={recipe.name}
+        description='Các công thức chuẩn và mới nhất'
+        url={`${DEFAULT_HTTP_SITE}/cong-thuc`}
+      />
       {/* <Banner /> */}
       <div className='container'>
         <div className='row recipe'>

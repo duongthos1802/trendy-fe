@@ -42,12 +42,12 @@ exports.routers = {
     },
     blogLevelOne: {
       path: "/tin-tuc",
-      component: "/Blog",
+      component: "/tin-tuc",
       text: "",
     },
     blog: {
       path: "/tin-tuc/:slug",
-      component: "/Blog",
+      component: "/tin-tuc",
       text: "",
     },
     blogDetail: {

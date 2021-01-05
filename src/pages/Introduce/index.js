@@ -1,9 +1,11 @@
 import React from "react"
+import GenerateSeo from "../../components/GenerateSeo"
 import Layout from "../../components/layouts/Layout"
 
 const Introduce = () => {
   return (
     <Layout>
+      <GenerateSeo />
       <div className='intro'>
         <div className='row container-wrap'>
           <div className='col-sm-12 col-md-6 '>
@@ -38,7 +40,14 @@ const Introduce = () => {
       <div className='content-para'>
         <h2>Giá trị cốt lõi của chúng tôi</h2>
         <p>
-          Trendy tự hào mang đến các dòng nguyên liệu pha chế bao gồm: Syrup, Bột, Topping,... Trong tương lai, danh mục sản phẩm của Trendy sẽ tiếp tục được nghiên cứu để mở rộng, phát triển về cả số lượng và chất lượng. Với quan niệm pha chế đồ uống là sự kết hợp của sáng tạo và đam mê, Trendy sẽ không ngừng đồng hành cùng các chuyên gia pha chế và chủ quán kinh doanh cà phê trên con đường vươn tới đỉnh cao của sáng tạo, mang tới những sản phẩm chất lượng tốt và phù hợp với mô hình kinh doanh.
+          Trendy tự hào mang đến các dòng nguyên liệu pha chế bao gồm: Syrup,
+          Bột, Topping,... Trong tương lai, danh mục sản phẩm của Trendy sẽ tiếp
+          tục được nghiên cứu để mở rộng, phát triển về cả số lượng và chất
+          lượng. Với quan niệm pha chế đồ uống là sự kết hợp của sáng tạo và đam
+          mê, Trendy sẽ không ngừng đồng hành cùng các chuyên gia pha chế và chủ
+          quán kinh doanh cà phê trên con đường vươn tới đỉnh cao của sáng tạo,
+          mang tới những sản phẩm chất lượng tốt và phù hợp với mô hình kinh
+          doanh.
         </p>
       </div>
     </Layout>

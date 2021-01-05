@@ -2,23 +2,25 @@ import React, { useState, useEffect } from "react"
 import Router, { withRouter } from "next/router"
 import Link from "next/link"
 // actions
-import { getInspired, getInspiredBySlug } from "../../actions/InspiredAction"
+import { getBlogBySlugId, getBlogs } from "../../actions/blogAction"
 // components
 import Layout from "../../components/layouts/Layout"
 import Loader from "../../components/Loader"
 // coonstants
-import { DEFAULT_HTTP_SITE, DEFAULT_PAGE_SIZE, enumType } from "../../constants"
+import {
+  DEFAULT_HTTP_SITE,
+  DEFAULT_PAGE_SIZE,
+  DEFAULT_SITE,
+  enumType,
+} from "../../constants"
 import { routers } from "../../server/routers"
 // extensions
 import { imageUtils } from "../../utils"
-import {
-  htmlContentWithBBCode,
-  truncateHtmlContent,
-} from "../../extensions/html"
+import { truncateHtmlContent } from "../../extensions/html"
 import GenerateSeo from "../../components/GenerateSeo"
 
-const Inspired = (props) => {
-  const { inspired, category } = props.props
+const Blog = (props) => {
+  const { blogs, category } = props.props
   const [isLoading, setLoading] = useState(false)
   //State for the loading indicator
   const startLoading = () => setLoading(true)
@@ -38,13 +40,13 @@ const Inspired = (props) => {
   return (
     <Layout>
       <GenerateSeo
-        title={`Cảm hứng sáng tạo mới nhất`}
-        description={`Các Cảm hứng - sáng tạo - xu hướng mới nhất`}
+        title={`Tin tức mới nhất`}
+        description={`Các tin tức - sự kiện - xu hướng mới nhất`}
         image={imageUtils.getBannerUrl(
           category?.banner,
           enumType.imagePath.Banner
         )}
-        url={`${DEFAULT_HTTP_SITE}/cam-hung-sang-tao`}
+        url={`${DEFAULT_HTTP_SITE}/tin-tuc`}
       />
       <div className='section pt-4'>
         <div className='container-fluid container-fluid-custom'>
@@ -52,17 +54,15 @@ const Inspired = (props) => {
             {isLoading ? (
               <Loader />
             ) : (
-              inspired.map((inspired, index) => (
-                <Link
-                  href={`/cam-hung/chi-tiet/${inspired.slug}-${inspired._id}`}
-                >
+              blogs.map((blog, index) => (
+                <Link href={`/tin-tuc/chi-tiet/${blog.slug}-${blog._id}`}>
                   <div className='col-lg-4 col-md-6 pb-4' key={index}>
                     <div className='blog_post blog_style1 box_shadow1'>
                       <div className='blog_img'>
                         <a>
                           <img
                             src={imageUtils.getUrlImageProduct(
-                              inspired.pictures[0],
+                              blog.pictures[0],
                               enumType.imagePath.Blog
                             )}
                             alt='blog_img'
@@ -72,10 +72,16 @@ const Inspired = (props) => {
                       <div className='blog_content'>
                         <div className='blog_text'>
                           <h5 className='blog_title text-center font-size-18 text-color-primary-blue'>
-                            <a>{inspired?.name}</a>
+                            <a>
+                              {blog && blog.name
+                                ? truncateHtmlContent(blog.name, 75)
+                                : null}
+                            </a>
                           </h5>
-                          <p className='blog_description text-center font-size-14 line-height-15 '>
-                            {htmlContentWithBBCode(inspired?.description)}
+                          <p className='text-center font-size-14 line-height-15 '>
+                            {blog && blog.description
+                              ? truncateHtmlContent(blog.description, 100)
+                              : null}
                           </p>
                         </div>
                       </div>
@@ -91,8 +97,8 @@ const Inspired = (props) => {
   )
 }
 
-Inspired.getInitialProps = async ({ query }) => {
-  let inspired = null
+Blog.getInitialProps = async ({ query }) => {
+  let blogs = null
   const skip = (query.pageIndex - 1) * query.pageSize
   const limit = query.pageSize || DEFAULT_PAGE_SIZE
 
@@ -101,20 +107,20 @@ Inspired.getInitialProps = async ({ query }) => {
     const clause = `where: { slug: "${slug}", skip: ${
       skip || 0
     } limit: ${limit}}`
-    inspired = await getInspiredBySlug(clause)
+    blogs = await getBlogBySlugId(clause)
   } else {
     const clause = `where: { skip: ${skip || 0} limit: ${limit}}`
-    inspired = await getInspired(clause)
+    blogs = await getBlogs(clause)
   }
 
   return {
     props: {
-      category: inspired?.category,
-      inspired: inspired?.blogs,
+      category: blogs?.category,
+      blogs: blogs?.blogs,
       currentPage: 1,
-      pageCount: inspired?.total,
+      pageCount: blogs?.total,
     },
   }
 }
 
-export default withRouter(Inspired)
+export default withRouter(Blog)

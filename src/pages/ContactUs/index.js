@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../../components/layouts/Layout"
 import { Formik, Field, Form, ErrorMessage } from "formik"
 import * as yup from "yup"
+import GenerateSeo from "../../components/GenerateSeo"
 
 const schema = yup.object({
   name: yup.string().required("Họ tên không được để trống."),
@@ -17,6 +18,7 @@ const ContactUs = (props) => {
   }
   return (
     <Layout>
+      <GenerateSeo />
       <div className='row container-wrap contact-us'>
         <div className='col-md-7 contact-us-left'>
           <h2>

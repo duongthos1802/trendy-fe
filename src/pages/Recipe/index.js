@@ -8,7 +8,8 @@ import { getCategoryBySlug, getRecipes } from "../../actions/recipeAction"
 import { useDispatch, useSelector } from "react-redux"
 import { loadDataPager } from "../../actions/categoryAction"
 import Title from "../../components/Title"
-import { DEFAULT_PAGE_SIZE, enumType } from "../../constants"
+import { DEFAULT_HTTP_SITE, DEFAULT_PAGE_SIZE, enumType } from "../../constants"
+import GenerateSeo from "../../components/GenerateSeo"
 
 const Recipe = ({ category, slug }) => {
   const dispatch = useDispatch()
@@ -44,6 +45,11 @@ const Recipe = ({ category, slug }) => {
 
   return (
     <Layout>
+      <GenerateSeo
+        title='Công thức - cách làm - trang trí'
+        description='Các công thức chuẩn và mới nhất'
+        url={`${DEFAULT_HTTP_SITE}/cong-thuc`}
+      />
       <Banner category={category} />
       <div className='section'>
         <div className='container'>

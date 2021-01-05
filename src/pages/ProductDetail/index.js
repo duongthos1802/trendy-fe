@@ -6,11 +6,12 @@ import { getIdByUrl } from "../../extensions/routes"
 import { getProductById } from "../../actions/productAction"
 import { htmlContentWithBBCode } from "../../extensions/html"
 import Information from "./Information"
-import { enumType } from "../../constants"
+import { DEFAULT_HTTP_SITE, enumType } from "../../constants"
 import { imageUtils } from "../../utils"
 import { useDispatch, useSelector } from "react-redux"
 import { loadDataPager } from "../../actions/categoryAction"
 import RelateItem from "../../components/RelateItem"
+import GenerateSeo from "../../components/GenerateSeo"
 
 const mapImage = (pictures) => {
   let imagesData = []
@@ -54,6 +55,11 @@ const ProductDetail = ({ product }) => {
   const imageItem = mapImage(product.pictures)
   return (
     <Layout>
+      <GenerateSeo
+        title={product?.name}
+        description='Các sản phẩm pha chế chất lượng và mới nhất'
+        url={`${DEFAULT_HTTP_SITE}/san-pham`}
+      />
       {product ? (
         <div className='section product-detail'>
           <div className='container'>

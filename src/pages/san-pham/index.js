@@ -8,7 +8,8 @@ import { getCategoryBySlug, getProducts } from "../../actions/productAction"
 import { loadDataPager } from "../../actions/categoryAction"
 import { useDispatch, useSelector } from "react-redux"
 import Title from "../../components/Title"
-import { DEFAULT_PAGE_SIZE, enumType } from "../../constants"
+import { DEFAULT_HTTP_SITE, DEFAULT_PAGE_SIZE, enumType } from "../../constants"
+import GenerateSeo from "../../components/GenerateSeo"
 
 const Product = (props) => {
   const dispatch = useDispatch()
@@ -45,6 +46,11 @@ const Product = (props) => {
 
   return (
     <Layout>
+      <GenerateSeo
+        title='Sản phẩm pha chế'
+        description='Các sản phẩm pha chế chất lượng và mới nhất'
+        url={`${DEFAULT_HTTP_SITE}/san-pham`}
+      />
       <Banner category={props.category} />
       <div className='section'>
         <div className='container'>

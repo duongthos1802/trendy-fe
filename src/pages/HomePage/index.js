@@ -7,10 +7,12 @@ import ProductList from "./ProductList"
 import Information from "./Information"
 import Introduce from "./Introduce"
 import { getBannerHome } from "../../actions/homeAction"
+import GenerateSeo from "../../components/GenerateSeo"
 
 const HomePage = ({ bannerHome }) => {
   return (
     <Layout>
+      <GenerateSeo />
       {bannerHome && bannerHome.banner && bannerHome.banner.length ? (
         <BannerHome banner={bannerHome.banner} />
       ) : null}
