@@ -182,7 +182,7 @@ const Header = ({ children, isMobile }) => {
                   <span className='icon-bar bottom-bar' />
                 </button>
                 <div className='collapse navbar-collapse' id='navbar-classic'>
-                  <ul className='navbar-nav ml-auto mt-2 mt-lg-0 mr-3'>
+                  <ul className='navbar-nav ml-auto mt-2 mt-lg-0'>
                     {renderMenu(dataMenu)}
                   </ul>
                 </div>
