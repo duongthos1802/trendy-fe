@@ -19,7 +19,7 @@ const BannerHome = ({ banner }) => {
             banner
               ? banner.map((item, i) => (
                 <div
-                  className={"carousel-item background_bg " + (i === 0 ? " active" : "")}
+                  className={"carousel-item background_bg cursor-pointer " + (i === 0 ? " active" : "")}
                   style={{ backgroundImage: `url(${imageUtils.getBlockUrl(item.image, enumType.imagePath.Banner)})` }}
                   onClick={(e) => handleClick(e, item.url)}
                 >
