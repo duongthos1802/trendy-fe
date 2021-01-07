@@ -38,7 +38,7 @@ const Introduce = () => {
         </div>
       </div>
       <div className='content-para'>
-        <h2>Giá trị cốt lõi của chúng tôi</h2>
+        <h2>Trendy - Đồng hành để phát triển</h2>
         <p>
           Trendy tự hào mang đến các dòng nguyên liệu pha chế bao gồm: Syrup,
           Bột, Topping,... Trong tương lai, danh mục sản phẩm của Trendy sẽ tiếp

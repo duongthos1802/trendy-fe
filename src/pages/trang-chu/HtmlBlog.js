@@ -68,7 +68,7 @@ const HtmlBlock = () => {
                   </div>
                   <p className="font-size-14">{htmlContentWithBBCode(blockHomePage.blockSecond?.description)}</p>
                   <p className="w-100 btn-block">
-                    <a className="btn btn-dark" href="/cong-thuc">Tìm hiểu thêm</a>
+                    <a className="btn btn-dark" href="/san-pham">Tìm hiểu thêm</a>
                   </p>
                 </div>
               </div>
