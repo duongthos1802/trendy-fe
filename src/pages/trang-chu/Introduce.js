@@ -30,8 +30,8 @@ const Introduce = () => {
               <div className="heading_s1 heading_light">
                 <h2 className="text-color-white">{introduceHomePage?.title}</h2>
               </div>
-              <p className="text-white">{htmlContentWithBBCode(introduceHomePage?.description)}</p>
-              <a className="btn btn-white"  target="_blank" href="/cam-hung-sang-tao">Tìm hiểu thêm</a>
+              <p className="text-white text-justify">{htmlContentWithBBCode(introduceHomePage?.description)}</p>
+              <a className="btn btn-white" target="_blank" href="/cam-hung-sang-tao">Tìm hiểu thêm</a>
             </div>
           </div>
         </div >

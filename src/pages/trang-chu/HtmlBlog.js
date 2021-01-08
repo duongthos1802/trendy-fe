@@ -37,7 +37,7 @@ const HtmlBlock = () => {
                   <div className="heading_s1 title-block">
                     <h2 className="mb-5">{blockHomePage.block?.title}</h2>
                   </div>
-                  <p className="font-size-14">{htmlContentWithBBCode(blockHomePage.block?.description)}</p>
+                  <p className="font-size-14 text-justify">{htmlContentWithBBCode(blockHomePage.block?.description)}</p>
                   <p className="w-100 btn-block">
                     <a className="btn btn-dark" href="/gioi-thieu">Tìm hiểu thêm</a>
                   </p>
@@ -52,13 +52,13 @@ const HtmlBlock = () => {
       }
       {/* Block Second */}
       <div className="container my-5">
-        <hr/>
+        <hr />
       </div>
       {
         blockHomePage && blockHomePage.blockSecond
           ? <div className="container mb-5">
             <div className="row">
-            <div className="col-lg-6 animation" data-animation="fadeInUp" data-animation-delay="0.03s">
+              <div className="col-lg-6 animation" data-animation="fadeInUp" data-animation-delay="0.03s">
                 <img src={imageUtils.getBlockUrl(blockHomePage.blockSecond.image, enumType.imagePath.HtmlBlock)} alt="about_img3" />
               </div>
               <div className="col-lg-6 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
@@ -66,7 +66,7 @@ const HtmlBlock = () => {
                   <div className="heading_s1 title-block">
                     <h2 className="mb-5">{blockHomePage.blockSecond?.title}</h2>
                   </div>
-                  <p className="font-size-14">{htmlContentWithBBCode(blockHomePage.blockSecond?.description)}</p>
+                  <p className="font-size-14 text-justify">{htmlContentWithBBCode(blockHomePage.blockSecond?.description)}</p>
                   <p className="w-100 btn-block">
                     <a className="btn btn-dark" href="/san-pham">Tìm hiểu thêm</a>
                   </p>

@@ -25,12 +25,12 @@ const ContactUs = (props) => {
             Chúng tôi nỗ lực vào việc cung cấp cho khách hàng chất lượng sản
             phẩm và sự hỗ trợ cao nhất có thể.
           </h2>
-          <div className='address'>
+          {/* <div className='address'>
             <h4>Thành Phố Hà Nội – Việt Nam</h4>
             <p>Tầng 5, Hồng Hà Tower 89 Thịnh Liệt, Hoàng Mai, Hà Nội</p>
             <p>0848.034.456</p>
             <p>chuquancafe.com</p>
-          </div>
+          </div> */}
         </div>
         <div className='col-md-5 contact-us-right'>
           <div className='form-card'>
@@ -150,9 +150,9 @@ const ContactUs = (props) => {
                         <button
                           type='submit'
                           className='btn btn-default background-color-primary'
-                          // onClick={() => {
-                          //   window.location.reload(true)
-                          // }}
+                        // onClick={() => {
+                        //   window.location.reload(true)
+                        // }}
                         >
                           Gửi yêu cầu
                         </button>
