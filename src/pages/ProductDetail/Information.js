@@ -1,6 +1,6 @@
 import React from "react"
 import { htmlContentWithBBCode } from "../../extensions/html"
-import ListRecipe from "../Recipe/ListRecipe"
+import ListRecipe from "../cong-thuc/ListRecipe"
 
 const Information = ({ product }) => {
   return (
