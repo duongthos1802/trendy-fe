@@ -91,18 +91,20 @@ const ProductDetail = ({ product }) => {
                 <Information product={product} />
               </div>
 
-              <div className='col-12'>
-                <h4 className='font-weight-bold custom-border-bottom d-inline'>
-                  Sản phẩm liên quan
-                </h4>
-                {product.productSuggestion &&
+
+              {product.productSuggestion &&
                 product.productSuggestion.length ? (
-                  <RelateItem
-                    products={product.productSuggestion.slice(0, 4)}
-                    category={product.category}
-                  />
+                  <div className='col-12'>
+                    <h4 className='font-weight-bold custom-border-bottom d-inline'>
+                      Sản phẩm liên quan
+                  </h4>
+                    <RelateItem
+                      products={product.productSuggestion.slice(0, 4)}
+                      category={product.category}
+                    />
+                  </div>
                 ) : null}
-              </div>
+
             </div>
           </div>
         </div>
