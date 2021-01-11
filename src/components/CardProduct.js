@@ -24,7 +24,7 @@ const CardProduct = ({ product, category, recipe }) => {
           )}
           {/* <img src={product.image} /> */}
         </div>
-        <div className='title-product'>
+        <div className='title-product pt-3'>
           <p className='mb-0 font-size-18 font-weight-bold title__overflow'>
             {product ? product?.name : recipe?.name}
           </p>
