@@ -11,7 +11,7 @@ const Introduce = () => {
           <div className='col-sm-12 col-md-6 '>
             <div className='main-content'>
               <h2>Trendy - Nguyên liệu pha chế được tin dùng bởi Baristas</h2>
-              <p>
+              <p className="text-justify">
                 Ngành công nghiệp pha chế đồ uống ngày càng phát triển, đòi hỏi
                 sự ra đời của những hương vị mới và sáng tạo hơn nữa trong
                 nguyên liệu và cách pha chế. Bằng cách lắng nghe và thấu hiểu
@@ -39,7 +39,7 @@ const Introduce = () => {
       </div>
       <div className='content-para'>
         <h2>Trendy - Đồng hành để phát triển</h2>
-        <p>
+        <p  className="text-justify">
           Trendy tự hào mang đến các dòng nguyên liệu pha chế bao gồm: Syrup,
           Bột, Topping,... Trong tương lai, danh mục sản phẩm của Trendy sẽ tiếp
           tục được nghiên cứu để mở rộng, phát triển về cả số lượng và chất
