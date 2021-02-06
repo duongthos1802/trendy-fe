@@ -79,7 +79,7 @@ const BlogDetail = (props) => {
   return (
     <Layout isMobile={props.isMobile}>
       <GenerateSeo
-        title={`${blog.name}`}
+        title={`${blog?.name}`}
         description={`Các Cảm hứng - sáng tạo - xu hướng mới nhất`}
         url={`${DEFAULT_HTTP_SITE}/cam-hung-sang-tao`}
       />
@@ -97,44 +97,44 @@ const BlogDetail = (props) => {
                   alt='blog_img'
                 />
               ) ? (
-                <div className='single_post'>
-                  <div className='blog_img blog_img-detail'>
-                    <img
-                      src={imageUtils.getUrlImageProduct(
-                        blog.pictures[0],
-                        enumType.imagePath.Blog
-                      )}
-                      alt='blog_img'
-                    />
-                  </div>
-                  <div className='blog_content'>
-                    <div className='blog_text'>
-                      <h2 className='blog_title text-color-primary-blue'>
-                        {blog?.name ?? null}
-                      </h2>
-                      <ul className='list_none blog_meta'>
-                        <li>
-                          <a href='#'>
-                            <i className='ti-calendar'></i>
-                            {dateTime.formatTimeStampToUtcTime(blog.createdAt)}
-                          </a>
-                        </li>
-                      </ul>
-                      <div className='row'>
-                        <div className='col-md-12'>
-                          {blog.content
-                            ? htmlContentWithBBCode(blog.content)
-                            : null}
+                  <div className='single_post'>
+                    <div className='blog_img blog_img-detail'>
+                      <img
+                        src={imageUtils.getUrlImageProduct(
+                          blog.pictures[0],
+                          enumType.imagePath.Blog
+                        )}
+                        alt='blog_img'
+                      />
+                    </div>
+                    <div className='blog_content'>
+                      <div className='blog_text'>
+                        <h2 className='blog_title text-color-primary-blue'>
+                          {blog?.name ?? null}
+                        </h2>
+                        <ul className='list_none blog_meta'>
+                          <li>
+                            <a href='#'>
+                              <i className='ti-calendar'></i>
+                              {dateTime.formatTimeStampToUtcTime(blog.createdAt)}
+                            </a>
+                          </li>
+                        </ul>
+                        <div className='row'>
+                          <div className='col-md-12'>
+                            {blog.content
+                              ? htmlContentWithBBCode(blog.content)
+                              : null}
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ) : (
-                <div>
-                  <p>Không tồn tại bài viết</p>
-                </div>
-              )}
+                ) : (
+                  <div>
+                    <p>Không tồn tại bài viết</p>
+                  </div>
+                )}
             </div>
             <div className='col-lg-4 mt-3 mt-lg-0'>
               <div className='sidebar'>
@@ -145,40 +145,40 @@ const BlogDetail = (props) => {
                   <ul className='widget_recent_post'>
                     {blogsFeatures && blogsFeatures.length
                       ? blogsFeatures.map((item, index) => (
-                          // <Link href={`/${routes.BLOG_DETAIL}/${item.slug}-${item._id}`}>
-                          <Link
-                            href={`/cam-hung/chi-tiet/${item.slug}-${item._id}`}
-                          >
-                            <li key={index}>
-                              <div className='post_footer'>
-                                <div className='post_img post_img_feature'>
-                                  <img
-                                    className='custom-img-blog'
-                                    src={imageUtils.getUrlImageProduct(
-                                      item.pictures[0],
-                                      enumType.imagePath.Blog
-                                    )}
-                                    alt='letest_post1'
-                                  />
-                                </div>
-
-                                <div className='post_content'>
-                                  <h6 classNameName='text-color-primary-blue'>
-                                    {" "}
-                                    {item && item.name
-                                      ? truncateHtmlContent(item.name, 80)
-                                      : null}
-                                  </h6>
-                                  <p className='small m-0 d-xs-none'>
-                                    {dateTime.formatTimeStampToUtcTime(
-                                      blog.createdAt
-                                    )}
-                                  </p>
-                                </div>
+                        // <Link href={`/${routes.BLOG_DETAIL}/${item.slug}-${item._id}`}>
+                        <Link
+                          href={`/cam-hung/chi-tiet/${item.slug}-${item._id}`}
+                        >
+                          <li key={index}>
+                            <div className='post_footer'>
+                              <div className='post_img post_img_feature'>
+                                <img
+                                  className='custom-img-blog'
+                                  src={imageUtils.getUrlImageProduct(
+                                    item.pictures[0],
+                                    enumType.imagePath.Blog
+                                  )}
+                                  alt='letest_post1'
+                                />
                               </div>
-                            </li>
-                          </Link>
-                        ))
+
+                              <div className='post_content'>
+                                <h6 classNameName='text-color-primary-blue'>
+                                  {" "}
+                                  {item && item.name
+                                    ? truncateHtmlContent(item.name, 80)
+                                    : null}
+                                </h6>
+                                <p className='small m-0 d-xs-none'>
+                                  {dateTime.formatTimeStampToUtcTime(
+                                    blog.createdAt
+                                  )}
+                                </p>
+                              </div>
+                            </div>
+                          </li>
+                        </Link>
+                      ))
                       : null}
                   </ul>
                 </div>
