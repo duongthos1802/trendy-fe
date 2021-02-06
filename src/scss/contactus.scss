@@ -1,5 +1,12 @@
+.contact-us-wrap {
+  background-image: url(https://mysterybean.vn/wp-content/uploads/2020/10/DSCF6249.jpg?id=7762) !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
 .contact-us {
   padding: 60px 0 !important ;
+
   @media (max-width: $sm-max-width) {
     padding: 25px 0 !important ;
   }
