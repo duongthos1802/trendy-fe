@@ -14,7 +14,7 @@ const NextArrow = (props) => {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "red" }}
+      style={{ ...style, display: "block", background: "#ED1C27" }}
       onClick={onClick}
     />
   );
@@ -25,8 +25,7 @@ const PrevArrow = (props) => {
   return (
     <div onClick={onClick}
       className={className}
-      style={{ ...style, display: "block", background: "red" }}>
-      <i className="fa fa-arrow-left text-color-primar" />
+      style={{ ...style, display: "block", background: "#ED1C27" }}>
     </div>
   );
 }
@@ -38,8 +37,8 @@ const settings = {
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 3,
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />,
+  // nextArrow: <NextArrow />,
+  // prevArrow: <PrevArrow />,
   responsive: [
     {
       breakpoint: 1024,
@@ -92,7 +91,7 @@ const CategoryProduct = () => {
                 <Link href={`/san-pham/${category?.slug}`}>
                   <a>
                     <div className="kd-photobox kd-animated fadeInUp kd-animate">
-                      <a className="full-pbox-link" href="https://mysterybean.vn/product-category/ca-phe-hoa-tan/?lang=vi" title="">
+                      <a className="full-pbox-link">
                         <div className="photobox-img">
                           {/* <img src="https://mysterybean.vn/wp-content/uploads/2020/10/Salted-Caramel.jpg" /> */}
                           <img src={imageUtils.getBlockUrl(category.image, enumType.imagePath.Category)} />
@@ -108,7 +107,6 @@ const CategoryProduct = () => {
               </div>
             ))
           }
-
         </Slider >
       </div>
     </div>
