@@ -44,7 +44,7 @@ const ProductList = () => {
                         </div> */}
                       </div>
                     </div>
-                    <div className="row list-product">
+                    <div className="row list-product justify-content-center">
                       {
                         category.products.map(product => (
                           <div className="col-lg-3 col-md-6 col-12">
