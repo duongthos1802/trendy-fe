@@ -19,6 +19,7 @@ const ProductList = () => {
   useEffect(() => {
     loadCategoryFeature()
   }, [])
+
   return categoryFeature && categoryFeature.length && (
     <div className="py-4">
       {
