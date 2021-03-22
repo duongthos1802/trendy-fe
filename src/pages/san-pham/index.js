@@ -91,8 +91,7 @@ Product.getInitialProps = async ({ query }) => {
   const { slug } = query
   let category = []
   if (slug) {
-    const query = `filter: { slug: "${slug}" }`
-    console.log("query.......", query)
+    const query = `filter: { slug: "${slug}", option: Product }`
     category = await getCategoryBySlug(query)
   } else {
     const query = `filter: { status: Published }`

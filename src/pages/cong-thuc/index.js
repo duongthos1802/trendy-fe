@@ -88,14 +88,14 @@ const Recipe = ({ category, slug }) => {
 
 Recipe.getInitialProps = async (context) => {
   const { slug } = context.query
-
   let category = []
   if (slug) {
-    const query = `filter: { slug: "${slug}" }`
+    const query = `filter: { slug: "${slug}", option: Recipe}`
     category = await getCategoryBySlug(query)
   } else {
     const query = `filter: { status: Published }`
     const recipes = await getRecipes(query)
+
     category.push({
       name: "Công thức",
       slug: "cong-thuc",
