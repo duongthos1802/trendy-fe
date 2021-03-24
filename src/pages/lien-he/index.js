@@ -22,7 +22,7 @@ const ContactUs = (props) => {
       <div className='contact-us-wrap'>
         <div className='row container-wrap contact-us'>
           <div className='col-md-7 contact-us-left'>
-            <h2 className='text-color-white'>
+            <h2 className=''>
               Chúng tôi nỗ lực vào việc cung cấp cho khách hàng chất lượng sản
               phẩm và sự hỗ trợ cao nhất có thể.
             </h2>
@@ -35,7 +35,7 @@ const ContactUs = (props) => {
           </div>
           <div className='col-md-5 contact-us-right'>
             <div className='form-card'>
-              <p className='contact-message text-color-white'>
+              <p className='contact-message '>
                 Để biết thêm thông tin chi tiết về thương hiệu Trendy và sản
                 phẩm, vui lòng liên hệ:{" "}
                 <span className='contact-phone'>0848.034.456</span> hoặc điền
@@ -147,7 +147,7 @@ const ContactUs = (props) => {
                             className='invalid-feedback'
                           />
                         </div>
-                        <p className='contact-message mb-3 col-md-12 text-color-white'>
+                        <p className='contact-message mb-3 col-md-12 '>
                           Trendy cam kết bảo vệ sự riêng tư của bạn và đảm bảo
                           rằng thông tin cá nhân của bạn được bảo vệ.
                         </p>
@@ -155,9 +155,9 @@ const ContactUs = (props) => {
                           <button
                             type='submit'
                             className='btn btn-default background-color-primary'
-                            // onClick={() => {
-                            //   window.location.reload(true)
-                            // }}
+                          // onClick={() => {
+                          //   window.location.reload(true)
+                          // }}
                           >
                             Gửi yêu cầu
                           </button>
