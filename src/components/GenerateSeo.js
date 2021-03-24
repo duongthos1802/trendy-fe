@@ -8,7 +8,7 @@ import {
 
 const defaultSite = DEFAULT_SITE
 
-const defaultTitle = `${DEFAULT_SITE} - Cung cấp nguyên liệu pha chế`
+const defaultTitle = `${DEFAULT_SITE} - Chuyên dùng cho pha chế`
 
 const defaultDescription = `${DEFAULT_SITE} cung cấp nguyên liệu, chia sẻ công thức lớn nhất Việt Nam`
 
