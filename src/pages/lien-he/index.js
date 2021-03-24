@@ -22,10 +22,10 @@ const ContactUs = (props) => {
       <div className='contact-us-wrap'>
         <div className='row container-wrap contact-us'>
           <div className='col-md-7 contact-us-left'>
-            <h2 className=''>
+            {/* <h2 className=''>
               Chúng tôi nỗ lực vào việc cung cấp cho khách hàng chất lượng sản
               phẩm và sự hỗ trợ cao nhất có thể.
-            </h2>
+            </h2> */}
             {/* <div className='address'>
             <h4>Thành Phố Hà Nội – Việt Nam</h4>
             <p>Tầng 5, Hồng Hà Tower 89 Thịnh Liệt, Hoàng Mai, Hà Nội</p>
