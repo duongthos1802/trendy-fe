@@ -10,7 +10,7 @@ const defaultSite = DEFAULT_SITE
 
 const defaultTitle = `${DEFAULT_SITE} - Chuyên dùng cho pha chế`
 
-const defaultDescription = `${DEFAULT_SITE} cung cấp nguyên liệu, chia sẻ công thức lớn nhất Việt Nam`
+const defaultDescription = ``
 
 const defaultImage = DEFAULT_IMAGE_SITE
 
