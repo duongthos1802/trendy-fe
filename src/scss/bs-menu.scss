@@ -13,6 +13,13 @@
     min-width: 150px !important;
     max-height: 95px !important;
   }
+
+  @media screen and (max-width: 768px) {
+    .logo-brand {
+      min-width: 135px !important;
+      max-height: 70px !important;
+    }
+  }
 }
 .navbar-classic.navbar-light .navbar-nav .nav-link {
   color: #181825;
