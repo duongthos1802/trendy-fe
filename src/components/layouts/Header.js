@@ -63,25 +63,35 @@ const renderSubMenu = (data, isMega, parentData) => {
             ))}
           </ul>
           <ul className='col-lg-10 menu-gallery'>
-            <li>
-              <a href='/' className='dropdown-item'>
-                <img
-                  src={`/static/assets/images/menu/how-we-make-coffee.jpg`}
-                />
-              </a>
+            <li style={{ maxWidth: '40%' }}>
+              <Link href={`/san-pham/tra`}>
+                <a className='dropdown-item'>
+                  <img src={`/static/assets/images/menu/tra.png`} />
+                </a>
+              </Link>
+
             </li>
-            <li>
-              <a href='/' className='dropdown-item'>
-                <img
-                  src={`/static/assets/images/menu/mystery-bean-lover.jpg`}
-                />
-              </a>
+            <li style={{ maxWidth: '40%' }}>
+              <Link href={`/san-pham/bot`}>
+                <a className='dropdown-item'>
+                  <img src={`/static/assets/images/menu/bot.png`} />
+                </a>
+              </Link>
             </li>
-            <li>
-              <a href='/' className='dropdown-item'>
-                <img src={`/static/assets/images/menu/ready-to-mix.jpg`} />
-              </a>
+            <li style={{ maxWidth: '40%' }}>
+              <Link href={`/san-pham/topping`}>
+                <a className='dropdown-item'>
+                  <img src={`/static/assets/images/menu/topping.png`} />
+                </a>
+              </Link>
             </li>
+            {/* <li style={{ maxWidth: '25%' }}>
+              <Link href={`/san-pham/topping`}>
+                <a className='dropdown-item'>
+                  <img src={`/static/assets/images/menu/topping.png`} />
+                </a>
+              </Link>
+            </li> */}
           </ul>
         </li>
       </ul>
@@ -106,7 +116,7 @@ const renderMenu = (initMenu) => {
         <li
           className={`nav-item dropdown ${
             menu.isMega ? "mega-dropdown" : null
-          }`}
+            }`}
         >
           <Link href={`/${menu.slug}`}>
             <a
