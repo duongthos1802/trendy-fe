@@ -32,12 +32,19 @@ a {
 
 .banner_section:not(.full_screen) .carousel-item {
   height: 640px;
+
+  @media (max-width: $xxl-min-width) {
+    height: 540px;
+  }
+
   @media (max-width: $xl-max-width) {
     height: 400px;
   }
+
   @media (max-width: $md-max-width) {
     height: 300px;
   }
+  
   @media (max-width: $xs-max-width) {
     height: 146px;
   }
