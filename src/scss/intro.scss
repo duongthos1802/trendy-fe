@@ -2,7 +2,7 @@
 
 .intro {
   position: relative;
-  background-image: url('../static//assets/images/default/gioithieu.png') !important;
+  background-image: url("../static//assets/images/default/gioithieu.png") !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
@@ -15,6 +15,11 @@
 
   .main-content {
     max-width: 80%;
+
+    @media (max-width: $xs-max-width) {
+      max-width: 100%;
+    }
+
     h2 {
       // color: white !important ;
       font-weight: 700;
@@ -52,5 +57,11 @@
   }
   .content-para {
     min-width: 80%;
+  }
+}
+
+@media (max-width: $xs-max-width) {
+  .content-para {
+    min-width: 89%;
   }
 }
