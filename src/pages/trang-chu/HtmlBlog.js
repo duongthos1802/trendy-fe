@@ -33,7 +33,7 @@ const HtmlBlock = () => {
           ? <div className="container">
             <div className="row">
               <div className="col-lg-6 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
-                <div className="about_section pl-lg-3 py-5">
+                <div className="about_section about_first pl-lg-3 py-5">
                   <div className="heading_s1 title-block">
                     <h2 className="mb-5">{blockHomePage.block?.title}</h2>
                   </div>
@@ -46,6 +46,10 @@ const HtmlBlock = () => {
               <div className="col-lg-6 animation" data-animation="fadeInUp" data-animation-delay="0.03s">
                 <img src={imageUtils.getBlockUrl(blockHomePage.block.image, enumType.imagePath.HtmlBlock)} alt="about_img3" />
               </div>
+
+              <p className="w-100 btn-block-mobile mt-3">
+                <a className="btn btn-dark" href="/gioi-thieu">Tìm hiểu thêm</a>
+              </p>
             </div>
           </div>
           : null
@@ -58,7 +62,7 @@ const HtmlBlock = () => {
         blockHomePage && blockHomePage.blockSecond
           ? <div className="container mb-5">
             <div className="row">
-              <div className="col-lg-6 animation" data-animation="fadeInUp" data-animation-delay="0.03s">
+              <div className="col-lg-6 animation img-block" data-animation="fadeInUp" data-animation-delay="0.03s">
                 <img src={imageUtils.getBlockUrl(blockHomePage.blockSecond.image, enumType.imagePath.HtmlBlock)} alt="about_img3" />
               </div>
               <div className="col-lg-6 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
@@ -67,7 +71,15 @@ const HtmlBlock = () => {
                     <h2 className="mb-5">{blockHomePage.blockSecond?.title}</h2>
                   </div>
                   <p className="font-size-14 text-justify">{htmlContentWithBBCode(blockHomePage.blockSecond?.description)}</p>
+
+                  <div className="col-lg-6 animation mb-3 img-block-mobile" data-animation="fadeInUp" data-animation-delay="0.03s">
+                    <img src={imageUtils.getBlockUrl(blockHomePage.blockSecond.image, enumType.imagePath.HtmlBlock)} alt="about_img3" />
+                  </div>
                   <p className="w-100 btn-block">
+                    <a className="btn btn-dark" href="/san-pham">Tìm hiểu thêm</a>
+                  </p>
+
+                  <p className="w-100 btn-block-mobile">
                     <a className="btn btn-dark" href="/san-pham">Tìm hiểu thêm</a>
                   </p>
                 </div>

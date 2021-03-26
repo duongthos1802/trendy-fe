@@ -44,7 +44,7 @@ a {
   @media (max-width: $md-max-width) {
     height: 300px;
   }
-  
+
   @media (max-width: $xs-max-width) {
     height: 146px;
   }
@@ -119,7 +119,7 @@ a {
   padding: 10px 0 !important;
   font-size: 20px !important;
   @media (max-width: $sm-max-width) {
-    font-size: 18px !important;
+    font-size: 24px !important;
   }
 }
 
@@ -197,7 +197,6 @@ a {
   min-height: 60px;
 }
 
-
 .cursor-pointer {
-  cursor: pointer!important;
+  cursor: pointer !important;
 }
