@@ -63,7 +63,7 @@ const renderSubMenu = (data, isMega, parentData) => {
             ))}
           </ul>
           <ul className='col-lg-10 menu-gallery'>
-            <li style={{ maxWidth: '40%' }}>
+            <li style={{ maxWidth: '25%' }}>
               <Link href={`/san-pham/tra`}>
                 <a className='dropdown-item'>
                   <img src={`/static/assets/images/menu/tra.png`} />
@@ -71,14 +71,24 @@ const renderSubMenu = (data, isMega, parentData) => {
               </Link>
 
             </li>
-            <li style={{ maxWidth: '40%' }}>
+
+            <li style={{ maxWidth: '25%' }}>
+              <Link href={`/san-pham/syrup`}>
+                <a className='dropdown-item'>
+                  <img src={`/static/assets/images/menu/syrup.png`} />
+                </a>
+              </Link>
+
+            </li>
+
+            <li style={{ maxWidth: '25%' }}>
               <Link href={`/san-pham/bot`}>
                 <a className='dropdown-item'>
                   <img src={`/static/assets/images/menu/bot.png`} />
                 </a>
               </Link>
             </li>
-            <li style={{ maxWidth: '40%' }}>
+            <li style={{ maxWidth: '25%' }}>
               <Link href={`/san-pham/topping`}>
                 <a className='dropdown-item'>
                   <img src={`/static/assets/images/menu/topping.png`} />
