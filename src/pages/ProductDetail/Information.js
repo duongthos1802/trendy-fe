@@ -103,7 +103,7 @@ const Information = ({ product }) => {
           aria-labelledby='Suggestion-tab'
         >
           <div className='row'>
-            {product.recipes && product.recipes.length ? (
+            {product && product.recipes && product.recipes.length ? (
               <ListRecipe
                 recipes={product?.recipes}
                 category={product.category}
