@@ -33,7 +33,7 @@ const RecipeDetail = ({ recipe }) => {
   return (
     <Layout>
       <GenerateSeo
-        title={recipe.name}
+        title={recipe?.name}
         description='Các công thức chuẩn và mới nhất'
         url={`${DEFAULT_HTTP_SITE}/cong-thuc`}
       />
@@ -45,7 +45,7 @@ const RecipeDetail = ({ recipe }) => {
           </div>
           <div className='recipe-info-main col-md-12 col-xl-7'>
             <div className='recipe-info-main-content'>
-              <h1 className='page-title'>{recipe.name}</h1>
+              <h1 className='page-title'>{recipe?.name}</h1>
               <div className='recipe_content_information'>
                 {recipe?.ingredient ? (
                   <div>
@@ -80,17 +80,19 @@ const RecipeDetail = ({ recipe }) => {
               </div>
             </div>
           </div>
-          <div className='col-12'>
-            <h4 className='font-weight-bold custom-border-bottom d-inline'>
-              Công thức liên quan
-            </h4>
-            {recipe.recipeSuggestion && recipe.recipeSuggestion.length ? (
-              <RelateItem
-                recipes={recipe.recipeSuggestion.slice(0, 4)}
-                category={recipe.category[0]}
-              />
-            ) : null}
-          </div>
+          {
+            recipe && recipe.products && recipe.products.length 
+            ?  <div className='col-12'>
+                <h4 className='font-weight-bold custom-border-bottom d-inline'>
+                  Sản phẩm liên quan
+                </h4>
+                <RelateItem
+                  products={recipe.products.slice(0, 4)}
+                  category={recipe.category[0]}
+                />
+              </div>
+            : null
+          }
         </div>
       </div>
     </Layout>

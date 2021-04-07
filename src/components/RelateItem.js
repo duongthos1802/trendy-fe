@@ -23,10 +23,10 @@ const RelateItem = ({ products, recipes, category }) => {
             return (
               <div className='col-md-3 col-12 mb-5'>
                 <Link
-                  href={`cong-thuc/chi-tiet/${product?.slug}-${product._id}`}
+                  href={`san-pham/chi-tiet/${product?.slug}-${product._id}`}
                 >
                   <a>
-                    <CardProduct product={product} category={category} />
+                    <CardProduct product={product} category={product?.category} />
                   </a>
                 </Link>
               </div>

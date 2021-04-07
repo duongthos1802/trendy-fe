@@ -40,6 +40,15 @@ export default {
               slug
             }
           }
+          products {
+            _id
+            name
+            slug
+            pictures
+            category {
+              name
+            }
+          }
           recipeSuggestion {
             _id
             name

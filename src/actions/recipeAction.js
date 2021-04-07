@@ -8,6 +8,7 @@ export const getRecipeDetail = async (clause) => {
   try {
     const queryData = query.recipeQuery.loadData(clause)
 
+
     const result = await apiService().post(GRAPHQL_PATH, {
       query: queryData,
       variables: null,
