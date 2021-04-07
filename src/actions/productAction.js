@@ -40,6 +40,24 @@ export const getProducts = async (clause) => {
   }
 }
 
+export const getProductsGood = async (clause) => {
+  try {
+    const queryData = query.productQuery.getProductsGood(clause)
+
+    const result = await apiService().post(GRAPHQL_PATH, {
+      query: queryData,
+      variables: null,
+    })
+
+    if (result.status === 200 && !result.data.errors) {
+      const resultData = result.data.data ? result.data.data.searchProducts : null
+      return resultData
+    }
+  } catch (error) {
+    console.log("error........", error)
+  }
+}
+
 export const getProductById = async (clause) => {
   try {
     const queryData = query.productQuery.getProductById(clause)

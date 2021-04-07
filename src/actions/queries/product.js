@@ -49,6 +49,7 @@ export default {
         }
       }`
   },
+  
   getProducts(clause) {
     return `
       query {
@@ -60,6 +61,23 @@ export default {
             category {
               name
             }
+        }
+      }`
+  },
+
+  getProductsGood(clause) {
+    return `
+      query {
+        searchProducts(${clause}){
+          items {
+            _id
+            name
+            images
+            description,
+            isPriority
+            pictures
+            slug
+          }
         }
       }`
   },

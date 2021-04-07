@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Link from "next/link"
 import product from "../actions/queries/product"
-import { getProducts } from "../actions/productAction"
+import { getProducts, getProductsGood } from "../actions/productAction"
 import SmallCardProduct from "./SmallCardProduct"
 
 const MenuRight = ({ menu, isGood }) => {
@@ -12,15 +12,15 @@ const MenuRight = ({ menu, isGood }) => {
     cateParent = menu.find((item) => !item.parentId)
   }
   const loadGoodProducts = async (queryClause) => {
-    const products = await getProducts(queryClause)
-    return products
+    const products = await getProductsGood(queryClause)
+    return products?.item??[]
   }
   useEffect(() => {
-    const query = `filter: {goodProduct: true, status: Published}, limit: 5`
+    const query = `(where: { goodProduct: true,  status: "Published" }, first :5, skip: 0`
     const products = loadGoodProducts(query)
     products.then((value) => setGoodProducts(value))
   }, [])
-  // console.log("goodProducts.......", goodProducts)
+
   return (
     <div class='sidebar px-2 d-none d-md-block'>
       <div className='widget'>
