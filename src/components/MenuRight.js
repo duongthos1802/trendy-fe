@@ -16,7 +16,7 @@ const MenuRight = ({ menu, isGood }) => {
     return products?.item??[]
   }
   useEffect(() => {
-    const query = `(where: { goodProduct: true,  status: "Published" }, first :5, skip: 0`
+    const query = `where: { goodProduct: true,  status: "Published" }, first :5, skip: 0`
     const products = loadGoodProducts(query)
     products.then((value) => setGoodProducts(value))
   }, [])
