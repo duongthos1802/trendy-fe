@@ -13,7 +13,7 @@ const MenuRight = ({ menu, isGood }) => {
   }
   const loadGoodProducts = async (queryClause) => {
     const products = await getProductsGood(queryClause)
-    return products?.item??[]
+    return products?.items??[]
   }
   useEffect(() => {
     const query = `where: { goodProduct: true,  status: "Published" }, first :5, skip: 0`
