@@ -16,7 +16,7 @@ const BannerHome = ({ banner }) => {
     <div className="banner_section-mobile staggered-animation-wrap banner-fixed">
       <div id="carouselExampleControls" className="carousel slide carousel-fade carousel_style2 light_arrow" data-ride="carousel">
         <div className="carousel-inner">
-          {banner.banner.map((item, i) =>
+          {banner.length && banner.map((item, i) =>
             <div
               className={className({
                 'carousel-item background_bg image-banner cursor-pointer': true,
