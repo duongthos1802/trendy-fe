@@ -71,6 +71,7 @@ export default {
         banner(${clause}){
           _id
           image
+          url
           description 
         }
       }

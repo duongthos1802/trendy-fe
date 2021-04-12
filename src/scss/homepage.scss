@@ -27,6 +27,11 @@
   box-shadow: 0 0px 17px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
 
+  @media (max-width: $xs-max-width) {
+    margin: 0;
+
+  }
+
   .phb-content {
     position: relative;
     overflow: hidden;

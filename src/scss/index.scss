@@ -35,7 +35,7 @@ a {
   color: $color-primary-blue !important;
 }
 
-.banner_section:not(.full_screen) .carousel-item {
+.carousel-item img {
   height: 640px;
 
   @media (max-width: $xxl-min-width) {
