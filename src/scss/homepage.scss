@@ -29,7 +29,6 @@
 
   @media (max-width: $xs-max-width) {
     margin: 0;
-
   }
 
   .phb-content {
@@ -105,14 +104,14 @@
     }
   }
   .bg-overlay {
-    padding: 34px 0px;
+    padding: 90px 0px;
     background-color: rgba(0, 0, 0, 0.56);
-    @media (max-width: 1440px) {
-      padding: 13px 0px;
-    }
-    @media (max-width: $xs-max-width) {
-      padding: 34px 0px;
-    }
+    // @media (max-width: 1440px) {
+    //   padding: 13px 0px;
+    // }
+    // @media (max-width: $xs-max-width) {
+    //   padding: 34px 0px;
+    // }
   }
 }
 
@@ -258,7 +257,6 @@
     font-size: 22px;
   }
 }
-
 
 .text-content-blog {
   @media (max-width: $md-max-width) {
