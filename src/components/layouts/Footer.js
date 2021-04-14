@@ -1,4 +1,5 @@
 import React from "react"
+import Link from 'next/link'
 import { Formik, Field, Form, ErrorMessage } from "formik"
 import * as yup from "yup"
 
@@ -33,18 +34,19 @@ const Footer = ({ children, isMobile }) => {
               <div className='widget'>
                 <ul className='social_icons social_white social_style1 rounded_social custom-social'>
                   <li>
+                  <Link href="https://www.facebook.com/nguyenlieutrendy">
                     <a
-                      href='https://www.facebook.com/nguyenlieutrendy'
                       target='_blank'
                     >
-                      <i class='fab fa-facebook-f' className='font-size-16'></i>
+                      <i  className='ion-social-facebook font-size-22'></i>
                     </a>
+                    </Link>
                   </li>
                   {/* <li><a href="#"><i className="ion-social-twitter" /></a></li> */}
                   {/* <li><a href="#"><i className="ion-social-googleplus" /></a></li> */}
                   <li>
-                    <a href='#' target='_blank'>
-                      <i class='fas fa-phone-alt' className='font-size-16'></i>
+                    <a target='_blank'>
+                      <i className="ion-ios-telephone font-size-22"></i>
                     </a>
                   </li>
                   {/* <li><a href="#"><i className="ion-social-instagram-outline" /></a></li> */}
