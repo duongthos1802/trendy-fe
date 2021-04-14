@@ -22,8 +22,9 @@ const Introduce = () => {
   }, [])
 
   return introduceHomePage && (
-    <div className="section background_bg introduce" style={{ backgroundImage: `url(${imageUtils.getBlockUrl(introduceHomePage.image, enumType.imagePath.HtmlBlock)})` }}>
-      <div className="bg-overlay">
+    <div className="section background_bg introduce position-relative">
+      <img src= {`${imageUtils.getBlockUrl(introduceHomePage.image, enumType.imagePath.HtmlBlock)}`} />
+      <div className="bg-overlay position-absolute w-100" style={{top: 0}}>
         <div className="container" >
           <div className="row">
             <div className="col-lg-6 col-md-8 animation" data-animation="fadeInUp" data-animation-delay="0.02s">

@@ -16,7 +16,7 @@ const Footer = ({ children, isMobile }) => {
       <div className='footer_top'>
         <div className='container'>
           <div className='row'>
-            <div className='col-xl-6 col-md-8 col-sm-12'>
+            <div className='col-xl-6 col-md-12 col-sm-12'>
               <div className='widget'>
                 <div className='footer_logo'>
                   <a className='logo'>
@@ -51,7 +51,7 @@ const Footer = ({ children, isMobile }) => {
                 </ul>
               </div>
             </div>
-            <div className='col-xl-6 col-md-8 col-sm-12'>
+            <div className='col-xl-6 col-md-12 col-sm-12'>
               <Formik
                 validationSchema={schema}
                 // onSubmit={handleSubmit}

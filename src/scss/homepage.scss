@@ -94,9 +94,19 @@
 
 .introduce {
   padding: 0px;
+  img {
+    object-fit: contain;
+    @media (max-width: $md-max-width) {
+      height: 443px;
+    }
+    @media (max-width: $xs-max-width) {
+      height: 459px;
+      object-fit: none;
+    }
+  }
   .bg-overlay {
-    padding: 90px 0px;
-    background-color: rgba(0, 0, 0, 0.56);
+    padding: 34px 0px;
+    background-color: rgba(0, 0, 0, 0.56)
   }
 }
 
@@ -240,5 +250,16 @@
     opacity: 1;
     display: block;
     font-size: 22px;
+  }
+}
+
+
+.text-content-blog {
+  @media (max-width: $md-max-width) {
+    font-size: 24px !important;
+  }
+
+  @media (max-width: $sm-max-width) {
+    font-size: 16px !important;
   }
 }
