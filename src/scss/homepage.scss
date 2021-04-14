@@ -106,7 +106,10 @@
   }
   .bg-overlay {
     padding: 34px 0px;
-    background-color: rgba(0, 0, 0, 0.56)
+    background-color: rgba(0, 0, 0, 0.56);
+    @media (max-width: 1366px) {
+      padding: 13px 0px;
+    }
   }
 }
 
