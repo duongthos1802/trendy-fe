@@ -12,7 +12,7 @@ const defaultTitle = `${DEFAULT_SITE} - Chuyên dùng cho pha chế`
 
 const defaultDescription = ``
 
-const defaultImage = DEFAULT_IMAGE_SITE
+const defaultImage = require('../static/assets/images/default/seo.jpeg')
 
 const GenerateSeo = ({ title, description, image, url, product, recipe }) => {
   // generate title
