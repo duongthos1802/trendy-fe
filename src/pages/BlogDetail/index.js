@@ -176,7 +176,7 @@ const BlogDetail = (props) => {
                                   ) */}
                                   
                                   {
-                                    blog.createdAt ? moment(blog.createdAt).format("DD/MM/YYYY"): ''
+                                    item.createdAt ? moment(item.createdAt).format("DD/MM/YYYY"): ''
                                   }
                                 </p>
                               </div>
