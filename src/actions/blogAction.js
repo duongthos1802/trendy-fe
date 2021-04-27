@@ -73,6 +73,7 @@ export const getBlogBySlugId = async (clause) => {
   try {
     const queryData = query.blogQuery.getListBlogBySlugId(clause)
 
+    console.log('getBlogBySlugId.............', queryData)
     const result = await apiService().post(GRAPHQL_PATH, {
       query: queryData,
       variables: null
@@ -94,6 +95,7 @@ export const getBlogBySlugId = async (clause) => {
 export const getBlogs = async (clause) => {
   try {
     const queryData = query.blogQuery.getBlogs(clause)
+    console.log('getBlogs.............', queryData)
 
     const result = await apiService().post(GRAPHQL_PATH, {
       query: queryData,

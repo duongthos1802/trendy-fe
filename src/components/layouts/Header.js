@@ -165,7 +165,7 @@ const Header = ({ children, isMobile }) => {
   }
 
   useEffect(() => {
-    const queryClause = `filter: {status: ${enumType.status.PUBLISHED}}, skip: 0, sort:INDEX_ASC`
+    const queryClause = `filter: {status: ${enumType.status.PUBLISHED}}, skip: 0`
     loadCategoryData(queryClause)
   }, [])
 
