@@ -38,6 +38,7 @@ export default {
               slug
               name
               pictures
+              createdAt
             }
             categoryBlog{
               _id

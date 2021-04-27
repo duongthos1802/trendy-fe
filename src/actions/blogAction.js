@@ -52,8 +52,6 @@ export const categoryBlogFeatures = async (clause) => {
   try {
     const queryData = query.blogQuery.categoryBlogFeatures(clause)
 
-    console.log('queryData....', queryData);
-
     const result = await apiService().post(GRAPHQL_PATH, {
       query: queryData,
       variables: null
