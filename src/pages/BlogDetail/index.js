@@ -117,7 +117,10 @@ const BlogDetail = (props) => {
                           <li>
                             <a href='#'>
                               <i className='ti-calendar'></i>
-                              {dateTime.formatTimeStampToUtcTime(blog.createdAt)}
+                              {
+                                  blog.createdAt ? moment(blog.createdAt).format("DD/MM/YYYY"): ''
+                              }
+                              {/* {dateTime.formatTimeStampToUtcTime(blog.createdAt)} */}
                             </a>
                           </li>
                         </ul>

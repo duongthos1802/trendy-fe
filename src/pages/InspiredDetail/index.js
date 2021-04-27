@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useRouter } from "next/router"
 import Link from "next/link"
+import moment from 'moment'
 // Actions
 import { loadData, categoryBlogFeatures } from "../../actions/blogAction"
 // Extensions
@@ -116,7 +117,10 @@ const BlogDetail = (props) => {
                           <li>
                             <a href='#'>
                               <i className='ti-calendar'></i>
-                              {dateTime.formatTimeStampToUtcTime(blog.createdAt)}
+                              {
+                                  blog.createdAt ? moment(blog.createdAt).format("DD/MM/YYYY"): ''
+                              }
+                              {/* {dateTime.formatTimeStampToUtcTime(blog.createdAt)} */}
                             </a>
                           </li>
                         </ul>
