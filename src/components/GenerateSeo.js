@@ -12,7 +12,7 @@ const defaultTitle = `${DEFAULT_SITE} - Chuyên dùng cho pha chế`
 
 const defaultDescription = ``
 
-const defaultImage = 'https://api.nguyenlieutrendy.com/uploads/banner_pictures/1616035102665-banner-trendy.jpg'
+const defaultImage = 'https://api.nguyenlieutrendy.com/uploads/banner_pictures/1618049125517-7-01re.jpg'
 
 const GenerateSeo = ({ title, description, image, url, product, recipe }) => {
   // generate title
