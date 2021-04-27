@@ -2,6 +2,8 @@ import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useRouter } from "next/router"
 import Link from "next/link"
+import moment from 'moment'
+
 // Actions
 import { loadData, categoryBlogFeatures } from "../../actions/blogAction"
 // Extensions
@@ -17,7 +19,6 @@ import { DEFAULT_HTTP_SITE, enumType } from "../../constants"
 // Components
 import Layout from "../../components/layouts/Layout"
 // constant
-import { routers } from "../../server/routers"
 import GenerateSeo from "../../components/GenerateSeo"
 
 const BlogDetail = (props) => {
@@ -170,9 +171,13 @@ const BlogDetail = (props) => {
                                     : null}
                                 </h6>
                                 <p className='small m-0 d-xs-none'>
-                                  {dateTime.formatTimeStampToUtcTime(
+                                  {/* {dateTime.formatTimeStampToUtcTime(
                                     blog.createdAt
-                                  )}
+                                  ) */}
+                                  
+                                  {
+                                    blog.createdAt ? moment(blog.createdAt).format("DD/MM/YYYY"): ''
+                                  }
                                 </p>
                               </div>
                             </div>

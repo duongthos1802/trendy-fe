@@ -170,9 +170,12 @@ const BlogDetail = (props) => {
                                     : null}
                                 </h6>
                                 <p className='small m-0 d-xs-none'>
-                                  {dateTime.formatTimeStampToUtcTime(
+                                  {/* {dateTime.formatTimeStampToUtcTime(
                                     blog.createdAt
-                                  )}
+                                  )} */}
+                                  {
+                                    blog.createdAt ? moment(blog.createdAt).format("DD/MM/ddYYYY"): ''
+                                  }
                                 </p>
                               </div>
                             </div>
