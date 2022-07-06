@@ -12,19 +12,7 @@ const Introduce = () => {
             <div className='main-content'>
               <h2>Trendy - Nguyên liệu pha chế được tin dùng bởi Barista</h2>
               <p className="text-justify">
-                Ngành công nghiệp pha chế đồ uống ngày càng phát triển, đòi hỏi
-                sự ra đời của những hương vị mới và sáng tạo hơn nữa trong
-                nguyên liệu và cách pha chế. Bằng cách lắng nghe và thấu hiểu
-                nhu cầu của khách hàng, Trendy ra đời với sứ mệnh đem lại những
-                sản phẩm phù hợp với việc kinh doanh và pha chế đồ uống, đặc
-                biệt được tin dùng bởi các Barista đầu ngành. Mỗi sản phẩm của
-                Trendy đều được tỉ mỉ và cẩn thận trong từng khâu thiết kế, chế
-                biến, đóng gói và vận chuyển, mang đến hương vị của thiên nhiên
-                cùng sự tin tưởng về những ly đồ uống ngon sắp được ra đời.
-                Chúng tôi tin rằng, với năng lượng tích cực mà Trendy mang lại,
-                mỗi ngày pha chế sẽ là một ngày vui cùng đam mê của các
-                Barista, mỗi sản phẩm từ nguyên liệu của Trendy sẽ là một món
-                quà tới người thưởng thức.
+                Ngành công nghiệp pha chế đồ uống ngày càng phát triển, đòi hỏi sự ra đời của những hương vị mới và sáng tạo hơn nữa trong nguyên liệu và cách pha chế. Bằng cách lắng nghe và thấu hiểu nhu cầu của khách hàng, Trendy ra đời với sứ mệnh đem lại những sản phẩm phù hợp với việc kinh doanh và pha chế đồ uống, đặc biệt được tin dùng bởi các Barista đầu ngành. Mỗi sản phẩm của Trendy đều được tỉ mỉ và cẩn thận trong từng khâu thiết kế, chế biến, đóng gói và vận chuyển, mang đến hương vị của thiên nhiên, sự tin tưởng về những ly đồ uống ngon sắp được ra đời và trải nghiệm pha chế tuyệt vời.
               </p>
               {/* <p>
                 Trendy tự hào mang đến các dòng nguyên liệu pha chế bao gồm:
