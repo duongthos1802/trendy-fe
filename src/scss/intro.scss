@@ -12,6 +12,8 @@
   margin-right: auto;
   margin-left: auto;
   padding: 120px 0 155px 0;
+  @media (max-width: $xs-max-width) {
+    padding: 0;  }
 
   .main-content {
     max-width: 80%;
