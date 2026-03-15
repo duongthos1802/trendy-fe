@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node src/server/index.js",
     "build": "next build src",
-    "start":"node src/server/index.js"
+    "start": "node src/server/index.js"
   },
   "dependencies": {
     "@rematch/core": "^2.0.0-next.5",
@@ -23,17 +23,17 @@
     "moment": "^2.29.1",
     "next": "10.0.3",
     "next-seo": "^4.17.0",
-    "node-sass": "^5.0.0",
     "nprogress": "^0.2.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-image-gallery": "^1.0.8",
     "react-js-pagination": "^3.0.3",
-    "react-paginate": "^6.5.0",
+    "react-paginate": "^8.2.0",
     "react-redux": "^7.2.2",
     "react-slick": "^0.27.13",
     "redux": "^4.0.5",
-    "sanitize-html": "^2.2.0",
+    "sanitize-html": "2.7.3",
+    "sass": "^1.70.0",
     "slick-carousel": "^1.8.1",
     "yup": "^0.32.8"
   }

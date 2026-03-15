@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
-import ImageGallery from "react-image-gallery"
+import dynamic from "next/dynamic";
+// import ImageGallery from "react-image-gallery"
 import Layout from "../../components/layouts/Layout"
 import MenuRight from "../../components/MenuRight"
 import { getIdByUrl } from "../../extensions/routes"
@@ -12,6 +13,12 @@ import { useDispatch, useSelector } from "react-redux"
 import { loadDataPager } from "../../actions/categoryAction"
 import RelateItem from "../../components/RelateItem"
 import GenerateSeo from "../../components/GenerateSeo"
+
+
+const ImageGallery = dynamic(
+  () => import("react-image-gallery"),
+  { ssr: false }
+);
 
 const mapImage = (pictures) => {
   let imagesData = []

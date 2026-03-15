@@ -63,7 +63,7 @@ const renderSubMenu = (data, isMega, parentData) => {
             ))}
           </ul>
           <ul className='col-lg-10 menu-gallery'>
-            <li style={{ maxWidth: '25%' }}>
+            <li style={{ maxWidth: '20%' }}>
               <Link href={`/san-pham/tra`}>
                 <a className='dropdown-item'>
                   <img src={`/static/assets/images/menu/tra.png`} />
@@ -72,7 +72,7 @@ const renderSubMenu = (data, isMega, parentData) => {
 
             </li>
 
-            <li style={{ maxWidth: '25%' }}>
+            <li style={{ maxWidth: '20%' }}>
               <Link href={`/san-pham/syrup`}>
                 <a className='dropdown-item'>
                   <img src={`/static/assets/images/menu/syrup.png`} />
@@ -81,27 +81,27 @@ const renderSubMenu = (data, isMega, parentData) => {
 
             </li>
 
-            <li style={{ maxWidth: '25%' }}>
-              <Link href={`/san-pham/bot`}>
+            <li style={{ maxWidth: '20%' }}>
+              <Link href={`/san-pham/bot-pha-che`}>
                 <a className='dropdown-item'>
                   <img src={`/static/assets/images/menu/bot.png`} />
                 </a>
               </Link>
             </li>
-            <li style={{ maxWidth: '25%' }}>
+            <li style={{ maxWidth: '20%' }}>
               <Link href={`/san-pham/topping`}>
                 <a className='dropdown-item'>
                   <img src={`/static/assets/images/menu/topping.png`} />
                 </a>
               </Link>
             </li>
-            {/* <li style={{ maxWidth: '25%' }}>
-              <Link href={`/san-pham/topping`}>
+            <li style={{ maxWidth: '20%' }}>
+              <Link href={`/san-pham/bot-matcha`}>
                 <a className='dropdown-item'>
-                  <img src={`/static/assets/images/menu/topping.png`} />
+                  <img src={`/static/assets/images/menu/matcha.jpeg`} />
                 </a>
               </Link>
-            </li> */}
+            </li>
           </ul>
         </li>
       </ul>

@@ -1,5 +1,6 @@
 import React from "react"
-import ImageGallery from "react-image-gallery"
+import dynamic from "next/dynamic";
+// import ImageGallery from "react-image-gallery"
 import { getRecipeDetail } from "../../actions/recipeAction"
 import Banner from "../../components/Banner"
 import GenerateSeo from "../../components/GenerateSeo"
@@ -9,6 +10,13 @@ import { DEFAULT_HTTP_SITE, enumType } from "../../constants"
 import { htmlContentWithBBCode } from "../../extensions/html"
 import { getIdByUrl } from "../../extensions/routes"
 import { imageUtils } from "../../utils"
+
+
+const ImageGallery = dynamic(
+  () => import("react-image-gallery"),
+  { ssr: false }
+);
+
 
 const renderImageGallery = (pictures) => {
   let imagesData = []
